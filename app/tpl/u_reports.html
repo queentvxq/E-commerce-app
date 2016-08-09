@@ -1,0 +1,133 @@
+<div class="uviews" id="u_reports" v-if="show" :transition="transitionName">
+    <!--header-->
+    <com-utopbar2 v-ref:utopbar title="服务报告填写"></com-utopbar2>
+    <div class="wrapper" id="u_report">
+        <div>
+            <div class="reports-box">
+                <div class="ui-border-b">
+                    <span>服务名称</span>
+                    <span style="color:#c0c0c0;float:right">{{servicename}}</span>
+                </div>
+                <div id="u_rep_select" class="ui-border-b">
+                    <span>设备</span>
+                    <select v-on:click="selectDevice" name="devicecategory" id="devicecategory" v-model="selected" @change="device" disabled="{{submitstate==2}}">
+                        <template v-if="deviceid==''">
+                            <option selected v-bind:value=""></option>
+                        </template>
+                        <template v-for="value in listdevice">
+                            <template v-if="value.id===deviceid">
+                                <option selected v-bind:value="value.id">{{value.Name}}</option>
+                            </template>
+                            <template v-else>
+                                <option v-bind:value="value.id">{{value.Name}}</option>
+                            </template>
+                        </template>
+                    </select>
+                    <template v-if="deviceid==''">
+                        <i class="am-icon-cx-5" style="float:right"></i>
+                    </template>
+                </div>
+                <div class="ui-border-b">
+                    <span for="">服务建议</span>
+                    <input style="color:#c0c0c0;width:73%" type="text" placeholder="服务建议" v-model="recommend" disabled>
+                </div>
+                <div class="ui-border-b" id="textarea">
+                    <span for="">备注</span>
+                    <textarea cols="30" rows="10" v-model="testresult" disabled="{{submitstate==2}}"></textarea>
+                </div>
+            </div>
+
+            <div class="img">
+                <div class="title am-g ui-border-b">
+                    <div class="am-u-sm-6">服务前图片</div>
+                    <div class="am-u-sm-6">服务后图片</div>
+                    <input type="file" id="file" v-on:change="imgchange" style="display:none">
+                </div>
+                <div class="img-list ui-border-b">
+                    <template v-if="listbefore.length >= listafter.length">
+                        <template v-for="value in listbefore">
+                            <div class="am-g">
+                                <div class="am-u-sm-6">
+                                    <div class="before">
+                                        <div class="img-border">
+                                            <div class="img-bg" v-on:click="imgupload(0,'b-'+$index,0)" id='b-{{$index}}'>
+                                                <template v-if="listbefore[$index].imgurl">
+                                                    <img :src="listbefore[$index].imgurl" alt="">
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="am-u-sm-6">
+                                    <div class="after">
+                                        <div class="img-border">
+                                            <div class="img-bg" v-on:click="imgupload(1,'a-'+$index,0)" id='a-{{$index}}'>
+                                                <template v-if="listafter[$index].imgurl">
+                                                    <img :src="listafter[$index].imgurl" alt="">
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </template>
+                    <template v-else>
+                        <template v-for="value in listafter">
+                            <div class="am-g">
+                                <div class="am-u-sm-6">
+                                    <div class="before">
+                                        <div class="img-border">
+                                            <div class="img-bg" v-on:click="imgupload(0,'b-'+$index,0)" id='b-{{$index}}'>
+                                                <template v-if="listbefore[$index].imgurl">
+                                                    <img :src="listbefore[$index].imgurl" alt="">
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="am-u-sm-6">
+                                    <div class="after">
+                                        <div class="img-border">
+                                            <div class="img-bg" v-on:click="imgupload(1,'a-'+$index,0)" id='a-{{$index}}'>
+                                                <template v-if="listafter[$index].imgurl">
+                                                    <img :src="listafter[$index].imgurl" alt="">
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </template>
+                    </template>
+                    <div class="am-g" id="addbtns" v-bind:class="{ 'hidebtn': listafter.length!=listbefore.length || submitstate==2 }">
+                        <div class="am-u-sm-6">
+                            <div class="before">
+                                <div class="img-border img-border-dotted">
+                                    <div class="img-bg" v-on:click="imgupload(0,'bn',1)" id='bn'></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="am-u-sm-6">
+                            <div class="after">
+                                <div class="img-border img-border-dotted">
+                                    <div class="img-bg" v-on:click="imgupload(1,'an',1)" id='an'></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <img id="imgs" src="" alt="" style="display:none">
+            <div class="am-g btns" v-bind:class="{ 'hidebtn': submitstate==2 }">
+                <div class="am-u-sm-6">
+                    <button type="button" v-on:click="savebtn(1)" class="am-btn am-btn-default">保存</button>
+                </div>
+                <div class="am-u-sm-6">
+                    <button type="button" v-on:click="savebtn(2)" class="am-btn am-btn-default">提交</button>
+                </div>
+            </div>
+            <div style="height:60px"></div>
+        </div>
+    </div>

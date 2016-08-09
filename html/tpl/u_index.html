@@ -1,0 +1,133 @@
+<!--用户中心首页-->
+<div class="wrapper2" id="u_index" v-if="show" :transition="transitionName">
+    <div class="am-container mViews bodybg1" id="u_main">
+        <div id="u_top">
+            <div class="am-g uheadt">
+                <div class="am-u-sm-2 head-left">
+                    <a @click="testLogin($event)" id="setbtni" href="#ucenter/uset">
+                        <i class="am-icon-cx-36"></i>
+                    </a>
+                </div>
+                <div class="am-u-sm-8"></div>
+                <div class="am-u-sm-2 head-right">
+                    <a @click="testLogin($event)" id="setbtni2" href="#ucenter/umsg">
+                        <i class="am-icon-cx-46"></i>
+                        <span class="None act" v-bind:class="{ 'cxdot': new}"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="u_con">
+                <div class="u_head">
+                    <span id="uImg" @click="goPage" class="u_img" data-val="uset">
+                        <img class="am-circle" :src="avatar" title="uc" alt="头像" />
+                    </span>
+                </div>
+                <div @click="goPage" class="u_name">{{nickname}}</div>
+            </div>
+        </div>
+        <div id="u_main_mu">
+            <ul class="doc-icon-list cx-list">
+                <li class="clear-border-top ui-border-b">
+                    <a @click="testLogin($event)" href="#ucenter/uorder">
+                        <span class="widget-name">我的订单</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="am-avg-sm-3 myodbtn">
+                <li>
+                    <a @click="testLogin($event)" href="#ucenter/uorder/2" class="ui-border-r">
+                        <i class="am-icon-cx-59"></i>
+                        <span>待付款</span>
+                        <span class="cxdot" v-show="wcount > 0">{{wcount}}</span>
+                    </a>
+                </li>
+                <li>
+                    <a @click="testLogin($event)" href="#ucenter/uorder/3" class="ui-border-r">
+                        <i class="am-icon-cx-60"></i>
+                        <span>进行中</span>
+                        <span class="cxdot" v-show="pcount > 0">{{pcount}}</span>
+                    </a>
+                </li>
+                <li>
+                    <a @click="testLogin($event)" href="#ucenter/uorder/4" class="ui-border-r">
+                        <i class="am-icon-cx-61"></i>
+                        <span>已完成</span>
+                    </a>
+                </li>
+            </ul>
+            <template v-if="isGcs">
+            <div class="space40"></div>
+            <ul class="doc-icon-list cx-list">
+                <li class="">
+                    <a @click="testLogin($event)" href="#ucenter/uwork">
+                        <i class="am-icon-cx-14"></i>
+                        <span class="widget-name">工作单</span>
+                    </a>
+                </li>
+            </ul>
+            </template>
+            <div class="space40"></div>
+            <ul class="doc-icon-list cx-list">
+                <li class="ui-border-b clear-border-top">
+                    <a @click="testLogin($event)" href="#ucenter/uwish">
+                        <i class="am-icon-cx-47"></i>
+                        <span class="widget-name">心愿单</span>
+                    </a>
+                </li>
+                <li class="ui-border-b">
+                    <a @click="testLogin($event)" href="#ucenter/uyouhui">
+                        <i class="am-icon-cx-63"></i>
+                        <span class="widget-name">优惠券</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a @click="testLogin($event)" href="#ucenter/ureportList">
+                        <i class="am-icon-cx-64"></i>
+                        <span class="widget-name">服务报告</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="space40"></div>
+            <ul class="doc-icon-list cx-list">
+                <li class="ui-border-b">
+                    <a @click="testLogin($event)" href="#ucenter/udevice">
+                        <i class="am-icon-cx-65"></i>
+                        <span class="widget-name">设备管理</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a @click="testLogin($event)" href="#ucenter/uaddr">
+                        <i class="am-icon-cx-66"></i>
+                        <span class="widget-name">收货地址管理</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="space40"></div>
+            <ul class="doc-icon-list  cx-list">
+                <li class="ui-border-b">
+                    <a @click="testLogin($event)" href="#ucenter/ubdacc">
+                        <i class="am-icon-cx-70"></i>
+                        <span class="widget-name">绑定账号</span>
+                    </a>
+                </li>
+                <li class="ui-border-b" data-val="ucs">
+                   <!-- href="tel:{{tel}}"-->
+                    <a @click="telphone(tel)">
+                        <i class="am-icon-cx-71"></i>
+                        <span class="widget-name">联系客服</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#ucenter/ufeedback">
+                        <i class="am-icon-cx-72"></i>
+                        <span class="widget-name">意见反馈</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="space40"></div>
+            <div class="space40"></div>
+            <div class="space40"></div>
+        </div>
+    </div>
+</div>
+<!--End--主要内容-------------------->

@@ -1,0 +1,31 @@
+<div class="views bodybg1 wrapper2" id="u_addredit" v-if="show" :transition="transitionName">
+    <com-utopbar2 v-ref:utopbar title="修改收货地址" btname="保存" v-on:btn-evt="saveBtn"></com-utopbar2>
+    <div class="wrapper" id="u_addr_eidt">
+        <div class="am-container">
+            <form id="addr_edit_form">
+                <input class="ui-border-b" type="text" placeholder="收货人姓名（请使用真实姓名）" v-model="addr.name" />
+                <input class="ui-border-b" type="tel"  placeholder="手机号码" maxlength="11" v-model="addr.cellphone" />
+                <div class="place" v-on:click="place_select">
+                    <input class="ui-border-b" type="text" placeholder="省市区" v-model="addr.place" readonly />
+                    <i class="am-icon-cx-5"></i>
+                </div>
+                <input class="ui-border-b" type="text" placeholder="小区名称" v-model="addr.street" />
+                <input class="ui-border-b" type="text" placeholder="房号（如:3幢2单元101室）" v-model="addr.room" />
+
+            </form>
+        </div>
+    </div>
+    <div class="am-tabs placeselect" id="placeselect">
+        <div class="ui-border-b title">所在地区<i class="am-icon-cx-76" v-on:click="close_sel"></i></div>
+        <ul class="am-tabs-nav am-nav am-nav-tabs am-nav-justify">
+            <li class="am-active"><a href="">省份</a></li>
+            <li><a href="">城市</a></li>
+            <li><a href="">地区</a></li>
+        </ul>
+        <div class="am-tabs-bd">
+            <div class="am-tab-panel am-active" id="getprovince">...</div>
+            <div class="am-tab-panel" id="getcity">...</div>
+            <div class="am-tab-panel" id="getregion">...</div>
+        </div>
+    </div>
+</div>

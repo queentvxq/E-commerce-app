@@ -1,0 +1,28 @@
+<div class="am-g" dataVal="{{=pid}}">
+    <div class="am-u-sm-2">
+       {{
+           var act='act';
+           if(typeof(pay)!="undefined"){
+               if(!pay) act='';
+           }           
+       }}
+        <a class="selt {{=act}}" dataVal="{{=pid}}"><i class="am-icon-cx-38"></i></a>
+    </div>
+    <div class="am-u-sm-10">
+        <a href="/#mall/mdetail/vas/{{=pid}}" class="psimg"><img src="{{=picurl}}"></a>
+        <div class="pddes">
+            <div class="pddestit"><a href="#mall/mdetail/vas/{{=pid}}">{{=name}}</a></div>
+            <div class="pddespre">￥{{=price}}</div>
+            <div class="pddnum">
+                <div class="numedt">
+                    <span class="numedtA" dataVal="{{=pid}}"><i class="am-icon-cx-40"></i></span>
+                    <span class="numedtB">{{=count}}</span>
+                    <span class="numedtC" dataVal="{{=pid}}"><i class="am-icon-cx-41"></i></span>
+                </div>
+                <a class="delBtn">
+                    <i class="am-icon-cx-32"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

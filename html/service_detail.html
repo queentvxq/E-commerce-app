@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="m am-touch js cssanimations">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="assets/css/amazeui.css">
+    <link rel="stylesheet" href="assets/css/amaze.min.css">
+    <link rel="stylesheet" href="assets/css/ucj.css">
+    <title>优厨家</title>
+</head>
+
+<body>
+    <!--最外层容器，用于整体销毁，包含主场景和全局模块-->
+    <div id="main">
+        <!--内部主场景容器，包含顶部和底部导航内容-->
+        <div class="am-page" id="service-detail">
+            <!--主要内容------------------------->
+            <div class="views wrapper" id="service-detail-main">
+                <!--detail首页-->
+                <div class="mViews" id="mViews">
+                    <div class="am-container" id="vs_index">
+                        <div id="service-index-ad">
+                            <div class="am-slider am-slider-a1">
+                                <ul class="am-slides">
+                                    <li>
+                                        <img src="assets/imgs/ad_i_0.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="service-detail-box">
+                            <div class="titles">
+                                <div class="title">无垢厨房深度报告</div>
+                                <div class="stitle">不只是干净，而是由内而外的焕然一新！</div>
+                            </div>
+                            <div class="infos">
+                                <div class="price">
+                                    <div style="float:left">价格:</div>
+                                    <div class="price-txt">
+                                        <div>原价<b class="p-red">￥100.00</b>&nbsp;&nbsp;</div>
+                                        <div>组合价<b class="p-red">￥88.00</b></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space100"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="upyyBtn"><a href="">预约</a></div>
+        </div>
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script>
+    var myScroll;
+    $(function($) {
+        var IScroll = $.AMUI.iScroll;
+        myScroll = new IScroll('#service-detail-main', {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
+        });
+        $('.am-slider').flexslider({
+            start: function() {
+                myScroll.refresh();
+                console.log($('#service-index-ad').height());
+            }
+        });
+    })
+
+    document.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    }, false);
+
+</script>
+
+</html>

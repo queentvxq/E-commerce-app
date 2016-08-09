@@ -1,0 +1,382 @@
+{
+    "pathA": "http://apiqa.ukitchenplus.com/",
+    "api": [
+        {
+            "name": "登陆用户",
+            "pourl": "account/login",
+            "path": "pathA",
+            "vas": {
+                "type": "1",
+                "account": "15906670853",
+                "pwd": "asdf1234",
+                "code": "test"
+            }
+        },
+        {
+            "name": "注册用户",
+            "pourl": "account/register",
+            "path": "pathA",
+            "vas": {
+                "phone": "123",
+                "pwd": "123",
+                "repwd": "123",
+                "code": "test"
+            }
+        },
+        {
+            "name": "接受验证码",
+            "pourl": "code/vcode",
+            "path": "pathA",
+            "vas": {
+                "type": "3",
+                "phone": "13567486258"
+            }
+        },
+        {
+            "name": "用户信息",
+            "pourl": "user/userinfo",
+            "path": "pathA",
+            "vas": {
+                "userid": ""
+            }
+        },
+        {
+            "name": "设置用户昵称",
+            "pourl": "user/SetNickName",
+            "path": "pathA",
+            "vas": {
+                "nickname": "3"
+            }
+        },
+        {
+            "name": "我的奖品",
+            "pourl": "user/myawards",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "获取省份列表",
+            "pourl": "user/getprovince",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "获取城市",
+            "pourl": "user/getcity",
+            "path": "pathA",
+            "vas": {
+                "pid": "1"
+            }
+        },
+        {
+            "name": "获取行政区",
+            "pourl": "user/getregion",
+            "path": "pathA",
+            "vas": {
+                "cid": "1"
+            }
+        },
+        {
+            "name": "商品订单",
+            "pourl": "user/myshoporder",
+            "path": "pathA",
+            "vas": {
+                "state": -1
+            }
+        },
+        {
+            "name": "服务订单",
+            "pourl": "user/myserviceorder",
+            "path": "pathA",
+            "vas": {
+                "state": -1
+            }
+        },
+        {
+            "name": "我的报告",
+            "pourl": "user/myreport",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "我的心愿单",
+            "pourl": "user/mycollection",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "我的优惠券",
+            "pourl": "user/mycoupon",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "系统消息",
+            "pourl": "user/mymessage",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "我的地址列表",
+            "pourl": "user/myaddress",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "验证手机是否被注册",
+            "pourl": "account/vphone",
+            "path": "pathA",
+            "vas": {
+                "verify": ""
+            }
+        },
+        {
+            "name": "是否绑定手机",
+            "pourl": "account/hasphone",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "是否已经设置密码",
+            "pourl": "account/haspwd",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "接受验证码",
+            "pourl": "code/phone",
+            "path": "pathA",
+            "vas": {
+                "type": 0,
+                "phone": ""
+            }
+        },
+        {
+            "name": "新建和更新地址",
+            "pourl": "user/UpdateAddress",
+            "path": "pathA",
+            "vas": {
+                "provinceid": 1,
+                "cityid": 1,
+                "regionid": 1,
+                "name": "abc",
+                "cellphone": "",
+                "street": "",
+                "room": "",
+                "isdefault": 0
+            }
+        },
+        {
+            "name": "默认地址",
+            "pourl": "uses/SetAddrDefault",
+            "path": "pathA",
+            "vas": {
+                "id": ""
+            }
+        },
+        {
+            "name": "商城首页",
+            "pourl": "shop/index",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "添加心愿单",
+            "pourl": "user/addmyfavorite",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "退出",
+            "pourl": "account/logoff",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "验证token",
+            "pourl": "account/verifytoken",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "购物车列表",
+            "pourl": "shop/getshopcart",
+            "path": "pathA",
+            "vas": {}
+        },
+        {
+            "name": "添加商品到购物车（增减）",
+            "pourl": "shop/addshopcart",
+            "path": "pathA",
+            "vas": {
+                "pid": "",
+                "count": ""
+            }
+        },
+        {
+            "name": "移除购物车的商品",
+            "pourl": "shop/removeshopcart",
+            "path": "pathA",
+            "vas": {
+                "pid": ""
+            }
+        },
+        {
+            "name": "商品搜索",
+            "pourl": "shop/searchlist",
+            "path": "pathA",
+            "vas": {
+                "key": "",
+                "cateid": ""
+            }
+        },
+        {
+            "name": "商品详细",
+            "pourl": "shop/detail",
+            "path": "pathA",
+            "vas": {
+                "id": ""
+            }
+        },
+        {
+            "name": "订单价格计算",
+            "pourl": "shop/ordercalculation",
+            "path": "pathA",
+            "vas": {
+                "addressid": "",
+                "pidlist": "",
+                "pricelist": "",
+                "buycount": "",
+                "cnum": ""
+            }
+        },
+        {
+            "name": "订单可使用优惠券",
+            "pourl": "shop/getcoupons",
+            "path": "pathA",
+            "vas": {
+                "payamount": ""
+            }
+        },
+        {
+            "name": "订单提交",
+            "pourl": "shop/submitorder",
+            "path": "pathA",
+            "vas": {
+                "addressid": "",
+                "pidlist": "",
+                "pricelist": "",
+                "buycount": "",
+                "cnum": "",
+                "remarks": "",
+                "realprice": "",
+                "bestprice": "",
+                "paymethod": ""
+            }
+        },
+        {
+            "name": "V2订单详情",
+            "pourl": "v2/user/SelectOrderDetail",
+            "path": "pathA",
+            "vas": {
+                "ordernumber": "1"
+            }
+        },
+        {
+            "name": "V2订单列表",
+            "pourl": "v2/user/CommonUserOrdeInfo",
+            "path": "pathA",
+            "vas": {
+                "type": "1"
+            }
+        },
+        {
+            "name": "V2设备管理列表",
+            "pourl": "v2/user/DeleteDevice",
+            "path": "pathA",
+            "vas": {
+                "page": "1"
+            }
+        },
+        {
+            "name": "V2设备删除",
+            "pourl": "v2/user/DeleteDevice",
+            "path": "pathA",
+            "vas": {
+                "deviceid": "1"
+            }
+        },
+        {
+            "name": "V2设备详情",
+            "pourl": "v2/user/UserDeviceServiceInfo",
+            "path": "pathA",
+            "vas": {
+                "deviceId": "1"
+            }
+        },
+        {
+            "name": "V2添加设备",
+            "pourl": "v2/user/AddDevice",
+            "path": "pathA",
+            "vas": {
+                "ordernumber": "1",
+                "devicecategory":"",
+                "ingredientid":"",
+                "model":"",
+                "categoryid":"",
+                "installyear":"",
+                "installmonth":""
+            }
+        },
+        {
+            "name": "V2发现类目",
+            "pourl": "v2/shop/DiscoveryCategory",
+            "path": "pathA",
+            "vas": {
+                "type": "1"
+            }
+        },
+        {
+            "name": "V2发现页信息列表",
+            "pourl": "v2/shop/DiscoveryGoods",
+            "path": "pathA",
+            "vas": {
+                "type": "1",
+                "categoryId":""
+            }
+        },
+        {
+            "name": "V2服务详情页",
+            "pourl": "v2/shop/ServiceResDetails",
+            "path": "pathA",
+            "vas": {
+                "sId": "1",
+                "smId":""
+            }
+        },
+        {
+            "name": "V2首页轮播与选集",
+            "pourl": "v2/Shop/Index",
+            "path": "pathA",
+            "vas": {
+            }
+        },
+        {
+            "name": "V2首页商品列表",
+            "pourl": "v2/Shop/IndexGoods",
+            "path": "pathA",
+            "vas": {
+                "page": "1",
+                "pagesize":"5"
+            }
+        },
+        {
+            "name": "V2首页商品详细",
+            "pourl": "v2/Shop/ProductResDetails",
+            "path": "pathA",
+            "vas": {
+                "id": "1"
+            }
+        }
+    ]
+}

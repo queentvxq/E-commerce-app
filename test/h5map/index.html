@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>图片加载平移放大缩小示例</title>
+    <link rel="stylesheet" href="amazeui.min.css">
+    <link rel="stylesheet" href="amaze.min.css">
+		<style>
+			html,body{
+				margin:0px;
+				padding:0px;
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+			}
+			#trace{
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			#bmp{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				overflow:hidden;
+			}
+            #loadImgBtn{
+                position: absolute;
+                top:0;
+                left: 0;
+                height: 3.5rem;
+                line-height: 2.8rem;
+                width: 100%;
+                text-align: center;
+                padding: 0.5rem 0;
+                display: block;
+                background: rgba(0, 0, 0, 0.6);
+                color: #fff;
+            }
+            #upBtn{
+                position: absolute;
+                top: 0.2rem;
+                right: 0.5rem;
+                
+            }
+		</style>
+		<script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.cookie.js"></script>
+	</head>
+	<body>
+		
+		<div id="trace" style="font-size: 1rem;"></div>
+		<div id="loadImgBtn">选择图片</div>
+		<div id="upBtn" class="am-btn am-btn-warning am-radius">使用</div>
+		<script type="text/javascript" src="main.js?v=2"></script>
+        
+	</body>
+</html>

@@ -1,0 +1,348 @@
+#u_main {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*用户中心首页*/
+
+#u-index {
+    overflow: hidden;
+    margin: 0;
+    position: 0;
+}
+
+#u_top {
+    height: 21rem;
+    background-color: #ffffff;
+    margin-bottom: 0.8rem;
+}
+
+#u_top .bg_u_t {
+    height: 6.2rem;
+    background-color: #000000;
+}
+
+#u_top .u_con {
+    margin: auto;
+    margin-top: 6rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#u_top .u_head {
+    margin: auto;
+    width: 9.7rem;
+}
+
+#u_top .uheadt {
+    background-color: #fff;
+    height: 50px;
+    line-height: 50px;
+}
+
+#u_top .u_img {
+    border-radius: 50%;
+    height: 9.6rem;
+    width: 9.6rem;
+    display: inline-block;
+}
+
+#u_top .u_img img {
+    width: 100%;
+    height: 100%;
+}
+
+#u_top .u_con .u_name {
+    text-align: center;
+    font-size: 2rem;
+    padding: 0.3rem 0;
+    color: #777;
+}
+
+#uOderState {
+    padding: 0;
+    text-align: center;
+}
+
+#uOderState a::after {
+    content: "";
+}
+
+#uOderState span {
+    display: block;
+}
+
+#uActPay,
+#uActTak,
+#uActFdk {
+    width: 25%;
+    display: inline-block;
+    height: 4rem;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+#uOderState [class*="am-icon-cx-"]:before {
+    font-size: 2rem;
+}
+
+#uActTak {
+    border: 1px solid #737373;
+    border-bottom: none;
+    border-top: none;
+}
+
+#u_main_mu .myodbtn {
+    background-color: #fff;
+}
+
+#u_main_mu .myodbtn a {
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+
+#u_main_mu .myodbtn a i {
+    display: block;
+    text-align: center;
+    font-size: 2.6rem;
+}
+#u_main_mu .myodbtn a i.am-icon-cx-62 {
+    
+}
+#u_main_mu .myodbtn a span {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+}
+#u_main_mu .myodbtn a span.cxdot{
+    font-size: .8rem;
+    top: 10%;
+    right: 35%;
+    display: inline-block;
+}
+
+/*用户登录页面*/
+
+#uc-login {
+    background: #ffffff;
+}
+
+#u_login {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#u_login_main {
+    position: relative;
+    top: -4rem;
+    width: 100%;
+}
+
+#u_login .u_login_bg img{
+    width: 100%;
+    height: auto;
+}
+
+#u_login .cx-tbnav {
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 4rem;
+    padding-top: 0.5rem;
+}
+
+#u_login .cx-tbnav li {
+    margin: 0;
+    float: none;
+    display: inline-block;
+    width: 48%;
+    height: 2rem;
+}
+
+#u_login .cx-tbnav a,
+.cx-tbnav a:focus {
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    background-color: transparent;
+    margin-top: -0.6rem;
+}
+
+#u_login .cx-tbnav .am-active a {
+    background-color: transparent;
+}
+
+#u_login .cx-tbnav .am-active:after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -1.5rem;
+    left: 48%;
+    margin-left: -10px;
+    border: 13px solid transparent;
+    content: "";
+    z-index: 1;
+    border-bottom-color: #ffffff;
+}
+
+#u_login .am-nav-tabs {
+    border: none;
+}
+
+#u_login .am-tabs-bd {
+    border: none;
+}
+
+#u_login .am-tabs-bd > div {
+    float: left;
+    width: 100%;
+}
+
+#u_login [class*="am-u-"]{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#u_login .am-tabs-bd .am-tab-panel{
+    padding: 10px 20px 15px;
+}
+
+#u_login .cx-form .am-form-label{
+    padding-right: 1rem;
+    padding-top: 1rem
+}
+
+#u_login .am-form-group input{
+    font-size: 1.5rem;
+}
+#u_login .grey{
+    color: #cccccc;
+}
+
+#u_login a.grey{
+    border: 1px solid #f1f1f1; 
+}
+
+.head-back{
+    text-align: center;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.8rem;
+    color: #000;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #ffffff;
+}
+
+.head-back .am-u-sm-1 a .am-icon-cx-77{
+    color: #ffffff;
+    font-size: 2.2rem;
+}
+
+.takVad {
+    padding: 0.2rem 0.6rem;
+    display: inline-block;
+    float: right;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #777777;
+    border: 1px solid #f1f1f1;
+}
+
+.u_login_ts {
+    text-align: center;
+    color: #bfbfbf;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.u_login_ts .cx-btn-reg{
+    width: 100%;
+    height: 4.5rem;
+    background-color: #ffffff;
+    color: #777777;
+    border: 1px solid #f1f1f1;
+    line-height: 3rem;
+}
+
+.u_login_ts .clause{
+    color: #bfbfbf;
+    text-decoration: underline; 
+}
+
+#setbtni,#setbtni2 {
+    color: #777777;
+    font-size: 2.2rem;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+#splistloading {
+    text-align: center;
+}
+
+#uheadtop{
+    height: 50px;
+    font-size: 2.2rem;
+    line-height: 4rem;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 201;
+    margin: 0;
+}
+#uheadtop .utopTit{
+    line-height: 49px;
+    color: #333;
+}
+#uheadtop #backBtn,#uheadtop #msgBtn{
+    font-size: 2.2rem;
+    display: inline-block;
+    line-height: 50px;
+    position: relative;
+    color: #777777;
+    width: 100%;
+}
+#uheadtop #backBtn{
+    width: 100%;
+}
+#uheadtop #msgBtn i{
+    
+}
+.uviews{
+    position: absolute;
+    top:0;
+    bottom:0;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+/*
+
+
+
+
+-webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+
+
+
+
+*/

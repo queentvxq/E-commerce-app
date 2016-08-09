@@ -1,0 +1,131 @@
+/*奖赏列表*/
+
+#m-discount {
+    background-color: #f5f7fb;
+}
+#m_discount{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 49px;
+}
+#m_discount .m-top-search {
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+    border-bottom: 1rem solid #f5f7fb;
+}
+
+#m_discount .m-top-search input {
+    width: 74%;
+    float: left;
+    border-color: #000;
+    border-right: none;
+    color: #727272;
+    height: 4rem;
+}
+
+#m_discount .m-top-search .xc_btn01 {
+    height: 4rem;
+    vertical-align: middle;
+    width: 26%;
+    border: none;
+    display: inline-block;
+}
+
+.discount-surplus {
+    padding-left: 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    height: 4rem;
+    line-height: 4rem;
+    color: #bfbfbf;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.m-discount-box {
+    background-color: #fff;
+}
+
+.m-discount-box {
+    padding: 0 0 0 1.8rem;
+}
+
+.discount-info {
+    list-style: none;
+    background-color: #db1a26;
+    background-image: url("../imgs/bg03.png");
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-size: 100%;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 1.3rem;
+    height: 13rem;
+    padding: 1rem 1.5rem;
+}
+
+.m-discount-box li {
+    padding-top: 2rem;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 2rem;
+    overflow: hidden;
+}
+
+.discount_def {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    margin-top: 5rem;
+}
+
+.discount_def .aDef {
+    border: 2px #727272 solid;
+    color: #727272;
+}
+
+.discount-info {
+    width: 83%;
+    float: right;
+    margin-right: 1.5rem;
+}
+
+.discount-info h2 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.discount-info .udes {
+    font-size: 1.3rem;
+    height: 4.5rem;
+}
+
+.discount-info .utend {
+    height: 2rem;
+    line-height: 3rem;
+}
+
+.with-no-discount {
+    background: #fff;
+    height: 4rem;
+    padding: 0 1.8rem;
+    margin-bottom: 49px;
+}
+
+.with-no-discount .txt {
+    line-height: 4rem;
+    width: 83%;
+    float: right;
+    margin-right: 1.2rem;
+    color: #727272;
+    font-weight: 500;
+}
+
+.with-no-discount .discount_def {
+    text-align: left;
+    margin-top: 0.8rem;
+    float: left;
+}

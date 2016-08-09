@@ -1,0 +1,30 @@
+<div class="views bodybg1 wrapper2" id="u_addr" v-if="show" :transition="transitionName">
+    <com-utopbar v-ref:utopbar title="收货地址管理"></com-utopbar>
+    <div class="wrapper" id="u_addr_list">
+        <div class="am-container">
+            <template v-if="list">
+                <template v-for="value in list">
+                    <div class="addr_box" id="{{value.id}}">
+                        <div class="am-g addr_info">
+                            <a v-on:click="setlocal(value.id,value.name,value.cellphone,value.province,value.city,value.region,value.provinceid,value.cityid,value.regionid,value.street,value.room)">
+                                <div class="am-u-sm-6 name">{{value.name}}</div>
+                                <div class="am-u-sm-6 tel">{{value.cellphone}}</div>
+                                <div class="am-u-sm-12 address">{{value.province}} {{value.city}} {{value.region}} {{value.street}} {{value.room}}</div>
+                            </a>
+                        </div>
+                        <div class="select">
+                            <template v-if="value.isdefault">
+                                <a id="set{{value.id}}" class="set" v-on:click="set_default(value.id)"><span class="am-icon-cx-90 addr_active"></span>设为默认</a>
+                            </template>
+                            <template v-else>
+                                <a id="set{{value.id}}" class="set" v-on:click="set_default(value.id)"><span class="am-icon-cx-90"></span>设为默认</a>
+                            </template>
+                            <a class="del" v-on:click="del_addr(value.id)"><i class="am-icon-cx-32"></i></a>
+                        </div>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </div>
+    <a v-on:click="newAddr"><div id="add_device" >添加新地址</div></a>
+</div>

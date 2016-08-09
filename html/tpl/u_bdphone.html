@@ -1,0 +1,19 @@
+<div class="views " id="u_bdphone" v-if="show" :transition="transitionName">
+    <com-utopbar v-ref:utopbar title="绑定手机"></com-utopbar>
+    <div class="uviews bodybg1" id="u_bdacc">
+       <div id="u_bdPhone" class="ui-border-t ui-border-b">
+           <div class="ui-border-b">
+               <i class="am-icon-cx-84"></i>
+               <input type="number" v-model="phone" placeholder="输入手机号码">
+               <span class="fRight ui-border" @click="upDataSendVad">获取验证码</span>
+           </div>
+           <div class="ui-border-b">
+               <i class="am-icon-cx-85"></i>
+               <input type="number" v-model="code" placeholder="六位手机短信验证码">
+           </div>
+           <div class="ui-border-b">
+                <a @click="upDataVad" class="upBtn">确认绑定</a>
+           </div>
+       </div>
+    </div>
+</div>

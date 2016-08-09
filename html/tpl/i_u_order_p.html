@@ -1,0 +1,30 @@
+{{ if(typeof(items)!="undefined") { _.each(items,function(good,k){ }}
+<div class="am-g sp_item">
+    <div class="am-u-sm-9 imgTit">
+        <a href="#mall/mdetail/vas/{{=good.pId}}"><img src="{{=good.imgurl}}" class="img" /> {{=good.title}}</a>
+    </div>
+    <div class="am-u-sm-3 price">
+        <div>￥{{=good.price}}</div>
+        <div>×<span>{{=good.count}}</span></div>
+    </div>
+</div>
+{{ });} }}
+<div class="tongji">
+    共<span>{{=goodscount}}</span>件商品，合计：￥<span class="hjprice">{{=payment}}</span>
+</div>
+<div class="odOper">
+    {{ 
+        if(state==0){ 
+    }}
+    <a class="am-btn am-btn-sm  am-radius xc_btn02 odBtnA" dataVal='{{=ordernumber}}'>撤单</a>
+    <a class="am-btn am-btn-sm  am-radius xc_btn02" href="{{=payurl}}">付款</a> 
+    {{ 
+        }else if(state==2){    
+    }}
+    <a  class="am-btn am-btn-sm  am-radius xc_btn02 odBtnB">确认收货</a>
+    {{ 
+        }else if(state==3 && comment==false){    
+    }}
+    <a class="am-btn am-btn-sm  am-radius xc_btn02 odBtnC">评价</a>   
+    {{ }; }}
+</div>

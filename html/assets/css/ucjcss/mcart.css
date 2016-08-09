@@ -1,0 +1,52 @@
+/*商城加入购物车底部栏--*/
+#m-cart-bar{
+    position: fixed;
+    left: 6px;
+    bottom: 6px;
+    right: 6px;
+    height: 55px;
+    line-height: 55px;
+    z-index: 1010;
+    background: #fff;
+    overflow: hidden;
+}
+#m-cart-bar > div{
+    height: 55px;
+    overflow: hidden;
+    background: #000;
+    text-align: center
+}
+#m-cart-bar > div a{
+    color: #fff;
+}
+#m-cart-bar > div a.buy{
+    font-size: 3.5rem;
+    line-height: 40px;
+    vertical-align: middle;    
+}
+#m-cart-bar .am-u-sm-10{
+    padding: 0
+}
+#m-cart-bar > div a.cart-add{
+    display: inline-block;
+    width: 99%;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px 0;
+    border-right: 1px solid #5b5b5b;
+    font-size: 2rem;
+}
+/*带购物车栏商城页面主体*/
+
+html .m-detail.wrapper{
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+

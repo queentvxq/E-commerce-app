@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/json2.js"></script>
+    <script>
+        var apiArr = new Array();
+        var urlArr = new Array();
+        var token = '';
+        apiArr[0] = {
+            phone: "123",
+            pwd: "123",
+            repwd: "123",
+            code: "test"
+        };
+        urlArr[0] = '<option value="0" poUrl="http://apiqa.ukitchenplus.com/account/register">注册用户</option>';
+
+        apiArr[1] = {
+            type: "0",
+            account: "13567486258",
+            pwd: "123",
+            code: "test"
+        };
+        urlArr[1] = '<option value="1" poUrl="http://apiqa.ukitchenplus.com/account/login">登陆用户</option>';
+
+        apiArr[2] = {
+            type: "3",
+            phone: "13567486258"
+        };
+        urlArr[2] = '<option value="2" poUrl="http://apiqa.ukitchenplus.com/code/phone">接受验证码</option>';
+
+        apiArr[3] = {
+            type: "3",
+            code: "test",
+            verify: "13567486258"
+        };
+        urlArr[3] = '<option value="3" poUrl="http://apiqa.ukitchenplus.com/code/vcode">校验验证码</option>';
+
+        apiArr[4] = {
+            nickname: "wl"
+        };
+        urlArr[4] = '<option value="4" poUrl="http://apiqa.ukitchenplus.com/user/SetNickName?uid=412223">设置用户昵称</option>';
+
+        apiArr[5] = {
+            userid: "412302"
+        };
+        urlArr[5] = '<option value="5" poUrl="http://apiqa.ukitchenplus.com/user/userinfo?uid=412223">用户信息</option>';
+
+        apiArr[6] = {
+            userid: "412302"
+        };
+        urlArr[6] = '<option value="6" poUrl="http://apiqa.ukitchenplus.com/user/myawards?uid=412223">我的奖品</option>';
+
+        apiArr[7] = {};
+        urlArr[7] = '<option value="7" poUrl="http://apiqa.ukitchenplus.com/user/getprovince?uid=412223">获取省份列表</option>';
+
+        apiArr[8] = {
+            pid: "1"
+        };
+        urlArr[8] = '<option value="8" poUrl="http://apiqa.ukitchenplus.com/user/myawards?uid=412223">获取城市</option>';
+
+        apiArr[9] = {
+            cid: "1"
+        };
+        urlArr[9] = '<option value="9" poUrl="http://apiqa.ukitchenplus.com/user/getregion?uid=412223">获取行政区</option>';
+
+        var urlSub = 0;
+        var o = {}
+        $(function($) {
+            var ii = 0;
+            $("#updataBtn").click(function(e) {
+                console.log($.cookie("UserLogin"));
+                var o = {}
+                $("#outTxt").html("收集发送数据...");
+                if ($(".zdlist").length > 0) {
+                    $(".zdlist").each(function(index, element) {
+                        var fdAtt = $(element).find(".fda").val();
+                        var fdVal = $(element).find(".fdb").val();
+                        o[fdAtt] = fdVal;
+                    });
+                    upData(o);
+                } else {
+                    upData(o);
+                }
+            });
+            $("#addFd").click(function(e) {
+                ii++;
+                $("#zdnr").append(addFid(ii, "", ""))
+            });
+
+            var urlLg = urlArr.length;
+            for (var k = 0; k < urlLg; k++) {
+                $("#apiSelt").append(urlArr[k]);
+            }
+
+            addApi(apiArr[0]);
+            $("#posurl").val($("#apiSelt").find("option:selected").attr("poUrl"));
+
+            $("#apiSelt").change(function(e) {
+                $("#posurl").val($(this).find("option:selected").attr("poUrl"));
+                urlSub = $(this).val();
+                addApi(apiArr[$(this).val()]);
+            })
+        });
+        //添加接口
+        function addApi(_o) {
+            $("#zdnr").empty()
+            var _i = 0;
+            $.each(_o, function(i, n) {
+                $("#zdnr").append(addFid(_i, i, n));
+                _i++;
+            });
+        }
+
+        function addFid(_i, _name, _val) {
+            var _html = '<li id="li' + _i + '" class="zdlist">';
+            _html += '字段名:<input type="text" name="fda" class="fda" value="' + _name + '">';
+            _html += '字段值:<input type="text" name="fdb"  class="fdb" value="' + _val + '">';
+            _html += '<a href="javascript:delfd(' + _i + ')" >删除字段</a></li>';
+
+            return _html;
+        }
+
+        function upData(_data) {
+            var _url = $("#posurl").val();
+            $("#outTxt").html("发送数据中...");
+            var postStr = _url + "<br />" + $.param(_data);
+            $("#outTxtPost").html(postStr);
+
+
+            var typ = "text";
+            if ($("#json").is(":checked")) {
+                typ = "json";
+            }
+            var jsonStr = JSON.stringify(_data);
+            $("#outTxtPost").append("<div>-----------------------------------</div>");
+            $("#outTxtPost").append("<div>" + jsonStr + "</div>");
+            $.ajax({
+                url: _url,
+                data: jsonStr,
+                contentType: 'application/json;charset=utf-8',
+                type: "POST",
+                dataType: 'json',
+                headers:{
+                    Cookie:$.cookie("UserLogin")
+                },
+                beforeSend: function(xhr) {
+                    //var cookie = $.cookie("UserLogin");
+                    //xhr.setRequestHeader('Cookie', cookie);
+                },
+                success: function(txt) {
+                    if (txt.state == 1 && urlSub == 1) {
+                        token = txt.result.token;
+                        $.cookie("UserLogin", token);
+                        console.log(token);
+                    }
+                    if (typ == "text") {
+                        $("#outTxt").html(txt);
+                    } else {
+                        $("#outTxt").html(JSON.stringify(txt));
+                    }
+                    console.log($.cookie("UserLogin"));
+                },
+                error: function(XMLHttpRequest, ajaxOptions, thrownError) {
+                    $("#outTxt").html("错误信息：" + ajaxOptions);
+                    console.log($.cookie("UserLogin"));
+                }
+            });
+        }
+
+        function delfd(i) {
+            $("#li" + i).remove();
+        }
+
+    </script>
+    <title>调试工具</title>
+    <style type="text/css">
+        #posurl {
+            height: 20px;
+            width: 200px;
+        }
+        
+        .fda {
+            width: 100px;
+            height: 20px;
+        }
+        
+        .fdb {
+            width: 280px;
+            height: 20px;
+        }
+        
+        ul,
+        li {
+            padding: 0;
+            margin: 0
+        }
+        
+        li {
+            padding: 6px;
+            list-style-type: disc;
+        }
+        
+        #outTxt {
+            width: 600px;
+            height: 300px;
+            border: 1px solid #A8A8A8;
+            background-color: #E4E4E4;
+            overflow-y: auto;
+            word-wrap: break-word;
+        }
+        
+        #outTxtPost {
+            width: 600px;
+            height: 100px;
+            border: 1px solid #A8A8A8;
+            background-color: #E4E4E4;
+            overflow-y: auto;
+            word-wrap: break-word;
+        }
+
+    </style>
+</head>
+
+<body style="padding:30px">
+    <div style="margin-bottom:12px;">
+        <label for="apiii">选择接口:</label>
+        <select id="apiSelt">
+        </select>
+    </div>
+    <label for="textfield3">发送地址:</label>
+    <input name="posurl" type="text" id="posurl" style="width:500px;">
+    <a href="#" id="addFd">添加字段</a>
+    <ul id="zdnr">
+
+    </ul>
+    <p>
+        <input type="button" value="发送数据" id="updataBtn">
+    </p>
+    <p>测试返回结果
+        <input name="json" type="checkbox" id="json" checked>
+        <label for="checkbox">json </label>
+    </p>
+    <p>
+        <label for="checkbox"> </label>
+    </p>
+    <div id="outTxtPost">&nbsp;</div>
+    <br>
+
+    <div id="outTxt">&nbsp;</div>
+    
+</body>
+
+</html>

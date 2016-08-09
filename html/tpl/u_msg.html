@@ -1,0 +1,27 @@
+<div class="views " id="u_msg" v-if="show" :transition="transitionName">
+    <!--用户中心首页-->
+    <com-utopbar2 v-ref:utopbar title="消息" btname="编辑" v-on:btn-evt="editNotice"></com-utopbar2>
+    <div class="uviews bodybg1" id="u_msg_list">
+        <div class="am-container">
+            <template v-if="list">
+                <template v-for="(index, value)  in list">
+                    <div class="usitem" id="i{{value.id}}" v-bind:class="{'read': value.state }">
+                        <div class="u_ms_main ui-border" v-on:click="openMore(value.id,$event,index)" >
+                            <div class="usitem_con ui-border-b">
+                                <div class="usitem_con_m">{{{value.content}}}</div>
+                            </div>
+                            <div class="usAct"><span class="htime">{{value.date}}</span></div>
+                        </div>
+                        <div class="msgicon">
+                            <i class="am-icon-cx-46"></i>
+                        </div>
+                        <a  v-show="delmsg" class="delNotice" @click="delNotice(index,value.id)"><i class="am-icon-cx-76"></i></a>
+                    </div>
+                </template>
+            </template>
+            <template v-else>
+                <div style="text-align: center;">你没有任何信息</div>
+            </template>
+        </div>
+    </div>
+</div>

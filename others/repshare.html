@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="cn" class="m am-touch js cssanimations">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="pragma" content="no-cache" />
+    <title>望厨服务分享</title>
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="../assets/css/amaze.min.css">
+    <link rel="stylesheet" href="../assets/css/ucj.min.css?v=1002">
+    <script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<style>
+    .cover {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        z-index: 2;
+        display: none;
+    }
+    
+    #wx-modal {
+        display: none;
+        z-index: 3;
+    }
+    
+    #reportshare {
+        z-index: 1;
+    }
+</style>
+<script>
+function isWeiXin(){
+    var u = window.navigator.userAgent.toLowerCase();
+    if(u.match(/MicroMessenger/i) == 'micromessenger'){
+        return true;
+    }else{
+        return false;
+    }
+}
+$(document).ready(function(){
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    var device;
+    if(ua.match(/iPad/i) || ua.match(/iPhone/i) || ua.match(/iPod/i)){
+        device ='ios'
+    }
+    if(ua.match(/Android/i)){
+        device ='android'
+    }
+    $.ajax({  
+        type:'post',      
+        url:'http://apiqa.ukitchenplus.com/v2/device/CheckVersion',  
+        cache:false,  
+        dataType:'json',  
+        success:function(data){
+            if (device == 'ios') {
+                if(!isWeiXin()){
+                    $('.dl-btn').attr('href',data.result.iosurl);
+                }
+            } else if (device == 'android') {
+                $('.dl-btn').attr('href',data.result.androidurl);
+            } else {
+                alert('望厨APP支持ios和安卓系统的手机！');
+            }
+        }
+    });  
+    $('.dl-btn').click(function(){
+        if(isWeiXin() && device == 'ios'){
+            $('#wx-modal').show();
+            $('.cover').show();
+        }
+    });
+    $('.cover').click(function(){
+        $(this).hide();
+        $('#wx-modal').hide();
+    })
+});
+</script>
+
+<body>
+    <div class="cover"></div>
+    <div id="wx-modal" style="display:none">请在浏览器打开页面!</div>
+    <div class="views" id="reportshare">
+        <div class="top-address ui-border-b">
+            <a href="http://www.wowkitchen.cn/">
+                <i class="am-icon-cx-49"></i>
+                <span>wowkitchen.cn</span>
+            </a>
+        </div>
+        <div class="body">
+            <img src="../assets/imgs/share_bg.png" alt="望厨~专业服务">
+        </div>
+        <div class="download">
+            <div class="icons">
+                <img src="../assets/imgs/share_icon.png" alt="">
+                <div class="title">望厨</div>
+                <div class="txt">探索厨房美学</div>
+            </div>
+            <a class="dl-btn">立即下载</a>
+        </div>
+    </div>
+</body>
+
+</html>

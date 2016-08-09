@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="m am-touch js cssanimations">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="assets/css/amazeui.css">
+    <link rel="stylesheet" href="assets/css/amaze.min.css">
+    <link rel="stylesheet" href="assets/css/ucj.css">
+    <title>优厨家</title>
+</head>
+
+<body>
+    <!--最外层容器，用于整体销毁，包含主场景和全局模块-->
+    <div id="main">
+        <!--内部主场景容器，包含顶部和底部导航内容-->
+        <div class="am-page" id="m-main">
+            <!--顶部内容-->
+            <!--商城顶部搜索条-->
+            <div class="am-g m-serch">
+                <div class="am-u-sm-2">
+                    <i class="am-icon-cx-31"></i>
+                </div>
+                <div class="am-u-sm-5">
+                </div>
+                <div class="am-u-sm-5">
+                    <a href=""><i class="am-icon-cx-27"></i></a>
+                    <a href=""><i class="am-icon-cx-27"></i></a>
+                    <a href=""><i class="am-icon-cx-27"></i></a>
+                </div>
+            </div>
+            <!--End--顶部内容-->
+
+            <!--主要内容------------------------- >-->
+
+            <div class="m-detail views wrapper" id="wrapper">
+                <div class="mViews" id="mViews">
+                    <!--商城首页-->
+                    <div id="m-detail-title" class="am-container">
+                        <div class="am-slider am-slider-a1">
+                            <ul class="am-slides">
+                                <li>
+                                    <img src="assets/imgs/ad_i_0.jpg">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="m-detail-pdName">
+                            <span class="product-name">西门子 SN65M031T1 洗碗机西门子 SN65M031T1 洗碗机</span>
+                        </div>
+                        <div class="m-detail-price">
+                            <span class="price">￥8,889</span>
+                            <span class="oldPrice">￥10,000</span>
+                            <div class="numedt">
+                                <span class="numedtA" dataVal=""><i class="am-icon-cx-40"></i></span>
+                                <span class="numedtB">1</span>
+                                <span class="numedtC" dataVal=""><i class="am-icon-cx-41"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-detail-basicInfo">
+                        <h2>产品参数</h2>
+                        <ul>
+                            <li>
+                                <i class="am-icon-cx-27"></i>
+                                <label>产地</label>
+                                <p>西门子 SN65M031T1 洗碗机</p>
+                            </li>
+                            <li>
+                                <i class="am-icon-cx-27"></i>
+                                <label>规格</label>
+                                <p>815*450*573</p>
+                            </li>
+                            <li>
+                                <i class="am-icon-cx-27"></i>
+                                <label class="info-lb">简介</label>
+                                <p class="info">西门子全自动洗碗机，强大的智能洗涤系统，轻松应对重油，强大的智能洗涤系统，轻松应对重油，强大的智能洗涤系统，轻松应对重油，强大的智能洗涤系统，轻松应对重油</p>
+                            </li>
+                            <li>
+                                <i class="am-icon-cx-27"></i>
+                                <label>到货时间</label>
+                                <p>预计三到五天</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="m-detail-special">
+                        <h2>特别说明</h2>
+                        <ul>
+                            <li>
+                                <label>关于发货</label>
+                                <p>西门子 SN65M031T1 洗碗机</p>
+                            </li>
+                            <li>
+                                <label>关于安装</label>
+                                <p>815*450*573</p>
+                            </li>
+                            <li>
+                                <label>特别提供</label>
+                                <p class="info">西门子全自动洗碗机，强大的智能洗涤系统，轻松应对重油，强大的智能洗涤系统，轻松应对重油，强大的智能洗涤系统，轻松应对重油，强大的智能洗涤系统，轻松应对重油</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space100"></div>
+                    <div class="space40"></div>
+                </div>
+            </div>
+            <!--End--主要内容-------------------->
+            <!--底部购买栏-->
+            <div id="m-cart-bar">
+                <div class="am-g">
+                    <div class="am-u-sm-10">
+                        <a href="#mall/mcart" class="cart-add">
+                            加入购物车
+                        </a>
+                    </div>
+                    <div class="am-u-sm-2">
+                       <a href="" class="buy"><i class="am-icon-cx-27"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!--End--底部导航-->
+        </div>
+
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script>
+    var myScroll;
+    $(function($) {
+        var IScroll = $.AMUI.iScroll;
+        myScroll = new IScroll('#wrapper', {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
+        });
+        $('.am-slider').flexslider({
+            start: function() {
+                myScroll.refresh();
+            }
+        });
+    })
+
+    document.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    }, false);
+</script>
+
+</html>

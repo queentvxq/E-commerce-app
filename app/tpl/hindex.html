@@ -1,0 +1,93 @@
+<div class="views" id="h-index" v-if="show" :transition="transitionName">
+    <header class="navbar icon-dark">
+        
+        <div class="am-u-sm-2 head-left">
+            <a v-on:click="clearSearchInfo()" class="nav-icon am-icon-cx-45"></a>
+        </div>
+        <div class="am-u-sm-8">
+            <h1 class="nav-title"><img src="assets/imgs/header.png" alt=""></h1>
+        </div>
+        <div class="am-u-sm-2 head-right">
+            <a href="#ucenter/umsg" class="nav-icon am-icon-cx-46"><span class="None act" v-bind:class="{ 'cxdot': new}"></span></a>
+        </div>
+    </header>
+    <div class="c-main" id="h_index">
+        <div>
+            <div class="am-slider am-slider-default myslider" id="myslider" style="height:{{midH}}">
+                <ul class="am-slides">
+                    <template v-if="advertisement">
+                        <template v-for="value in advertisement">
+                            <li id="advertisement{{value.id}}">
+                                <template v-if="value.type==1">
+                                    <template v-if="value.url==''">
+                                        <a><img style="height:{{midH}};width:auto" :src="value.imgurl" /></a>
+                                    </template>
+                                    <template v-else>
+                                        <a target="_blank" href="{{value.url}}"><img style="height:{{midH}};width:auto" :src="value.imgurl" /></a>
+                                    </template>
+                                </template>
+                                <template v-else>
+                                    <a href="#home/halbum/{{value.id}}"><img style="height:{{midH}};width:auto" :src="value.imgurl" /></a>
+                                </template>
+                            </li>
+                        </template>
+                    </template>
+                </ul>
+            </div>
+            <div id="wrapper" class="index-list">
+                <div class="wrap_index">
+                    <div class="collection">
+                        <div class="collection-title">品质生活</div>
+                        <ul class="collection-ul" id="collection" style="min-height:{{cH}}">
+                            <template v-if="anthology">
+                                <template v-for="value in anthology">
+                                    <li id="anthology{{value.id}}" style="width:{{cW}}">
+                                        <a href="#home/hpages/{{value.id}}">
+                                            <div>
+                                                <img style="height:{{cH}}" :src="value.previewImgUrl" alt="" />
+                                                <p class="title">{{value.name}}</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </template>
+                            </template>
+                        </ul>
+                    </div>
+                    <div class="recommend">
+                        <div class="recommend-title">
+                            <div class="title">精选商品</div>
+                        </div>
+                        <ul class="recommend-list">
+                            <template v-if="list">
+                                <template v-for="value in list">
+                                    <li>
+                                        <!--1f,0p-->
+                                        <template v-if="value.l.type===1">
+                                            <a href="#mall/service/{{value.l.id}}"><img style="height:{{midH}}" :src="value.l.imgrul" alt="" /></a>
+                                        </template>
+                                        <template v-else>
+                                            <a href="#mall/product/{{value.l.id}}"><img style="height:{{midH}}" :src="value.l.imgrul" alt="" /></a>
+                                        </template>
+
+                                        <div class="info">
+                                            <template v-if="value.l.type===1">
+                                                <div class="title" style="width:100%">{{value.l.name}}</span><span class="stimes">已服务{{value.l.count}}次</span></div>
+                                                <p class="price">￥{{value.l.memberprice}}</p>
+                                            </template>
+                                            <template v-else>
+                                                <p class="title">{{value.l.name}}</p>
+                                                <p class="price">￥{{value.l.memberprice}}</p>
+                                                <div class="others product ui-border-radius"><span id="{{value.n}}" v-on:click="updatalike(value.l.id,value.l.iscollection,value.n)"
+                                                        class="am-icon-cx-48 " v-bind:class="{ 'liked': value.l.iscollection,'unliked':!value.l.iscollection }"></span></div>
+                                            </template>
+                                        </div>
+                                    </li>
+                                </template>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

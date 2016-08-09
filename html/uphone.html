@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" class="m am-touch js cssanimations">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="assets/css/amazeui.css">
+    <link rel="stylesheet" href="assets/css/amaze.min.css">
+    <link rel="stylesheet" href="assets/css/ucjcss/fonts.css">
+    <link rel="stylesheet" href="assets/css/ucjcss/app.css?r=1255">
+    <link rel="stylesheet" href="assets/css/ucjcss/ucenter.css?r=1255">
+    <title>优厨家</title>
+</head>
+
+<body>
+    <!--最外层容器，用于整体销毁，包含主场景和全局模块-->
+    <div id="main">
+        <!--内部主场景容器，包含顶部和底部导航内容-->
+        <div class="am-page" id="uc-login">
+            <!--顶部内容-->
+            <!--End--顶部内容-->
+            <!--主要内容------------------------->
+            <div class="views">
+                <!--用户中心首页-->
+                <div class="am-container" id="u_login">
+                    <div class="u_login_bg">
+                    </div>
+                    <div class="am-containe" id="u_login_main">
+                        <div class="am-tabs cx-tabs"  data-am-tabs="{noSwipe: 1}">
+                            <ul class="am-tabs-nav am-nav am-nav-tabs cx-tbnav">
+                                <li class="am-active"><a href="#tab1">绑定手机</a></li>
+                            </ul>
+                            <div class="am-tabs-bd">
+                                <div class="am-tab-panel am-active" id="tab1">
+                                    <form class="am-form am-form-horizontal cx-form">
+                                        <div class="am-form-group">
+                                            <label for="doc-ipt-3" class="am-u-sm-2 am-form-label"><i class="am-icon-cx-3"></i></label>
+                                            <div class="am-u-sm-10">
+                                                <input type="number" id="doc-ipt-3" placeholder="请输入手机号码">
+                                            </div>
+                                        </div>
+                                        <div class="am-form-group">
+                                            <label for="doc-ipt-pwd-2" class="am-u-sm-2 am-form-label"><i class="am-icon-cx-19"></i></label>
+                                            <div class="am-u-sm-6">
+                                                <input type="password" id="doc-ipt-pwd-2" placeholder="请输入验证码">
+                                            </div>
+                                            <div class="am-u-sm-4"><a href="" class="takVad" id="takVad">获取验证码</a></div>
+                                        </div>
+                                        <div class="am-form-group">
+                                            <div class="am-u-sm-10 am-u-sm-offset-1">
+                                                <button type="submit" class="am-btn am-btn-default cx-btn-sbmt am-round">确定</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End--主要内容-------------------->
+        </div>
+        <!--End--内部主场景容器，包含顶部和底部导航内容-->
+        <!--End--最外层容器，用于整体销毁，包含主场景和全局模块-->
+        <!--底部导航-->
+        <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="navbar_bm" cxid="cx_b1">
+            <ul class="am-navbar-nav am-cf am-avg-sm-4">
+                <li>
+                    <a href="#">
+                        <span class="am-icon-cx-29"></span>
+                        <span class="am-navbar-label">商城</span>
+                    </a>
+                </li>
+                <li data-am-navbar-share>
+                    <a href="#">
+                        <span class="am-icon-cx-30"></span>
+                        <span class="am-navbar-label">服务</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="act">
+                        <span class="am-icon-cx-31"></span>
+                        <span class="am-navbar-label">我的</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--End--底部导航-->
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+
+</html>

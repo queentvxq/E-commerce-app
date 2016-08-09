@@ -1,0 +1,417 @@
+#m_main {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*商城首页*/
+
+#m_index {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+#wrapper {
+    /*overflow-y: auto;*/
+}
+
+
+/*商城首页--顶部搜索条目--*/
+
+#m-main .m-serch {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.8rem;
+    color: #000000;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 0.5px #F1F1F1 solid;
+    background-color: #fff;
+}
+
+#m-main .m-serch .am-icon-cx-27:before {
+    font-weight: bold;
+}
+
+#m-main .m-serch a {
+    color: #777777;
+    font-size: 2.2rem;
+    line-height: 50px;
+}
+
+#m-main .m-serch .goods {
+    font-size: 1.8rem
+}
+
+#m-main .m-serch h2 {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*商城首页--通栏广告--*/
+
+#m-index-ad {
+    min-height: 16rem;
+}
+
+#m-index-ad .am-slider {}
+
+#m-index-ad .am-slider-a1 .am-control-nav li a {
+    width: 1rem;
+    height: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#m-index-ad .am-slider-a1 .am-control-nav li a.am-active {
+    background-color: #ffffff;
+}
+
+
+/*商城首页--产品类别导航--*/
+
+#m-index-pcnav {
+    padding: 0.5rem 0;
+    height: 6.6rem;
+}
+
+#m-index-pcnav .box {
+    text-align: center;
+}
+
+#m-index-pcnav .box a {
+    display: block;
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+#m-index-pcnav .box a i {
+    font-size: 2.8rem;
+    height: 2.6rem;
+}
+
+#m-index-pcnav .box span {
+    display: block;
+}
+
+
+/*商城首页--推荐商品列表*/
+
+#m-index-pcs ul {
+    padding: 0;
+    margin: 0;
+}
+
+#m-index-pcs ul>li {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    min-height: 18rem;
+}
+
+#m-index-pcs .pcimg {
+    width: 100%;
+    position: relative;
+}
+
+#m-index-pcs .pcimg>a {
+    min-height: 15rem;
+}
+
+#m-index-pcs .pcimg img {
+    width: 100%
+}
+
+#m-index-pcs .pcCart {
+    position: relative;
+    bottom: 4rem;
+    text-align: right;
+}
+
+#m-index-pcs .pcimg .cart {
+    display: inline-block;
+    min-width: 11rem;
+    height: 3rem;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+#m-index-pcs .pcimg .cart i {
+    font-size: 1.6rem;
+    padding-right: 0.5rem;
+    margin-right: 0.5rem;
+    border-right: 1px #eeeeee solid;
+}
+
+#m-index-pcs .pcimg .cart span {
+    color: #ff7f00;
+    font-size: 1.6rem;
+}
+
+#m-index-pcs .pcTit {
+    height: 2rem;
+    background-color: #ffffff;
+    padding: 0.5rem 1rem;
+    position: relative;
+    bottom: 2.5rem;
+    left: 1rem;
+}
+
+#m-index-pcs .pcTit .itemTit {
+    display: inline-block;
+    margin-right: 1.2rem;
+    padding-right: 1.2rem;
+    border-right: 1px #404040 solid;
+    height: 1.5rem;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    line-height: 1.5rem;
+}
+
+#m-index-pcs .pcTit .itemCon {
+    vertical-align: middle;
+    line-height: 1.5rem;
+    text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 90%;
+    display: inline-block;
+}
+
+
+/*搜索条*/
+
+#msearch_bar {
+    width: 100%;
+    position: absolute;
+    z-index: 111;
+    height: 100%
+}
+#msearch_bar.act{
+    height: 100%;
+    background-color: #fff;
+}
+#msearch_bar #clearHBtn{
+    color: #777;
+    display: inline-block;
+    padding: 2px 10px;
+    height: auto;
+    line-height: 1.5rem;
+}
+#msearch_bar #searchfor{
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.6rem;
+    color: #000000;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 0.5px #F1F1F1 solid;
+    background-color: #fff;
+}
+#msearch_bar #searchfor .icon{
+    font-size: 2.2rem;
+    color: #777;
+}
+#msearch_bar #inputSearch {
+    width: 100%;
+    border: none;
+    font-size: 1.4rem;
+    position: relative;
+    padding: 0;
+    height: 25px;
+    margin: 10px 0;
+    display: block;
+}
+#msearch_bar .am-u-sm-2{
+    font-size: 1.4rem;
+}
+#msearch_bar #searchHistory{
+    background: #f5f7fb;
+    padding-bottom: 1rem;    
+    position: absolute;
+    top: 100px;
+    bottom: 48px;
+    width: 100%;
+    height: auto;
+    z-index: 200;
+}
+#msearch_bar .type-select{
+    text-align: center;
+    font-size: 1.6rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    z-index: 200;
+}
+#msearch_bar .type-select > div{
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+    background: #fff;
+}
+#msearch_bar .type-select .active{
+    border-bottom: 4px solid #000;
+    color: #000;
+
+}
+#msearch_bar #closedSearchBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    padding: 0;
+    font-size: 2rem;
+    color: #d0d0d0;
+    width: 5rem;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+}
+#msearch_bar .clearsr {
+    position: relative;
+    font-size: 1.5rem;
+    color: #999;
+    border-bottom: #e5e5e5 1px solid;
+    padding: 0.6rem 0;
+    clear: both;
+    background: #fff;
+}
+#msearch_bar #searchmylist{
+    height: auto;
+    background: #fff;
+}
+#msearch_bar .searchHlist li{
+    position: relative;
+    font-size: 1.5rem;
+    color: #333;
+    border-bottom: #e5e5e5 1px solid;
+    padding:0.6rem 0;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    white-space: pre;
+}
+#msearch_bar .searchHlist li.none{
+    display: none;
+}
+#msearch_bar  .moreBtn{
+    text-align: center;
+    color: #999;
+    line-height: 2.2;
+}
+#msearch_bar .searchHlist li:last-child{
+    border-bottom: none;
+}
+#msearch_bar .spaceSearch{
+    height: 1.2rem;
+    background-color: #f5f7fb;
+}
+#msearch_bar .spaceHotTit{
+    position: relative;
+    font-size: 1.5rem;
+    color: #999;
+    padding: 0.6rem 0;    
+    padding-left: 1rem;
+    background-color: #fff;
+    margin-top: 0.5rem
+}
+#msearch_bar .searchHot{
+    padding: 0.5rem;
+    background-color: #fff;
+}
+#msearch_bar .searchHot li{
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
+    margin: 0.5rem;
+    border: 1px #eaeaea dashed;
+    font-size: 1.5rem;
+    background-color: #f3f3f3;
+}
+#msearch_bar #m_result{
+    position: absolute;
+    top: 100px;
+    bottom: 50px;
+    height: auto;
+    z-index: 0;
+    overflow: hidden;
+    background: #f5f7fb;
+}
+#msearch_bar #m_result .nolist{
+    text-align: center;
+    color: #ccc;
+}
+#msearch_bar #m_result .nolist i{
+    font-size: 4rem;
+    margin-top: 35%;
+
+}
+#msearch_bar #m_result .nolist p{
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+#m-main .circle{
+    display: inline-block;
+    border: 1px solid #ff330f;
+    background: #ff330f;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    position: fixed;
+    top: .8rem;
+    right: .7rem;
+    color: #fff;
+    font-weight: normal;
+}
+#m_main #mcartnum{
+    line-height: 1.3;
+}
+/*专题*/
+#sb_index{
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 0;
+    bottom: 49px;
+}
+#sb_index img{
+    max-width: 100%;
+}
+#sb_index .remark{
+    padding: 1rem;
+}
+#sb_index ul li{
+    margin: 0.5rem 0;
+}
+#sb_index .pcimg img{
+    width: 100%;
+}
+/*
+
+
+
+
+-webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+
+
+
+
+*/

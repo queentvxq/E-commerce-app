@@ -1,0 +1,614 @@
+@font-face {
+    font-family: 'icomoon-cx';
+    src:    url('../fonts/icomoon.eot?8mnorp');
+    src:    url('../fonts/icomoon.eot?8mnorp#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?8mnorp') format('truetype'),
+        url('../fonts/icomoon.woff?8mnorp') format('woff'),
+        url('../fonts/icomoon.svg?8mnorp#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class*="am-icon-cx-"]:before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon-cx' !important;
+    font:"icomoon-cx";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+[class*="ci-"] i{
+	font-style:normal;
+}
+[class*="ci-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon-cx' !important;
+    font:"icomoon-cx";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+	display:inline-table;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.am-icon-cx-1:before {
+    content: "\e901";
+}
+.am-icon-cx-2:before {
+    content: "\e902";
+}
+.am-icon-cx-3:before {
+    content: "\e903";
+}
+.am-icon-cx-4:before {
+    content: "\e904";
+}
+.am-icon-cx-5:before {
+    content: "\e905";
+}
+.am-icon-cx-6:before {
+    content: "\e906";
+}
+.am-icon-cx-7:before {
+    content: "\e907";
+}
+.am-icon-cx-8:before {
+    content: "\e908";
+}
+.am-icon-cx-9:before {
+    content: "\e909";
+}
+.am-icon-cx-10:before {
+    content: "\e910";
+}
+.am-icon-cx-11:before {
+    content: "\e911";
+}
+.am-icon-cx-12:before {
+    content: "\e912";
+}
+.am-icon-cx-13:before {
+    content: "\e913";
+}
+.am-icon-cx-14:before {
+    content: "\e914";
+}
+.am-icon-cx-15:before {
+    content: "\e915";
+}
+.am-icon-cx-16:before {
+    content: "\e916";
+}
+.am-icon-cx-17:before {
+    content: "\e917";
+}
+.am-icon-cx-18:before {
+    content: "\e918";
+}
+.am-icon-cx-19:before {
+    content: "\e919";
+}
+.am-icon-cx-20:before {
+    content: "\e920";
+}
+.am-icon-cx-21:before {
+    content: "\e921";
+}
+.am-icon-cx-22:before {
+    content: "\e922";
+}
+.am-icon-cx-23:before {
+    content: "\e923";
+}
+.am-icon-cx-24:before {
+    content: "\e924";
+}
+.am-icon-cx-25:before {
+    content: "\e925";
+}
+.am-icon-cx-26:before {
+    content: "\e926";
+}
+.am-icon-cx-27:before {
+    content: "\e927";
+}
+.am-icon-cx-28:before {
+    content: "\e928";
+}
+.am-icon-cx-29:before {
+    content: "\e929";
+}
+.am-icon-cx-30:before {
+    content: "\e930";
+}
+.am-icon-cx-31:before {
+    content: "\e931";
+}
+.am-icon-cx-32:before {
+    content: "\e932";
+}
+.am-icon-cx-33:before {
+    content: "\e933";
+}
+.am-icon-cx-34:before {
+    content: "\e934";
+}
+.am-icon-cx-35:before {
+    content: "\e935";
+}
+.am-icon-cx-36:before {
+    content: "\e936";
+}
+.am-icon-cx-37:before {
+    content: "\e937";
+}
+.am-icon-cx-38:before {
+    content: "\e938";
+}
+.am-icon-cx-39:before {
+    content: "\e939";
+}
+.am-icon-cx-40:before {
+    content: "\e940";
+}
+.am-icon-cx-41:before {
+    content: "\e941";
+}
+.am-icon-cx-42:before {
+    content: "\e942";
+}
+.am-icon-cx-43:before {
+    content: "\e943";
+}
+.am-icon-cx-44:before {
+    content: "\e944";
+}
+.am-icon-cx-45:before {
+    content: "\e945";
+}
+.am-icon-cx-46:before {
+    content: "\e946";
+}
+.am-icon-cx-47:before {
+    content: "\e947";
+}
+.am-icon-cx-48:before {
+    content: "\e948";
+}
+.am-icon-cx-49:before {
+    content: "\e949";
+}
+.am-icon-cx-50:before {
+    content: "\e950";
+}
+.am-icon-cx-51:before {
+    content: "\e951";
+}
+.am-icon-cx-52:before {
+    content: "\e952";
+}
+.am-icon-cx-53:before {
+    content: "\e953";
+}
+.am-icon-cx-54:before {
+    content: "\e954";
+}
+.am-icon-cx-55:before {
+    content: "\e955";
+}
+.am-icon-cx-56:before {
+    content: "\e956";
+}
+.am-icon-cx-57:before {
+    content: "\e957";
+}
+.am-icon-cx-58:before {
+    content: "\e958";
+}
+.am-icon-cx-59:before {
+    content: "\e959";
+}
+.am-icon-cx-60:before {
+    content: "\e960";
+}
+.am-icon-cx-61:before {
+    content: "\e961";
+}
+.am-icon-cx-62:before {
+    content: "\e962";
+}
+.am-icon-cx-63:before {
+    content: "\e963";
+}
+.am-icon-cx-64:before {
+    content: "\e964";
+}
+.am-icon-cx-65:before {
+    content: "\e965";
+}
+.am-icon-cx-66:before {
+    content: "\e966";
+}
+.am-icon-cx-67:before {
+    content: "\e967";
+}
+.am-icon-cx-68:before {
+    content: "\e968";
+}
+.am-icon-cx-69:before {
+    content: "\e969";
+}
+.am-icon-cx-70:before {
+    content: "\e970";
+}
+.am-icon-cx-71:before {
+    content: "\e971";
+}
+.am-icon-cx-72:before {
+    content: "\e972";
+}
+.am-icon-cx-73:before {
+    content: "\e973";
+}
+.am-icon-cx-74:before {
+    content: "\e974";
+}
+.am-icon-cx-75:before {
+    content: "\e975";
+}
+.am-icon-cx-76:before {
+    content: "\e976";
+}
+.am-icon-cx-77:before {
+    content: "\e977";
+}
+.am-icon-cx-78:before {
+    content: "\e978";
+}
+.am-icon-cx-79:before {
+    content: "\e979";
+}
+.am-icon-cx-80:before {
+    content: "\e980";
+}
+.am-icon-cx-81:before {
+    content: "\e981";
+}
+.am-icon-cx-82:before {
+    content: "\e982";
+}
+.am-icon-cx-83:before {
+    content: "\e983";
+}
+.am-icon-cx-84:before {
+    content: "\e984";
+}
+.am-icon-cx-85:before {
+    content: "\e985";
+}
+.am-icon-cx-86:before {
+    content: "\e986";
+}
+.am-icon-cx-87:before {
+    content: "\e987";
+}
+.am-icon-cx-88:before {
+    content: "\e988";
+}
+.am-icon-cx-89:before {
+    content: "\e989";
+}
+.am-icon-cx-90:before {
+    content: "\e990";
+}
+.am-icon-cx-91:before {
+    content: "\e991";
+}
+.am-icon-cx-92:before {
+    content: "\e992";
+}
+.am-icon-cx-93:before {
+    content: "\e993";
+}
+.am-icon-cx-94:before {
+    content: "\e994";
+}
+.am-icon-cx-95:before {
+    content: "\e995";
+}
+.am-icon-cx-96:before {
+    content: "\e996";
+}
+.am-icon-cx-97:before {
+    content: "\e997";
+}
+.am-icon-cx-98:before {
+    content: "\e998";
+}
+.am-icon-cx-99:before {
+    content: "\e999";
+}
+.am-icon-cx-100:before {
+    content: "\f000";
+}
+.am-icon-cx-101:before {
+    content: "\f001";
+}
+.am-icon-cx-102:before {
+    content: "\f002";
+}
+.am-icon-cx-103:before {
+    content: "\f003";
+}
+/*多个path的icon*/
+.ci-jiadian .path1:before {
+    content: "\e900";
+    color: rgb(4, 0, 0);
+}
+.ci-jiadian .path2:before {
+    content: "\e90a";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-jiadian .path3:before {
+    content: "\e90b";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-chuju .path1:before {
+    content: "\e90c";
+    color: rgb(4, 0, 0);
+}
+.ci-chuju .path2:before {
+    content: "\e90d";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-chuju .path3:before {
+    content: "\e90e";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-chuju .path4:before {
+    content: "\e90f";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-chuju .path5:before {
+    content: "\e91a";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-chuju .path6:before {
+    content: "\e91b";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-chuju .path7:before {
+    content: "\e91c";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-chuju .path8:before {
+    content: "\e91d";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-chuju .path9:before {
+    content: "\e91e";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+
+.ci-jinshui .path1:before {
+    content: "\e91f";
+    color: rgb(4, 0, 0);
+}
+.ci-jinshui .path2:before {
+    content: "\e92a";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-jinshui .path3:before {
+    content: "\e92b";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-jinshui .path4:before {
+    content: "\e92c";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-jinshui .path5:before {
+    content: "\e92d";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-jinshui .path6:before {
+    content: "\e92e";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-jinshui .path7:before {
+    content: "\e92f";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-jinshui .path8:before {
+    content: "\e93a";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-jinshui .path9:before {
+    content: "\e93b";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-qingjie .path1:before {
+    content: "\e93c";
+    color: rgb(26, 26, 26);
+}
+.ci-qingjie .path2:before {
+    content: "\e93d";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-qingjie .path3:before {
+    content: "\e93e";
+    margin-left: -1em;
+    color: rgb(26, 26, 26);
+}
+.ci-qingjie .path4:before {
+    content: "\e93f";
+    margin-left: -1em;
+    color: rgb(26, 26, 26);
+}
+.ci-qingjie .path5:before {
+    content: "\e94a";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-qingjie .path6:before {
+    content: "\e94b";
+    margin-left: -1em;
+    color: rgb(26, 26, 26);
+}
+.ci-qingjie .path7:before {
+    content: "\e94c";
+    margin-left: -1em;
+    color: rgb(26, 26, 26);
+}
+.ci-qingjiebaoyang .path1:before {
+    content: "\e94d";
+    color: rgb(217, 217, 217);
+}
+.ci-qingjiebaoyang .path2:before {
+    content: "\e94e";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-qingjiebaoyang .path3:before {
+    content: "\e94f";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-qingjiebaoyang .path4:before {
+    content: "\e95a";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-jiancejiaoxue .path1:before {
+    content: "\e95b";
+    color: rgb(4, 0, 0);
+}
+.ci-jiancejiaoxue .path2:before {
+    content: "\e95c";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-jiancejiaoxue .path3:before {
+    content: "\e95d";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-jiancejiaoxue .path4:before {
+    content: "\e95e";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-jiancejiaoxue .path5:before {
+    content: "\e95f";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-jiancejiaoxue .path6:before {
+    content: "\e96a";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-jiancejiaoxue .path7:before {
+    content: "\e96b";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-jiancejiaoxue .path8:before {
+    content: "\e96c";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-jiancejiaoxue .path9:before {
+    content: "\e96d";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-jiancejiaoxue .path10:before {
+    content: "\e96e";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-jiancejiaoxue .path11:before {
+    content: "\e96f";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-dingzhishengji .path1:before {
+    content: "\e97a";
+    color: rgb(217, 217, 217);
+}
+.ci-dingzhishengji .path2:before {
+    content: "\e97b";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-dingzhishengji .path3:before {
+    content: "\e97c";
+    margin-left: -1em;
+    color: rgb(217, 217, 217);
+}
+.ci-dingzhishengji .path4:before {
+    content: "\e97d";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-dingzhishengji .path5:before {
+    content: "\e97e";
+    margin-left: -1em;
+    color: rgb(4, 0, 0);
+}
+.ci-zuhefuwu .path1:before {
+    content: "\e97f";
+    color: rgb(217, 217, 217);
+}
+.ci-zuhefuwu .path2:before {
+    content: "\e98a";
+    margin-left: -1em;
+    color: rgb(26, 26, 26);
+}
+.ci-zuhefuwu .path3:before {
+    content: "\e98b";
+    margin-left: -1em;
+    color: rgb(26, 26, 26);
+}
+.ci-zuhefuwu .path4:before {
+    content: "\e98c";
+    margin-left: -1em;
+    color: rgb(26, 26, 26);
+}
+.ci-zuhefuwu .path5:before {
+    content: "\e98d";
+    margin-left: -1em;
+    color: rgb(26, 26, 26);
+}
+
+
+
+

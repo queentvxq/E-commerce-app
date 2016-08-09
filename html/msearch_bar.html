@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="m am-touch js cssanimations">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="assets/css/amazeui.css">
+    <link rel="stylesheet" href="assets/css/amaze.min.css">
+    <link rel="stylesheet" href="assets/css/ucj.css">
+    <title>优厨家</title>
+</head>
+
+<body>
+    <!--最外层容器，用于整体销毁，包含主场景和全局模块-->
+    <div id="main">
+        <!--内部主场景容器，包含顶部和底部导航内容-->
+        <div class="am-page" id="m-main">
+            <div id="msearch_bar">
+                <div id="searchfor" class="am-g m-serch">
+                    <div class="am-u-sm-2">
+                        <i class="am-icon-cx-31"></i>
+                    </div>
+                    <div class="am-u-sm-8">
+                        <input id="inputSearch" type="search" value="" placeholder="请输入想要搜索的关键词" />
+                        <a id="closedSearchBtn"><i class="am-icon-times-circle"></i></a>
+                    </div>
+                    <div class="am-u-sm-2">取消</div>
+                </div>
+                
+                <div id="searchHistory">
+                    <div class="type-select">
+                        <div class="am-u-sm-6 active">服务</div>
+                        <div class="am-u-sm-6">商城</div>
+                    </div>
+                    <div class="clearsr am-g">
+                        <div class="am-u-sm-8">历史记录</div>
+                        <div class="am-u-sm-4 am-text-right"><a id="clearHBtn">清除</a></div>
+                    </div>
+                    <div id="searchmylist">
+                        <ul class="searchHlist">
+                            <li class="strkword">西门子冰箱</li>
+                            <li class="strkword">蒸箱</li>
+                            <li class="strkword">咖啡机</li>
+                            <li class="moreBtn">查看全部</li>
+                        </ul>
+                    </div>
+                    <div class="spaceHotTit">热门搜索</div>
+                    <ul class="searchHot">
+                        <li class="hotkword">西门子冰箱</li>
+                        <li class="hotkword">蒸箱</li>
+                        <li class="hotkword">咖啡机</li>
+                        <li class="hotkword">油烟机</li>
+                        <li class="hotkword">净水器</li>
+                        <li class="hotkword">咖啡机</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--End--内部主场景容器，包含顶部和底部导航内容-->
+        <!--End--最外层容器，用于整体销毁，包含主场景和全局模块-->
+        <!--底部导航-->
+        <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="navbar_bm" cxid="cx_b1">
+            <ul class="am-navbar-nav am-cf am-avg-sm-4">
+                <li>
+                    <a href="#" class="act">
+                        <span class="am-icon-cx-28"></span>
+                        <span class="am-navbar-label">商城</span>
+                    </a>
+                </li>
+                <li data-am-navbar-share>
+                    <a href="#">
+                        <span class="am-icon-cx-29"></span>
+                        <span class="am-navbar-label">服务</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="am-icon-cx-30"></span>
+                        <span class="am-navbar-label">我的</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--End--底部导航-->
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script>
+    var myScroll;
+    $(function($) {})
+
+</script>
+
+</html>

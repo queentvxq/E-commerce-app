@@ -1,0 +1,111 @@
+<div class="views" id="u_order" v-if="show" :transition="transitionName">
+    <!--用户中心首页-->
+    <com-utopbar v-ref:utopbar title="我的订单"></com-utopbar>
+    <div class="uviews bodybg1" id="u_order_sc">
+        <div class="odnav">
+            <template v-if="isGcs==1">
+
+                <ul class="am-avg-sm-2 ui-border-b">
+                    <li :class="{'act':sc }">
+                        <a @click="selectData(3)">进行中</a>
+                    </li>
+                    <li :class="{'act':sd }">
+                        <a @click="selectData(4)">已完成</a>
+                    </li>
+                </ul>
+            </template>
+            <template v-else>
+                <ul class="am-avg-sm-4 ui-border-b">
+                    <li :class="{'act':sa }">
+                        <a @click="selectData(1)">全部</a>
+                    </li>
+                    <li :class="{'act':sb }">
+                        <a @click="selectData(2)">待付款</a>
+                    </li>
+                    <li :class="{'act':sc }">
+                        <a @click="selectData(3)">进行中</a>
+                    </li>
+                    <li :class="{'act':sd }">
+                        <a @click="selectData(4)">已完成</a>
+                    </li>
+                </ul>
+            </template>
+        </div>
+        <div class="uviews" id="u_order_list">
+            <ul class="u_order_item">
+                <template v-if="list.length>0">
+                    <template v-for="(index, value) in list">
+                        <li class="u_order_splist">
+                            <div class="u_od_tb"></div>
+                            <div class="u_od_con ">
+                                <div class="am-g tongji ui-border-b">
+                                    <template v-if="value.orderstatus==1">
+                                        <div class="am-u-sm-7 od_state">
+                                            {{value.orderstatuname}}
+                                            <span class="odclock">
+                                        <i class="am-icon-clock-o"></i>
+                                        {{value.surplutime}}
+                                        </span>
+                                        </div>
+                                    </template>
+                                    <template v-else>
+                                        <template v-if="isGcs==1">
+                                            <div class="am-u-sm-7 workodno">
+                                                订单号：{{value.ordernumber}}
+                                            </div>
+                                        </template>
+                                        <template v-else>
+                                            <div class="am-u-sm-7">
+                                                {{value.orderstatuname}}
+                                            </div>
+                                        </template>
+                                    </template>
+                                    <div class="am-u-sm-5 hjprice">￥{{value.payamount}}</div>
+                                </div>
+                                <template v-for="(i, shop) in value.listshop">
+                                    <a @click="goPage" href="#ucenter/uordermx/{{value.ordernumber}}" class="sp_item ui-border-b">
+                                        <div class="img">
+                                            <img src="{{shop.coverimgurl}}" class="img" />
+                                        </div>
+                                        <div class="tit">
+                                            <h3>{{shop.productname}}</h3>
+                                            <span class="spec">价格：￥{{shop.payprice}}</span>
+                                            <span class="spec">数量：{{shop.productcount}}</span>
+                                        </div>
+                                        <div class="spstate">{{shop.statesname}}</div>
+                                    </a>
+                                </template>
+                                <template v-for="(i, service) in value.listservice">
+                                    <a @click="goPage" href="#ucenter/uordermx/{{value.ordernumber}}" class="sp_item ui-border-b">
+                                        <div class="img">
+                                            <img src="{{service.coverimgurl}}" class="img" />
+                                        </div>
+                                        <div class="tit">
+                                            <h3>{{service.servicename}}</h3>
+                                            <span class="spec">价格：￥{{service.payprice}}</span>
+                                        </div>
+                                    </a>
+                                </template>
+                                <div class="am-g odOper">
+                                    <div class="am-u-sm-12 odActBtn">
+                                        <template v-for="(i, operation) in value.listoperation">
+                                            <template v-if="operation.id == 1">
+                                                <a @click="Aorder(index,operation,$event)" class="am-btn cx-btn red-brn ui-border">付款</a></template>
+                                            <template v-else>
+                                                <a @click="Aorder(index,operation,$event)" class="am-btn cx-btn ui-border">{{operation.orderoperationname}}</a>
+                                            </template>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </template>
+                </template>
+                <li class="odNone" v-if="ne">
+                    <div><i class="{{nocs}}"></i></div>
+                    <div>{{notx}}</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

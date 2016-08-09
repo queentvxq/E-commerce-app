@@ -1,0 +1,610 @@
+/*个人设置*/
+#u_set select{
+    border: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    direction: rtl;
+    background: #fff;
+}
+#u_set select option {
+    direction: ltr;
+    background: #fff;
+}
+#u_set input{
+    border: 0;
+    width: 100%;
+    text-align: right;
+}
+#u_set .usitemcon {
+    display: inline-block;
+    vertical-align: middle;
+    height: 3rem;
+}
+
+#u_set .usitemcon .u_name {
+    line-height: 2.8rem;
+    color: #999999;
+}
+
+#u_set .uimg {
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-block;
+    vertical-align:top;
+}
+
+#u_set  .uimg img {
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#u_set .usitem:hover {
+    background-color: #f5f5f5;
+}
+
+#u_set #nickname {
+    border: none;
+    height: 2.8rem;
+    line-height: 2.2rem;
+}
+#u_set_hd{
+    background: #000;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    
+}
+#u_set_hd #loadImgBtn {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.3rem;
+    padding: 0.6rem;
+    font-size: 2rem;
+    color: #fff;
+}
+.xuanzhuan{
+    color: #fff;
+    position: absolute;
+    right: 2.3rem;
+    top: 2.5rem;
+    font-size: 2rem;
+    padding: 0.6rem;
+}
+#u_set_hd .img-select-box{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7rem;
+    background: #000;
+}
+#u_set_hd .img-select {
+    bottom: 2.6rem;
+    width: 85%;
+    margin: 0 7.5%;
+    position: absolute;
+    border: 1px solid #313131;
+    border-radius: 1.5rem;
+}
+#u_set_hd .img-select div{
+    float: left;
+    color: #fff;
+    font-size: 1.6rem;
+    width: 50%;
+}
+#u_set_hd .img-select #cancel{
+    border-right: 1px solid #313131;
+}
+.u_sex_select {
+    display: inline-block;
+}
+
+.u_sex_tit {
+    display: inline-block;
+    padding-right: 2rem;
+    margin-right: 4rem;
+}
+
+.u_sex_select .sex {
+    padding: 0.4rem 1.5rem;
+    background-color: #e5e5e5;
+    display: inline-block;
+    border-radius: 9999px;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+.u_sex_select .act {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.usitemcon #pwd {
+    border: none;
+    background: transparent;
+    height: 3rem;
+}
+
+.jiantou i {
+    float: right;
+    margin-top: 0.5rem;
+}
+
+
+/*消息列表*/
+#u_msg_list{
+    top:50px;
+}
+#u_msg {
+    padding: 0;
+}
+
+#u_msg .usitem {
+    padding: 1.8rem  1.8rem 0 1.8rem;
+    position: relative;
+}
+#u_msg .usitem:first-child{
+    padding-top: 1.8rem;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+}
+#u_msg .usitem .msgicon{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: #f74c31 1px solid;
+    color: #f74c31;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 2rem;
+}
+#u_msg .usitem .msgicon img{
+    max-width: 100%;
+}
+#u_msg .usitem .u_ms_main{
+    padding: 0 1.8rem;
+    background-color: #fff;
+    position: relative;
+    top: 0;
+    left: 3rem;
+    margin-right: 2.8rem;
+    height: auto;
+}
+#u_msg .usitem .usitem_con{
+    padding-bottom: 1rem;
+}
+#u_msg .usitem .usitem_con p{
+    margin: 0;
+}
+#u_msg .usitem .usitem_con_m {
+    font-size: 1.5rem;
+    color: #333;
+    padding: 2rem 0 0 0;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box; 
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 6.2rem;
+}
+#u_msg .usitem.act .usitem_con_m {
+    display:block;
+    max-height: 100%;
+}
+#u_msg .usitem.read .msgicon{
+    color: #333;
+    border-color: #333;
+}
+#u_msg .usitem .usAct {
+    line-height: 2rem;
+    color: #c0c0c0;
+    height: 2.5rem;
+    text-align: left;
+    
+}
+#u_msg .usitem .usAct::after{
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    font: normal normal normal 1.6rem/1 FontAwesome,sans-serif;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    right: 1.5rem;
+    color: #ccc;
+    bottom: 0.6rem;
+    margin-top: -8px;
+    font-family: icomoon-cx!important;
+    content: "\e905";
+    font-size: 1.2rem;
+}
+}
+#u_msg .usitem.act .usAct::after{
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    color:#000;
+}
+#u_msg .usitem .htime {
+    font-size: 1.2rem;
+}
+
+
+
+#u_msg .usitem:hover {
+    background-color: #f5f5f5;
+}
+#u_msg .delNotice{
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    position: absolute;
+    right: -2px;
+    top: 0;
+    text-align: center;
+    color: #777;
+    vertical-align: middle;
+    z-index: 1111;
+}
+
+#u_msg .delNotice i{
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+/*地址设置*/
+
+#u_address {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
+#u_address .usitem {
+    padding: 1rem 0;
+    margin: 1rem 0;
+    background: #ffffff;
+}
+
+#u_address .usitem>.am-u-sm-2 {
+    padding-left: 0;
+    padding-right: 0;
+    vertical-align: middle;
+}
+
+#u_address .u_adress_def {
+    display: inline-block;
+    width: 15%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#u_address .u_adress_con {
+    display: inline-block;
+    width: 80%;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+#u_address .u_adress_con .c_name,
+#u_address .u_adress_con .c_tel {
+    color: #000000;
+    font-weight: bold;
+}
+
+#u_address .ud_edit {
+    display: inline-block;
+    width: 100%;
+    height: 2.3rem;
+    font-size: 1.6rem;
+    vertical-align: middle;
+    text-align: center;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    border-left: 1px #eeeeee solid;
+    color: #727272;
+}
+
+/*结算页面地址选择*/
+#u_address_select {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#u_address_select .usitem {
+    padding: 1rem 0;
+    margin: 1rem 0;
+    background: #ffffff;
+}
+
+#u_address_select .usitem>.am-u-sm-2 {
+    padding-left: 0;
+    padding-right: 0;
+    vertical-align: middle;
+}
+
+#u_address_select .u_adress_def {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;    
+    height: 100%;
+    margin-top: 20%;
+}
+
+#u_address_select .u_adress_con {
+    display: inline-block;
+    width: 80%;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+#u_address_select .u_adress_con .c_name,
+#u_address_select .u_adress_con .c_tel {
+    color: #000000;
+    font-weight: bold;
+}
+
+#u_address_select .ud_edit {
+    display: inline-block;
+    width: 100%;
+    height: 2.3rem;
+    font-size: 1.6rem;
+    vertical-align: middle;
+    text-align: center;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    border-left: 1px #eeeeee solid;
+    color: #727272;
+}
+
+
+/*新增地址*/
+
+#u_address_add {
+    padding: 1.5rem;
+    padding-top: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#u_address_add .usitem {
+    padding: 0.5rem 0;
+    border-bottom: 1px #e5e5e5 solid;
+}
+
+#u_address_add .usitem:hover {
+    background-color: #f5f5f5;
+}
+
+#u_address_add .usitem a {
+    display: block;
+    color: #999999;
+}
+
+#u_address_add label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #727272;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+#u_address_add .usitemcon {
+    display: inline-block;
+    vertical-align: middle;
+    height: 3rem;
+    padding-left: 1rem;
+    width: 90%;
+}
+
+#u_address_add .usitemcon input {
+    border: none;
+    background: transparent;
+    height: 3rem;
+    font-size: 1.2rem;
+    color: #727272;
+}
+
+#u_address_add .usitemcon input[type='text'] {
+    width: 100%;
+}
+
+input::-webkit-input-placeholder {
+    color: #c0c0c0 !important;
+}
+
+#u_adress_area {
+    position: relative;
+    background-color: #fff;
+    height: 100%;
+}
+
+#cellphone {
+    width: 100%;
+}
+
+.am-popup {
+    background: transparent;
+}
+
+.am-popup .am-popup-hd {
+    position: relative;
+    background: #000000;
+    height: 4rem;
+    font-size: 1.8rem;
+    color: #fff;
+    line-height: 4rem;
+    padding: 0 1rem;
+}
+
+.am-popup .am-popup-inner {
+    padding: 0;
+}
+
+.am-popup .am-popup-bd {
+    background: #fff;
+    height: 80%;
+    padding: 0;
+}
+
+.arealist {
+    padding: 0;
+    list-style: none;
+}
+
+.arealist li {
+    line-height: 3.2rem;
+    border-bottom: 1px #f2f2f2 solid;
+    color: #000;
+    font-size: 1.6rem;
+    padding: 0.3rem 1rem;
+}
+
+.arealist li:hover {
+    background-color: #efefef;
+}
+
+.arealist li a {
+    display: block;
+}
+
+#modal-area {
+    padding: 2rem;
+}
+
+
+/*反馈*/
+
+#u_feedback {
+    height: 100%;
+}
+
+#upFeed {    
+    position: absolute;
+    width: 100%;
+    top: 60px;
+}
+
+#u_feedback textarea {
+    border: none;
+    width: 100%;
+    height: 20rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    resize: none;
+    padding: 1rem;
+}
+#saveBtn{
+    display: block;
+    line-height: 49px;
+    padding-right: 5px;
+    font-size: 1.8rem;
+    height: 49px;
+}
+
+/*选择按钮*/
+
+.aDef {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 2.3rem;
+    height: 2.3rem;
+    border: 1px #eeeeee solid;
+    background-color: #ffffff;
+    color: #eeeeee;
+}
+
+.aDefAct {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 2.3rem;
+    height: 2.3rem;
+    border: 1px #000000 solid;
+    background-color: #000000;
+    color: #ffffff;
+}
+/*绑定账号*/
+#u_bdacc,#u_set{
+    top:50px;
+}
+.mu-list{
+    margin-top: .8rem;
+}
+.mu-list li{
+    position: relative;
+}
+.mu-list .fRight{
+    position: absolute;
+    right: 4rem;
+    top: 1.7rem;
+    width: 60%;
+    text-align: right;
+}
+.mu-list i,.mu-list .fRight{
+    color: #7f7f7f;    
+}
+#u_bdPhone{
+    padding: 1rem;
+    color: #000;
+    background: #fff;
+    margin-top: .8rem;
+}
+#u_bdPhone > div{
+    height: 6.5rem;
+    padding: 1rem 0;
+}
+#u_bdPhone > div i{
+    vertical-align: middle;
+}
+#u_bdPhone input{
+    border: 0;
+    width: 80%;
+    height: 3.5rem;
+}
+#u_bdPhone .fRight{
+    display: inline-block;
+    padding: .5rem 1rem;
+    vertical-align: middle;
+    color: #777;
+    position: absolute;
+    right: 1rem;
+}
+#u_bdPhone .upBtn{
+    font-size: 1.6rem;
+    padding: 1rem;
+    text-align:center;
+    border: 1px #000 solid;
+    display: block;
+}
+#dBtn{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 6rem;
+    height: 6rem;
+}
+/*
+
+
+
+*/

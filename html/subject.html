@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="m am-touch js cssanimations">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="assets/css/amazeui.css">
+    <link rel="stylesheet" href="assets/css/amaze.min.css">
+    <link rel="stylesheet" href="assets/css/ucj.css">
+    <title>优厨家</title>
+</head>
+
+<body>
+    <!--最外层容器，用于整体销毁，包含主场景和全局模块-->
+    <div id="main">
+        <!--内部主场景容器，包含顶部和底部导航内容-->
+        <div class="am-page" id="m-main">
+            <!--主要内容------------------------->
+            <div class="views wrapper2" id="s_main">
+                <!--服务首页-->
+                <div class="mViews" >
+                    <div class="am-container" id="m_index">
+                        <div id="m-index-ad">
+                            <div class="am-slider am-slider-a1">
+                                <ul class="am-slides">
+                                    <li>
+                                        <img src="assets/imgs/ad_i_0.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="m-index-pcs">
+                            <ul>
+                                <li>
+                                    <div class="pcimg">
+                                        <img src="assets/imgs/ad_i_1.jpg">
+                                        <div class="pcCart"><a class="cart" href=""><i class="am-icon-cx-27"></i><span>￥100</span></a></div>
+
+                                    </div>
+                                    <div class="pcTit">
+                                        <span class="itemCon">美食课堂关于烘培的那些事</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pcimg">
+                                        <img src="assets/imgs/ad_i_2.jpg">
+                                        <div class="pcCart"><a class="cart" href=""><i class="am-icon-cx-27"></i><span>￥100</span></a></div>
+                                    </div>
+                                    <div class="pcTit">
+                                        <span class="itemCon">美食课堂关于烘培的那些事</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pcimg">
+                                        <img src="assets/imgs/ad_i_3.jpg">
+                                        <div class="pcCart"><a class="cart" href=""><i class="am-icon-cx-27"></i><span>￥100</span></a></div>
+                                    </div>
+                                    <div class="pcTit">
+                                        <span class="itemCon">美食课堂关于烘培的那些事</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="space100"></div>
+                        <div class="space40"></div>
+                    </div>
+                </div>
+            </div>
+            <!--End--主要内容-------------------->
+        </div>
+        <!--End--内部主场景容器，包含顶部和底部导航内容-->
+        <!--End--最外层容器，用于整体销毁，包含主场景和全局模块-->
+        <!--底部导航-->
+        <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="navbar_bm" cxid="cx_b1">
+            <ul class="am-navbar-nav am-cf am-avg-sm-4">
+                <li>
+                    <a href="#" class="act">
+                        <span class="am-icon-cx-28"></span>
+                        <span class="am-navbar-label">商城</span>
+                    </a>
+                </li>
+                <li data-am-navbar-share>
+                    <a href="#">
+                        <span class="am-icon-cx-29"></span>
+                        <span class="am-navbar-label">服务</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="am-icon-cx-30"></span>
+                        <span class="am-navbar-label">我的</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--End--底部导航-->
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script>
+    var myScroll;
+    $(function($) {
+        var IScroll = $.AMUI.iScroll;
+        myScroll = new IScroll('#s_main', {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
+        });
+        $('.am-slider').flexslider({
+            start: function() {
+                myScroll.refresh();
+                console.log($('#m-index-ad').height());
+            }
+        });
+    })
+
+    document.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    }, false);
+
+</script>
+
+</html>

@@ -1,0 +1,39 @@
+<div class="views bodybg1 wrapper2" id="u_addredit" v-if="show" :transition="transitionName">
+    <com-utopbar v-ref:utopbar title="设备详情"></com-utopbar>
+    <div class="wrapper" id="u_deviceinfo">
+        <div class="am-container">
+            <div class="info-box" id="scroll-box">
+                <div class="inside-box">
+                    <div class="am-g base ui-border-b">
+                        <div class="am-u-sm-6">
+                            <div class="type"><label>设备：</label><span>{{devicecategoryname}}</span></div>
+                            <div class="type"><label>型号：</label><span>{{model}}</span></div>
+                            <div class="time"><label>安装时间：</label><span>{{installtime}}</span></div>
+                        </div>
+                        <div class="am-u-sm-6 right">
+                            <div class="type"><label>品牌：</label><span>{{ingredientname}}</span></div>
+                            <div class="type"><label>类型：</label><span>{{categoryname}}</span></div>
+                            <div class="time"><label>使用年限：</label><span>{{useage}}</span></div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <template v-if="servicelist">
+                            <template v-for="value in servicelist">
+                                <div class="d-list">
+                                    <div class="cycle"></div>
+                                    <div class="info">
+                                        <div class="date">{{value.createtime}}</div>
+                                        <div class=""><label>服务名称：</label><span>{{value.servicename}}</span></div>
+                                        <div class=""><label>服务周期：</label><span>{{value.serviceperiod}}月</span></div>
+                                        <div class=""><label>服务建议：</label><span>{{value.recommend}}</span></div>
+                                        <div class=""><label>备注：</label><span>{{value.testresult}}</span></div>
+                                    </div>
+                                </div>
+                            </template>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

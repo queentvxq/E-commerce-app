@@ -1,0 +1,249 @@
+body{
+	font-family: "微软雅黑";
+}
+.header{
+	background: #1d2d3c;
+	padding: 0;
+}
+.banner:after{
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.lineYel{
+	height: 10px;
+	width: 135px;
+	margin: 10px;
+	margin-left: 0;
+	background-color: #f2ca23;
+}
+#services{
+	text-align: center;
+}
+#services img{
+	width: 220px;
+	margin:10px;
+	margin-left: 0;
+}
+#svCon{
+	font-family: "微软雅黑";
+	line-height: 2.2;
+}
+#svCon h3{
+	font-size: 30px;
+}
+#svCon p{
+	font-size: 17px;
+}
+
+#about{
+	text-align: right;
+	position: relative;
+	height: 66px;
+}
+#aboutcon{
+	background-color: #e6e6e6;
+	height: 700px;
+	padding: 0;
+}
+#aboutcon>div,#aboutcon>div>div{
+	height: 100%;
+}
+#aboutTextMain{
+	height: 100%;
+	color: #000000;
+}
+#aboutText{
+	text-align: left;
+	margin-top: 260px;
+	padding: 20px 0;
+	line-height: 2;
+}
+.bg-image-1{    
+	background: url("../images/bg-image-1.jpg") 100% 0px no-repeat;
+	background-size: 100%;
+}
+.translucent-bg.blue:after{
+	background-color:none;
+}
+.isotope-item{}
+.isotope-item .btn-default{
+    width: 10rem;
+    min-width: 9rem;
+    background-color: rgba(0,0,0,0.85);
+    position: relative;
+    top: -50px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+}
+.isotope-item .btn-default.right{
+	position: absolute;
+	right: 15px;
+	top: 10rem;
+}
+.overlay{
+	background-color: rgba(0, 0, 0, 0.9);
+}
+#footer{
+	background-color: #1d2d3c;
+}
+#footer .section{
+	background-color: #1d2d3c;
+}
+.hzhb{
+	display: none;
+	width: 990px;
+	margin:20px auto;
+	color: #fff;
+	line-height: 30px;
+}
+.hzhb span{
+	padding-right: 30px;
+}
+.hzhb img{
+	display: inline-block;
+	vertical-align: middle;
+	height: 26px;
+	margin: 0 2px;
+}
+#contact img{
+	margin: auto;
+}
+.lxfs{
+	margin: auto;
+	line-height: 2;
+	    padding: 0 12px;
+}
+.lxfs span{
+	display: block;
+	color: #fff;
+}
+.header-right{
+	display: none;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	background-color: rgba(0, 0, 0, 0.8);
+	border-top: 1px solid #245269;
+	position: absolute;
+    width: 100%;
+    top: 0;
+}
+.navbar-default .navbar-toggle{
+	z-index: 111;
+}
+#wbh{
+	display: none;
+}
+#mbh{
+	display: block;
+	text-align: center;
+	color: #ffffff;
+	padding: 0 50px;
+}
+.banner-caption{
+	top: 60%;
+}
+.imgMauto{
+	margin: auto;
+}
+.bmtct{
+	text-align: left;
+}
+#rwm{
+	display: none;
+}
+.modal-content,.modal-dialog{
+	width: 300px;
+}
+@media (min-width: 1200px) {
+	#svCon {
+	    width: 1000px;
+	}
+	#portCon{
+	    width: 950px;		
+	}
+	#services img{
+		margin:auto;
+		width: auto;
+	}
+	.lineYel{
+		margin:10px auto;
+	}
+	#aboutcon{
+		height: 650px;
+	}
+}
+@media (min-width: 1000px) {
+	#aboutText{		
+		margin: 10px;
+		padding: 20px;
+	}
+	#portCon{
+	    width: 950px;		
+	}
+	#aboutcon{
+		background-color: #1d2d3c;
+		height: 450px;
+		padding: 0;
+	}
+	#about{
+		text-align: right;
+	}
+	#aboutTextMain{
+		height: 100%;
+		background-color: #1d2d3c;
+		color: #ffffff;
+	}
+	#about>img{
+		position: absolute;
+		right: 0px;
+	}
+	#about>.lineYel{
+		position: absolute;
+		top: 50px;
+		right: 0px;
+	}
+	.bg-image-1{    
+		background: url("../images/bg-image-1.jpg") 100% 0px no-repeat;
+		background-size: 80%;
+	}
+	#portfolio>img{
+		margin: auto;
+	}
+	.hzhb{
+		display: block;
+	}
+	.lxfs{
+		width: 990px;
+		margin: auto;
+		line-height: 2;
+	}
+	.lxfs span{
+		display: inline-block;
+		color: #fff;
+	}
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+		    background-color: rgba(0, 0, 0, 0);
+		        border-top: 1px solid transparent;
+	}
+	.header-right{
+		display: block;
+	}
+	#wbh{
+		display:block;
+	}
+	#mbh{
+		display: none;
+	}
+	.bmtct{
+		text-align: center;
+	}
+	#rwm{
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 2000;
+	}
+}

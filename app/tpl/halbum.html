@@ -1,0 +1,26 @@
+<div class="views" id="h-album" v-if="show" :transition="transitionName">
+    <div class="am-g ui-border-b" id="uheadtop">
+        <div class="am-u-sm-2" style="text-align:left"><a id="backBtn" v-on:click="goBack"><i class="am-icon-cx-77"></i></a></div>
+        <div class="am-u-sm-8 utopTit">{{title}}</div>
+        <div class="am-u-sm-2" style="text-align:right"><a id="msgBtn" v-on:click="share"><i class="am-icon-cx-78"></i></a></div>
+    </div>
+    <div class="c-main" id="h_album">
+        <div>
+            <template v-for="i in list">
+                <div class="imglist">
+                    <template v-if="i.id!=-1">
+                        <template v-if="type==0">
+                            <a href="#mall/product/{{i.id}}"><img :src="i.path" alt=""></a>
+                        </template>
+                        <template v-else>
+                            <a href="#mall/service/{{i.id}}"><img :src="i.path" alt=""></a>
+                        </template>
+                    </template>
+                    <template v-else>
+                        <img :src="i.path" alt="">
+                    </template>
+                </div>
+            </template>
+        </div>
+    </div>
+</div>

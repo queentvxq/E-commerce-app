@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="m am-touch js cssanimations">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="assets/css/amazeui.css">
+    <link rel="stylesheet" href="assets/css/amaze.min.css">
+    <link rel="stylesheet" href="assets/css/ucj.css?r=12223sv3">
+    <title>优厨家</title>
+</head>
+<body>
+    <!--最外层容器，用于整体销毁，包含主场景和全局模块-->
+    <div id="main">
+        <div class="am-page " id="uc-order-msg">
+            <!--顶部内容-->
+            <!--End--顶部内容-->
+            <!-- 主要内容 -->
+            <div class="views bodybg1" id="u_order_msg">
+            	<div class="am-g ui-border-b" id="uheadtop">
+                    <div class="am-u-sm-2">
+                        <a id="backBtn" v-on:click="goBack">
+                            <i class="am-icon-cx-77"></i>
+                        </a>
+                    </div>
+                    <div class="am-u-sm-8 utopTit">订单详情</div>
+                    <div class="am-u-sm-2">
+                        <a id="msgBtn" href="#/ucenter/umsg">
+                            <i class="am-icon-cx-46"></i>
+                        </a>
+                    </div>
+                </div>
+            	<div class="am-g" id="u_order_detail">
+            		<div class="u_od_tb"></div>
+                    <div class="u-order_msgcont">
+                        <div class="u_order_num">   
+                            <div class="am-g udingdan">
+                                <div class="am-u-sm-8 uorblack">订单号:
+                                    <span class="odnum">
+                                        154651321946
+                                    </span>
+                                </div>
+                                <div class="am-u-sm-4 wtdelivery">等待收货</div>
+                            </div>
+                            <div class="insel ui-border-t">
+                                <div class="mlistico">
+                                    <i class="am-icon-cx-82"></i>
+                                </div>
+                                <div class="odphone">
+                                    <div>U厨家服务工程师&nbsp;&lceil;吴斌&rfloor;&nbsp;已出发，将于14:00到达您家 联系方式：13345678910</div>
+                                    <div class="odtime">2016-06-23 12:30:25</div>
+                                </div>
+                                <div class="uiconright">
+                                    <i class="am-icon-angle-right"></i>
+                                </div>
+                            </div>
+                            <div class="insel ui-border-t">
+                                <div class="odiconadd">
+                                    <i class="am-icon-cx-15"></i>
+                                </div>
+                                <div class="odaddress">
+                                    <div>王敏倩 13758201618</div>
+                                    <div>浙江 杭州 西湖区 三墩镇 五连经济工业园 8幢 305室</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="u_od_td"></div>
+                        <div class="u_order_splist">
+                            <div class="u_od_con">
+                                <div class="sp_item ui-border-b">
+                                    <div class="img">
+                                        <img src="assets/imgs/sp03.jpg" class="img" />
+                                    </div>
+                                    <div class="tit">
+                                        <h3>清涼-冰箱健康管理</h3>
+                                        <span class="spec">价格：￥288</span>
+                                        <span class="spec">数量：1</span>
+                                        <span class="spec">选项：双开门</span>
+                                    </div>
+                                </div>
+                                <div class="sp_item ui-border-b">
+                                    <div class="img">
+                                        <img src="assets/imgs/sp02.jpg" class="img" />
+                                    </div>
+                                    <div class="tit">
+                                        <h3>3M 净水器套机 净享2500-CN</h3>
+                                        <span class="spec">价格：￥2500</span>
+                                        <span class="spec">数量：1</span>
+                                    </div>
+                                    <div class="spstate">退款成功</div>
+                                </div>
+                            </div>
+                            <div class="odpay">
+                                <div class="am-g odpayment odpayfirst">
+                                    <div class="am-u-sm-6">商品总价</div>
+                                    <div class="am-u-sm-6 odmoney">￥2788</div>
+                                </div>
+                                <div class="am-g odpayment">
+                                    <div class="am-u-sm-6">优惠</div>
+                                    <div class="am-u-sm-6 odmoney">￥0.00</div>
+                                </div>
+                                <div class="am-g odpayment">
+                                    <div class="am-u-sm-6">运费</div>
+                                    <div class="am-u-sm-6 odmoney">￥12.00</div>
+                                </div>
+                                <div class="am-g odpayment odpaylast">
+                                    <div class="am-u-sm-6 uorblack">实付款</div>
+                                    <div class="am-u-sm-6 wtdelivery">￥2800.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="u_od_td"></div>
+                        <div class="u_order_invoice">
+                            <div class="odpaytype uorblack ui-border-b">支付方式<span>货到付款</span></div>
+                            <div class="odpaymsg ui-border-b">
+                                <div class="uorblack">发票信息<span>纸质发票</span></div>
+                                <div class="odpaycom">发票抬头：杭州星嘉世投有限公司</div>
+                            </div>
+                            <div class="odmsgfooter">
+                                <div class="odcontact">
+                                    <i class="am-icon-cx-17"></i>
+                                    联系U厨家
+                                </div>
+                                <div class="odtime">下单时间：2016-6-17 16:17:25</div>
+                            </div>
+                            <div class="odmsgcode">
+                                <div class="odcodeimg">
+                                    <img src="assets/imgs/qrcode.png">
+                                </div>
+                                <div class="odtime">下单时间：2016-6-17 16:17:25</div>
+                            </div>
+                        </div>
+                    </div>
+	                
+                </div>
+            </div>
+            <!--End--主要内容------------------>
+        </div>
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+
+</html>

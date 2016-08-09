@@ -1,0 +1,22 @@
+<div class="views" id="" v-if="show" :transition="transitionName">
+    <com-utopbar v-ref:utopbar title="关于我们"></com-utopbar>
+    <div class="uviews bodybg1" id="u_about">
+        <div class="u_about_us">
+            <div class="uabicon"><img src="assets/imgs/share_icon.png" class="img">
+                <div>望厨 {{v}}</div>
+            </div>
+        </div>
+        <div class="uabupdate cx-list">
+        	<a v-on:click="down">
+        		<span class="updatetxt">版本更新</span>
+        		<span class="updatenum">最新版本 {{version}}</span>
+        	</a>
+        </div>
+        <div class="uabofoot">
+            <div class="uabfo">
+            	<div class="uabimg"><img src="assets/imgs/uqrcode.png"></div>
+	            <span class="uabob">Copyright © 杭州<span @click="odebug">星嘉世投</span>电子商务有限公司 版权所有</span>
+            </div>
+        </div>
+    </div>
+</div>

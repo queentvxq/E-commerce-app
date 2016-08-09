@@ -1,0 +1,32 @@
+<!--底部导航-->
+<footer class="am-navbar am-cf am-navbar-default " id="navbar_bm" cxid="cx_b1" v-if="show">
+    <div class="am-g ui-border-t">
+        <ul class="am-navbar-nav am-cf am-avg-sm-4 ui-border-t">
+            <div class="am-u-sm-3">
+                <a href="#home" :class="{'act':ai }" id="a_index">
+                    <span class="am-icon-cx-49"></span>
+                    <span class="am-navbar-label">首页</span>
+                </a>
+            </div>
+            <div class="am-u-sm-3">
+                <a @click="goMall" :class="{'act':am }" id="a_mall">
+                    <span class="am-icon-cx-51"></span>
+                    <span class="am-navbar-label">发现</span>
+                </a>
+            </div>
+            <div class="am-u-sm-3">
+                <a href="{{a_buy}}" @click="openBuy" :class="{'act':ab }" id="a_buy">
+                    <span class="am-icon-cx-53"></span>
+                    <span class="am-navbar-label">购买</span>
+                </a>
+            </div>
+            <div class="am-u-sm-3">
+                <a href="#ucenter" :class="{'act':au }" id="a_ucenter">
+                    <span class="am-icon-cx-55"></span>
+                    <span class="am-navbar-label">我</span>
+                </a>
+            </div>
+        </ul>
+    </div>
+</footer>
+<!--End--底部导航-->

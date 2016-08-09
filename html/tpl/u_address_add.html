@@ -1,0 +1,48 @@
+<div class="views" id="u_address_add" v-if="show" :transition="transitionName">
+    <!--添加新地址-->
+    <div class="am-container">
+        <div class="am-g usitem">
+            <div class="usitemcon">
+                <input name="name" type="text" v-model="adname" id="name" placeholder="请输入真实姓名">
+            </div>
+        </div>
+        <div class="am-g usitem jiantou">
+            <div class="usitemcon">
+                <input name="cellphone" type="tel" v-model="cellphone" id="cellphone" placeholder="手机号">
+            </div>
+        </div>
+        <div class="am-g usitem jiantou">
+            <a id="areaPro" v-on:click="selectPro">
+                <label>{{pro_name}}</label>
+                <i class="am-icon-cx-5"></i>
+            </a>
+        </div>
+        <div class="am-g usitem jiantou">
+            <a id="areaCiy" v-on:click="selectCiy">
+                <label>{{ciy_name}}</label>
+                <i class="am-icon-cx-5"></i>
+            </a>
+        </div>
+        <div class="am-g usitem jiantou">
+            <a id="areaRegion" v-on:click="selectReg">
+                <label>{{reg_name}}</label>
+                <i class="am-icon-cx-5"></i>
+            </a>
+        </div>
+        <div class="am-g usitem jiantou">
+            <div class="usitemcon am-g">
+                <div class="am-u-sm-8">
+                    <input name="street" v-model="street" type="text" id="street" placeholder="街道">
+                </div>
+                <div class="am-u-sm-4">
+                    <input name="room" v-model="room" type="text" id="room" placeholder="房号">
+                </div>
+            </div>
+        </div>
+        <div class="am-g" style="margin-top:2rem">
+            <div class="am-u-sm-12">
+                <a id="submit" v-on:click="upData" class="am-btn am-btn-default cx-btn-sbmt am-round">保存收货地址</a>
+            </div>
+        </div>
+    </div>
+</div>

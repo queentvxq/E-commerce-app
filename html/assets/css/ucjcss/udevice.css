@@ -1,0 +1,180 @@
+#u_device_list{
+    padding: 1.6rem;
+    bottom: 60px;
+}
+#u_device_list .device-box{
+    margin-bottom: 1.6rem;
+    padding: 0 1.6rem;
+    border: 1px solid #f74c31;
+}
+#u_device_list .device-box .device-info{
+    padding: 1rem 0 0.5rem;
+    border-bottom: 1px solid #f1f1f1;
+}
+#u_device_list .device-box .device-info div{
+    padding: 0;
+    font-size: 1.3rem;
+}
+#u_device_list .device-box .device-info label{
+    font-weight: normal;
+    color: #000;
+}
+#u_device_list .device-box .device-info span{
+    color: #777;
+}
+#u_device_list .device-box .device-info .right{
+    padding-left: 0.5rem;
+}
+
+#u_device_list .device-box .more-details{
+    font-size: 1rem;
+    color: #c0c0c0;
+    line-height: 4.5rem;
+}
+#u_device_list .device-box .more-details a{
+    display: block;
+}
+.more-details i{
+    float: right;
+    line-height: 4.5rem;
+}
+
+/*bottom btn*/
+#add_device{
+    position: absolute;
+    width: 97%;
+    margin:6px 1.5%;
+    bottom: 0;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+    z-index: 1000;
+    background: #000;
+    font-size: 1.4rem;
+}
+#add_device a{
+    color: #fff;
+}
+
+/*deviceinfo.html*/
+#u_deviceinfo{
+    bottom: 0;
+    background: #f5f7fb;
+}
+#u_deviceinfo .info-box{
+    border:1px solid #f74c31;
+    position: absolute;
+    top: 1.6rem;
+    left: 1.6rem;
+    bottom: 1.6rem;
+    right: 1.6rem;
+    background: #fff;
+    overflow: hidden;
+}
+#u_deviceinfo .info-box .inside-box{
+    padding: 1.6rem;
+    overflow: scroll;
+}
+#u_deviceinfo .am-u-sm-6{
+    padding: 0;
+}
+#u_deviceinfo .info-box .inside-box .base{
+    padding: 1.6rem 0 2rem;
+    font-size: 1.4rem;
+}
+#u_deviceinfo .info-box .inside-box .base label{
+    font-weight: normal;
+    color: #000;
+}
+#u_deviceinfo .info-box .inside-box .details{
+    padding-top: 3rem;
+}
+#u_deviceinfo .info-box .inside-box .details .d-list{
+    position: relative;
+}
+#u_deviceinfo .info-box .inside-box .details .d-list .cycle{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    border: 0.4rem solid #f74c31;
+    position: absolute;
+    background: #fff;
+    top: 0;
+    left: 0;
+}
+#u_deviceinfo .info-box .inside-box .details .d-list .info{
+    margin-left: 0.75rem;
+    padding-bottom: 2rem;
+    padding-left: 2.5rem;
+    border-left: 1px solid #d0d0d0;
+}
+#u_deviceinfo .info-box .inside-box .details .d-list .info .ui-border-b{
+    padding-bottom: 2rem;
+}
+#u_deviceinfo .info-box .inside-box .details .d-list .info label{
+    font-weight: normal;
+    color: #000;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+}
+#u_deviceinfo .info-box .inside-box .details .d-list .info span{
+    font-size: 1.4rem;
+}
+#u_deviceinfo .info-box .inside-box .details .d-list .info .date{
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+/*u_deviceadd.html*/
+#u_device_add{
+    bottom: 0;
+}
+#u_d_add {
+    margin-top: .6rem;
+    background: #f5f7fb;
+}
+#u_d_add form{
+    background: #fff;
+}
+#u_d_add .xinghao, #u_d_add input, #u_d_add select {
+    height: 4rem;
+    border: none;
+    outline: 0;
+    color: #8d8d8d;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+#u_d_add input{
+    margin-top: 0.1rem;
+    height: 3.8rem;
+    text-align:right;
+    position: absolute;
+    right: 3rem;
+    width: 60%;
+    background: #fff;
+}
+#u_d_add select{
+    direction: rtl;
+    position: absolute;
+    right: 3rem;
+    width: 60%;
+    background: #fff;
+}
+#u_d_add .ui-border-b{
+    position: relative;
+    padding: 0 1.6rem;
+    overflow: hidden;
+}
+#u_d_add .ui-border-b div{
+    line-height: 4.5rem;
+    color: #000;
+    float: left;
+}   
+#u_d_add .ui-border-b i{
+    position: absolute;
+    right: 1.6rem;
+    line-height: 4.5rem;
+    top: 0;
+    color: #8d8d8d;
+}

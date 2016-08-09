@@ -1,0 +1,41 @@
+<div class="uviews" id="u_work_list" v-if="show" :transition="transitionName">
+    <!--header-->
+    <com-utopbar v-ref:utopbar title="服务报告"></com-utopbar>
+    <div class="wrapper" id="u_w_l">
+        <div class="list">
+            <template v-if="list">
+                <template v-for="i in list">
+                    <div class="box">
+                        <div class="title">{{i.servicename}}</div>
+                        <div class="logo">{{{i.decriptionpic}}}</div>
+                        <div class="am-g btns">
+                            <div class="am-u-sm-6">
+                                <template v-if="i.state == 0">
+                                    <button id="s{{i.serviceid}}" v-on:click="start(i.subordernumber,i.parentserviceid,i.serviceid)" type="button" class="am-btn am-btn-default ui-border">服务开始</button>
+                                    <button id="e{{i.serviceid}}" v-on:click="end(i.subordernumber,i.parentserviceid,i.serviceid)" type="button" class="am-btn am-btn-default ui-border"
+                                        style="display:none">服务结束</button>
+                                        <button id="endbtn" type="button" class="am-btn am-btn-default ui-border" style="display:none">服务已结束</button>
+                                </template>
+                                <template v-if="i.state == 1">
+                                    <button id="e{{i.serviceid}}" v-on:click="end(i.subordernumber,i.parentserviceid,i.serviceid)" type="button" class="am-btn am-btn-default ui-border">服务结束</button>
+                                    <button id="endbtn" type="button" class="am-btn am-btn-default ui-border" style="display:none;color:#c0c0c0">服务已结束</button>
+                                </template>
+                                <template v-if="i.state == 2">
+                                    <button type="button" class="am-btn am-btn-default ui-border" style="color:#c0c0c0">服务已结束</button>
+                                </template>
+                            </div>
+                            <div class="am-u-sm-6">
+                                <template v-if="i.isAddReport == 1">
+                                <button id="i.serviceid" v-on:click="gorep(i.subordernumber,i.parentserviceid,i.serviceid)" type="button" class="am-btn am-btn-default ui-border">填写报告</button>
+                                </template>
+                                <template v-else>
+                                    <button type="button" class="am-btn am-btn-default ui-border" style="color:#c0c0c0">填写报告</button>
+                                </template>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </template>
+        </div>
+    </div>
+</div>

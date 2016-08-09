@@ -1,0 +1,450 @@
+/*支付订单*/
+
+#b_order {
+    position: absolute;
+    height: auto;
+    width: 100%;
+}
+#b_order #b_oder_list {
+    padding: 0 1.9rem;
+}
+#b_order #b_oder_list li{
+    position: relative;
+    margin-top: 1rem;
+}
+#b_order #b_oder_list h3{
+    margin: 0;
+    font-size: 1.5rem;
+    color: #000;
+    line-height: 4.5rem;
+    padding: 0;
+    font-weight: normal;
+    position: relative;
+}
+#b_order #b_oder_list h3 .bodts{
+    color: #ff0000;
+    position: absolute;
+    right: 0;
+    font-size: 1rem;
+}
+#b_order #b_oder_list .b_odsps_tit {
+    height: 2.6rem;
+    line-height: 2.6rem;
+    padding: 0 0.6rem;
+    color: #727272;
+    font-size: 1.2rem;
+    background-color: #f2f4f5;
+}
+#b_order #b_oder_list .b_odsps_con .b_odsp{
+    padding: 2rem 0;
+    vertical-align: middle;
+    height: 9rem;
+    position: relative;
+}
+#b_order #b_oder_list .b_odsps_con .b_odsp:last-child{
+    border-bottom: none; !important;
+    background-image:none;
+}
+#b_order #b_oder_list .b_odsps_con .b_odsp>div{
+    padding: 0;
+    vertical-align: middle;
+}
+#b_order #b_oder_list .b_odsps_con .b_odsp .img2{
+    width: 5.2rem;
+    height: 5.2rem;
+    display: inline-block;
+    margin-right: 1rem;     
+    vertical-align: middle;
+}
+#b_order #b_oder_list .b_odsps_con .b_odsp .img2 img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#b_order #b_oder_list .b_odsps_con .b_odsp .sp_des{
+    vertical-align: middle;
+    display: inline-block;
+    height: 5.2rem;    
+    position: absolute;
+    left: 6rem;
+    top: 0;
+    font-size: 1.5rem;
+}
+#b_order #b_oder_list .b_odsps_con .b_odsp .sp_des span{
+    vertical-align: middle;
+    display: inline-block;
+}
+#b_order #b_oder_list .b_odsps_con .b_odsp .sp_des .sp_des_no{
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}
+#b_order #b_oder_list .b_odsps_con .b_odsp .b_odsp_pre {
+    line-height: 5rem;
+    text-align: right;
+}
+#b_order #stAds{
+    height: 6rem;
+    font-size: 1.2rem;
+    position: relative;
+    padding: 1rem;
+    line-height: 1.7;
+    display: block;
+}
+#b_order #stAds.jt_r::after {
+    font-size: 20px;
+    border-radius: 0;
+    
+}
+#b_order #stAds:before{
+    border-radius: 0;
+}
+#b_order #stAds:hover{
+    border-color: #ff0000;
+}
+#b_order .winput input{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1rem;
+    border: none;
+    font-size: 12px;
+}
+#b_order .winput::after {
+    border-radius: 0;
+}
+#b_order .b_selectItem {
+    
+}
+#b_order .b_selectItem img{
+    height: 3.4rem;
+    margin-right: 1rem;
+}
+#b_order .b_selectItem>div{
+    margin: 0;
+    padding:1rem 0;
+}
+
+#b_order .b_selectItem .b_zfxz{
+    text-align: right;
+    vertical-align:middle;
+}
+
+#b_order .b_selectItem .setpay{
+    display: inline-block;
+    height: 1.9rem;
+    width: 1.9rem;
+    vertical-align: middle;
+}
+
+#b_order .b_selectItem .setpay:before{
+    border-radius: 0;
+}
+
+#b_order .b_yhj{
+    position: relative;
+}
+#b_order .b_yhje span{
+    color: #f74c31;
+}
+#b_order .b_yhj.jt_r::after{
+    right: 0;
+}
+#b_order .b_yhje span.yhtxt{
+    color: #777777;
+    font-size: 1.2rem;
+}
+#b_order .b_selectItem.act .setpay{
+    
+}
+#b_order .b_selectItem.act .setpay:before{
+    font: 'icomoon-cx';
+    font-family: 'icomoon-cx' !important;
+    content: "\e990";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    background-color: #f74c31;
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+
+
+#navbar_order {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    z-index: 1010;
+    padding: 0.5rem;
+}
+
+#navbar_order>div {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+}
+#navbar_order>div h3{
+    font-size: 1.6rem;
+    line-height: 2;
+    text-align: center;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+#navbar_order .tongji {
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: center;
+}
+
+#navbar_order .buy {
+    padding: 0;
+    display: block;
+    text-align: center;
+}
+
+#buyBtn {
+    padding: 0;
+}
+
+
+/*购物车*/
+#bcart{
+    position: absolute;
+    height: auto;
+    top: 50px;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+    
+}
+#bcart .cartlist {
+    padding-bottom: 80px;
+}
+#bcart .cartlist li{
+    margin: 1.8rem;
+    background-color: #fff;
+}
+#bcart .cartlist li.act{
+    
+}
+#bcart .cartlist .b_sp{
+    padding:2rem;
+    position: relative;
+    min-height: 14rem;
+}
+#bcart .cartlist .b_sp>a{
+    display: inline-block;
+}
+#bcart .cartlist img {
+    width: 7rem;
+    float: left;
+}
+#bcart .cartlist .pddes {
+    margin-left: 8rem;
+    position: absolute;
+    top: 2rem;
+}
+
+#bcart .cartlist .pddes .pddestit {
+    width: 100%;
+    color: #000;
+}
+#bcart .cartlist .pddes .pddespre {
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+#bcart .cartlist .pddes .pddespre span{
+    color: #000;
+}
+#bcart .cartlist .pddes .pddespre:last-child{
+    padding-bottom: 1rem;
+}
+#bcart .b_sp_ed{
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0;
+}
+
+#bcart .b_sp_ed a{
+    display: inline-block;
+    width: 49.2%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -2px;
+}
+#bcart .setbuy{
+    width: 1.8rem;
+    display: inline-block;
+    height: 1.8rem;
+    background-color: #fff;
+    vertical-align: middle;
+}
+#bcart .setbuy i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2rem;
+}
+#bcart .setbuy i:before {
+    content: "";
+    position: absolute;
+}
+#bcart .setbuy:before{
+    border-radius: 0;
+}
+#bcart .setBtn.act .setbuy{
+    background: #000;
+    color: #fff;
+    border-radius: 0;
+}
+#bcart .setBtn.act .setbuy i:before {
+    content: "\e990";
+}
+
+
+#navbar_cart {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    z-index: 1010;
+    padding: 0.5rem;
+    color: #fff;
+}
+#navbar_cart > div{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.3;
+    padding: 0.5rem;
+}
+
+#navbar_cart .buy {
+    padding: 0;
+    text-align: center;
+    display: block;
+    color: #fff;
+}
+#navbar_cart .buy_jg {
+    font-size: 1.2rem;
+}
+#bcart .setAllBtn{
+    position: absolute;
+    left: 0;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    top: 0.5rem;
+    width: 8rem;
+    text-align: left;
+    line-height: 40px;
+    height: 50px;
+    font-size: 1.2rem;
+}
+#bcart .setAllIcon {
+    margin-right: 1rem;
+}
+#bcart .setAllIcon:before{
+    background-color: #fff;
+    border-radius: 0;
+}
+#bcart .setAllBtn.act .setAllIcon i:before{
+    content: "\e990";
+    color: #000;
+}
+.mulist .myouhuiicon{
+    position:relative;
+    top:-1.2rem;
+    left: 0;
+    width: 2rem;
+    height: 1.6rem;
+    background-image: url("../imgs/bg15.png");
+    background-repeat: no-repeat;
+    background-size:100%;
+    display: inline-block;
+}
+.mulist #yxyouhui{
+    display: none;
+    border-top: 1px #e5e5e5 solid;
+}
+.mulist #myouhuom{
+    position: absolute;
+    top: 1.4rem;
+    left: 0;
+}
+.numedt {
+    display: inline-block;
+    width: 140px;
+    height: 40px;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.numedt .numedtA,
+.numedt .numedtC {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0 4px;
+    overflow: hidden;
+    vertical-align: middle;
+    position: absolute;
+}
+.numedt .numedtA{
+    top: 0;
+    left: 0;
+}
+.numedt .numedtC{
+    top: 0;
+    right: 0;
+}
+.numedt .numedtB {
+    display: inline-block;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    overflow: hidden;
+    vertical-align: middle;
+    position: absolute;
+    left: 40px;
+    border: none;
+    padding: 0;
+}
+
+.cartnone{
+    text-align: center;
+}
+.cartnone i{
+    font-size: 5rem;
+    color: #c0c0c0;
+}
+.cartnone h3{
+    color: #c0c0c0;
+    padding: 1rem;
+    margin: 0;
+    font-weight: normal;
+}
+/*
+
+
+
+
+*/

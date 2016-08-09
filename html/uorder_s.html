@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="m am-touch js cssanimations">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="assets/css/amazeui.css">
+    <link rel="stylesheet" href="assets/css/amaze.min.css">
+    <link rel="stylesheet" href="assets/css/ucj.css?r=12223sv3">
+    <title>优厨家</title>
+</head>
+
+<body>
+    <!--最外层容器，用于整体销毁，包含主场景和全局模块-->
+    <div id="main">
+        <div class="am-page " id="uc-order-sc">
+            <!--顶部内容-->
+            <!--End--顶部内容-->
+            <!--主要内容------------------------->
+            <div class="views bodybg1" id="u_order_sc">
+                <div class="odnav">
+                    <ul class="am-avg-sm-4">
+                        <li>
+                            <a href="">全部</a>
+                        </li>
+                        <li>
+                            <a href="">待付款</a>
+                        </li>
+                        <li>
+                            <a href="">待收货</a>
+                        </li>
+                        <li>
+                            <a href="">待评价</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="u_order_list" class="wrapper sbg">
+                    <ul class="u_order_item ">
+                        <li class="u_order_splist">
+                            <h3 class="s_tit">下水道清洁</h3>
+                            <div class="s_time">服务时间：2015-02-10 09：00-10：00</div>
+                            <div class="s_addr">服务地址：杭州紫荆港路21号西溪天堂</div>
+                            <div class="s_price am-g">
+                                <div class="am-u-sm-7 tongji">
+                                    服务价格：<span>398.00</span>
+                                </div>
+                                <div class="am-u-sm-5 odOper">
+                                    <button type="button" class="am-btn am-btn-sm  am-radius xc_btn02">查看订单</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="u_order_splist">
+                            <h3 class="s_tit">下水道清洁</h3>
+                            <div class="s_time">服务时间：2015-02-10 09：00-10：00</div>
+                            <div class="s_addr">服务地址：杭州紫荆港路21号西溪天堂</div>
+                            <div class="s_price am-g">
+                                <div class="am-u-sm-7 tongji">
+                                    服务价格：<span>398.00</span>
+                                </div>
+                                <div class="am-u-sm-5 odOper">
+                                    <button type="button" class="am-btn am-btn-sm  am-radius xc_btn02">查看订单</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--End--主要内容-------------------->
+        </div>
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script>
+    $(function($) {
+
+        var IScroll = $.AMUI.iScroll;
+        myScroll = new IScroll('#u_order_list', {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
+        });
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,26 @@
+<div class="views" id="b_addr" v-if="show" :transition="transitionName">
+    <com-utopbar2 v-ref:utopbar title="选择收货地址" btname="管理" v-on:btn-evt="upData"></com-utopbar2>
+    <div id="u_address_set" class="uviews bodybg1">
+        <div class="u_address_cont">
+            <ul id="u_adressset_list">
+                <template v-for="(index, value) in list">
+                    <li class="ui-border" v-bind:class="{'act': value.id==addrid}" @click="takeUp(index,$event)">
+                        <div class="am-g">
+                            <div class="am-u-sm-11">
+                                <div class="peopho">
+                                    <span class="addpeo">{{value.name}}</span>
+                                    <span>{{value.cellphone}}</span>
+                                </div>
+                                <div class="addre"> {{value.province+value.city+value.region+value.street+value.room}}
+                                </div>
+                            </div>
+                            <div class="am-u-sm-1">
+                                <a class="ckbox ui-border-radius"></a>
+                            </div>
+                        </div>
+                    </li>
+                </template>
+            </ul>
+        </div>
+    </div>
+</div>

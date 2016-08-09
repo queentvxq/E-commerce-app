@@ -1,0 +1,34 @@
+<div class="uviews" id="u_reportList" v-if="show" :transition="transitionName">
+    <!--header-->
+    <com-utopbar v-ref:utopbar title="服务报告"></com-utopbar>
+    <div class="wrapper" id="u_reportl_m">
+        <!--工程师-->
+        <div>
+            <div class="outline">
+                <template v-if="list">
+                    <template v-for="value in list">
+                        <div class="box">
+                            <div class="time"><i class="am-icon-cx-99"></i>{{value.reporttime}}</div>
+                            <div class="inside" v-on:click="urepinfo(value.id)">
+                                <div class="name">{{value.servicename}}</div>
+                                <div class="bottom">
+                                    <div class="img">{{{value.catetorypic}}}</div>
+                                    <div class="info">
+                                        <div class="details">
+                                            <label>服务建议：</label>
+                                            <span class="xijie">{{value.recommend}}</span>
+                                        </div>
+                                        <div class="details">
+                                            <label>备注：</label>
+                                            <span class="xijie">{{value.testresult}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </div>
+    </div>
+</div>

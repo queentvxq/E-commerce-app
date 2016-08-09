@@ -1,0 +1,72 @@
+<div class="views" v-if="show" :transition="transitionName">
+    <!--用户中心首页-->
+    <div class="am-container" id="u_login">
+        <!--返回条-->
+        <div class="head-back">
+            <div class="am-u-sm-1">
+                <a v-on:click="goBack()"><i class="am-icon-cx-77"></i></a>
+            </div>
+        </div>
+        <!--返回条END-->
+        <div class="u_login_bg">
+            <img src="assets/imgs/ubg02.jpg">
+        </div>
+        <div class="am-containe" id="u_login_main">
+            <div class="am-tabs cx-tabs" data-am-tabs="{noSwipe: 1}">
+                <ul class="am-tabs-nav am-nav am-nav-tabs cx-tbnav">
+                    <li class="am-active"><a href="#tab1">验证码</a></li>
+                    <li class=""><a href="#tab2">账号</a></li>
+                </ul>
+                <div class="am-tabs-bd">
+                    <div class="am-tab-panel am-active" id="tab1">
+                        <form class="am-form am-form-horizontal cx-form">
+                            <div class="am-form-group">
+                                <label for="doc-ipt-3" class="am-u-sm-1 am-form-label"><i class="am-icon-cx-84"></i></label>
+                                <div class="am-u-sm-6">
+                                    <input type="number" v-model="accountA" id="accountA" placeholder="请输入您的手机号码" v-on:keyup="testPhone(accountA,'a')" maxlength="11"/>
+                                </div>
+                                <div class="am-u-sm-5"><a class="takVad {{active}}" id="takVad" v-on:click.stop="upDataSendVad">获取验证码</a></div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="doc-ipt-pwd-2" class="am-u-sm-1 am-form-label"><i class="am-icon-cx-85"></i></label>
+                                <div class="am-u-sm-11">
+                                    <input type="number" v-model="pwdA" id="pwdA"placeholder="请输入验证码" v-on:focus="clear($event,accountA)" v-on:keyup="testCode(pwdA)"/>
+                                </div>
+                                
+                            </div>
+                            <div class="am-form-group">
+                                <div class="am-u-sm-12">
+                                    <a class="am-btn cx-btn-sbmt {{aBtnActive}}" id="loginBtnA"v-on:click.stop="logBtnA($event)">登录</a>
+                                </div>
+                                <div class="am-u-sm-12 u_login_ts"><a href="#reg" class="am-btn cx-btn-reg">注册</a></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="am-tab-panel" id="tab2">
+                        <form class="am-form am-form-horizontal cx-form">
+                            <div class="am-form-group">
+                                <label for="doc-ipt-3" class="am-u-sm-1 am-form-label"><i class="am-icon-cx-84"></i></label>
+                                <div class="am-u-sm-11">
+                                    <input type="number" v-model="accountB" id="accountB" placeholder="请输入手机号码" maxlength="11"  v-on:keyup="testPhone(accountB,'b')">
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="doc-ipt-pwd-2" class="am-u-sm-1 am-form-label"><i class="am-icon-cx-85"></i></label>
+                                <div class="am-u-sm-11">
+                                    <input type="password" v-model="pwdB" id="pwdB" placeholder="请输入密码" v-on:focus="clear($event,accountB)" v-on:keyup="testPassword(pwdB)" />
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <div class="am-u-sm-12">
+                                    <a @click.self="logBtnB($event)" class="am-btn cx-btn-sbmt {{bBtnActive}}" id="loginBtnB">登录</a>
+                                </div>
+                                <div class="am-u-sm-12 u_login_ts"><a href="#reg" class="am-btn cx-btn-reg">注册</a></div>
+                            </div>
+                        </form>
+                    </div>
+                </div><!--am-tabs-bd  end-->
+            </div>
+        </div>
+    </div>
+    <iframe height="0"></iframe>
+</div>

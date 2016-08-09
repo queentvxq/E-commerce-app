@@ -1,0 +1,57 @@
+<div class="am-container" id="u_login">
+    <div class="u_login_bg">
+    </div>
+    <div class="am-containe" id="u_login_main">
+        <div class="am-tabs cx-tabs">
+            <ul class="am-tabs-nav am-nav am-nav-tabs cx-tbnav">
+                <li class="am-active"><a href="#tab1" id="u_tit">重置密码</a></li>
+            </ul>
+            <div class="am-tabs-bd">
+                <div class="am-tab-panel cxTab am-active" id="vf1">
+                    <form action="http://apiqa.ukitchenplus.com/code/vcode" method="post" class="am-form am-form-horizontal cx-form">
+                        <div class="am-form-group">
+                            <label for="doc-ipt-3" class="am-u-sm-2 am-form-label"><i class="am-icon-cx-3"></i></label>
+                            <div class="am-u-sm-6">
+                                <input type="tel" id="verify" placeholder="请输入手机号码">
+                            </div>
+                            <div class="am-u-sm-4"><a class="takVad" id="takVad">获取验证码</a></div>
+                        </div>
+                        <div class="am-form-group">
+                            <label for="doc-ipt-pwd-2" class="am-u-sm-2 am-form-label"><i class="am-icon-cx-19"></i></label>
+                            <div class="am-u-sm-10">
+                                <input type="password" id="code" name="code" placeholder="请输入验证码">
+                            </div>
+                        </div>
+                        <div class="am-form-group">
+                            <div class="am-u-sm-10 am-u-sm-offset-1">
+                                <input type="hidden" name="type" id="type" value="3">
+                                <button type="button" class="am-btn am-btn-default cx-btn-sbmt am-round" id="u_btn_f1">下一步</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="am-tab-panel cxTab" id="vf2">
+                    <form id="u_forgot_form" class="am-form am-form-horizontal cx-form" >
+                        <div class="am-form-group">
+                            <label for="doc-ipt-3" class="am-u-sm-2 am-form-label"><i class="am-icon-cx-3"></i></label>
+                            <div class="am-u-sm-10">
+                                <input type="password" id="newpwd1" name="newpwd1" placeholder="输入新密码">
+                            </div>
+                        </div>
+                        <div class="am-form-group">
+                            <label for="doc-ipt-pwd-2" class="am-u-sm-2 am-form-label"><i class="am-icon-cx-19"></i></label>
+                            <div class="am-u-sm-10">
+                                <input type="password" id="newpwd2" name="newpwd2" placeholder="确认新密码">
+                            </div>
+                        </div>
+                        <div class="am-form-group">
+                            <div class="am-u-sm-10 am-u-sm-offset-1">
+                                <button type="button" class="am-btn am-btn-default cx-btn-sbmt am-round" id="u_btn_f2">确定</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

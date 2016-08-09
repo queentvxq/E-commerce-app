@@ -1,0 +1,6 @@
+{
+    "jscodehints.detectedExclusions": [
+        "global/tool.js",
+        "channel/app/n.init.js"
+    ]
+}

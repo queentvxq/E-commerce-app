@@ -1,0 +1,218 @@
+#uc-order-sc{    
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 201;
+}
+#u_order_sc{
+    top: 50px;
+    left: 0;
+    z-index: 101;
+}
+#u_order_sc .odnav{
+    background-color: #fff;
+    height: 50px;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+}
+#u_order_sc .odnav li{
+    text-align: center;
+    height: 50px;
+}
+#u_order_sc .odnav li a{
+    display: block;
+    height: 47px;
+    line-height: 47px;
+    color: #666666;
+    font-size: 1.5rem;
+}
+#u_order_sc .odnav li.act{
+    height: 50px;
+    border-bottom: 3px #000 solid;
+}
+#u_order_sc .odnav li.act a{
+    color: #000;
+    font-weight: bold;
+}
+
+#u_order_list{
+    top: 50px;
+    padding:1.66rem;
+    background-color: #f5f7fb;
+}
+#u_order_list .u_order_item{
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+#u_order_sc .odNone{
+    text-align: center;
+    padding-top: 10rem;
+}
+#u_order_sc .odNone i{
+    font-size: 3rem;
+}
+.workodno{
+    font-size: 1.2rem;
+}
+.u_order_splist{
+    margin-bottom: 1.2rem;
+    background-color: #fff;
+}
+.u_order_splist .u_od_tb{
+    height: 4px;
+    background-image: url("../imgs/bg21.png");
+    background-repeat:  repeat-x;
+}
+.u_order_splist .u_od_con{
+    border: 1px #f1f1f1 solid;
+    border-top: none;
+    padding:0 1.9rem 0 1.9rem;
+}
+.u_order_splist .sp_item {
+    padding:2rem 0;
+    position: relative;
+    display: block;
+}
+.u_order_splist .sp_item .img{
+    padding: 0;
+    width: 36.7%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+.u_order_splist .sp_item .img img{
+    max-width: 100%;
+    max-height: 10rem;
+    width: 100%;
+}
+.u_order_splist .sp_item .tit{
+    position: absolute;
+    top: 2rem;
+    left: 40%;
+    line-height: 1.5;
+}
+.u_order_splist .sp_item .tit h3{
+    font-size: 1.5rem;
+    color: #000;
+    margin: 0;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 6.2rem;
+}
+.u_order_splist .sp_item .tit .spec{
+    font-size: 1.2rem;
+    color: #777777;
+    display: block;
+}
+.u_order_splist .sp_item>div{
+    height: 100%;
+}
+.u_order_splist .sp_item .spstate{
+    font-size: 1.2rem;
+    color: #777777;
+    display: inline-block;
+    position:absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    height: auto;
+}
+.u_order_splist .tongji{
+    font-size: 1.55rem;
+    height: 3.46rem;
+    line-height: 3.4rem;
+}
+.u_order_splist .tongji>div{
+    padding: 0;
+}
+.u_order_splist .tongji .od_state{
+    color: #f74c31;
+}
+.u_order_splist .tongji .hjprice{
+    text-align: right;
+}
+.u_order_splist .odOper{
+    height: 5.7rem;
+    padding: 1.2rem 0 1rem 0;
+}
+.u_order_splist .odOper>div{
+    margin: 0;
+    padding: 0;
+}
+.u_order_splist .u_od_con .odclock{
+    font-size: 1.2rem;
+}
+.u_order_splist .odOper .odActBtn{
+    text-align: right;
+}
+.u_order_splist .odOper .cx-btn{
+    margin-left: 0.5rem;
+}
+/*服务订单*/
+#u_order_list.sbg{
+    background: #f5f7fb;
+}
+#u_order_list.sbg .u_order_item{
+    padding: 0;
+}
+#u_order_list.sbg .u_order_splist{
+    padding-right: 0;
+    padding-top: 0.1;
+}
+.u_order_splist .s_tit{
+    margin-left: 1rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px #efefef solid;
+}
+.u_order_splist .s_time,.u_order_splist .s_addr{
+    margin-left: 1rem;
+    line-height: 1.8rem;
+    padding-bottom: 0.5rem;
+}
+.u_order_splist .s_price{
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    border-top: 1px #efefef solid;
+}
+#u_order_list.sbg .u_order_splist .odOper{
+    border: none;
+}
+#u_order_list.sbg .tongji{
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+#u_order_list.sbg .odOper{
+    padding-right: 1.5rem;
+}
+.selectPayMd{
+    text-align: center;
+}
+.selectPayMd h3{
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+.selectPayMd .am-g div{
+    padding: 1rem 3rem;
+}
+/*
+
+
+
+
+
+
+
+
+
+*/

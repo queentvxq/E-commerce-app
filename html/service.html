@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="m am-touch js cssanimations">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="assets/css/amazeui.css">
+    <link rel="stylesheet" href="assets/css/amaze.min.css">
+    <link rel="stylesheet" href="assets/css/ucj.css">
+    <title>优厨家</title>
+</head>
+
+<body>
+    <!--最外层容器，用于整体销毁，包含主场景和全局模块-->
+    <div id="main">
+        <!--内部主场景容器，包含顶部和底部导航内容-->
+        <div class="am-page" id="vs-main">
+            <!--顶部内容-->
+            <!--商城顶部搜索条-->
+            <div class="am-g m-serch">
+                <div class="am-u-sm-12">
+                    <h2>KITCHEN PLUS</h2></div>
+            </div>
+            <!--End--顶部内容-->
+            <!--主要内容------------------------->
+            <div class="views wrapper" id="wrapper">
+                <!--商城首页-->
+                <div class="mViews" id="mViews">
+                    <div class="am-container" id="vs_index">
+                        <div id="service-index-ad">
+                            <div class="am-slider am-slider-a1">
+                                <ul class="am-slides">
+                                    <li>
+                                        <img src="assets/imgs/ad_i_0.jpg">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="service-list-box">
+                            <ul>
+                                <li>
+                                    <div class="title">
+                                       <span class="mt">善气.厨房电器教学</span>&nbsp;
+                                       <span class="st">[不让电器闲着，就是对他最大的呵护]</span>
+                                    </div>
+                                    <div class="s-info-img">
+                                        <img src="assets/imgs/ad_i_0.jpg">
+                                    </div>
+                                    <div class="s-info-bottom">
+                                        <span class="s-price">￥100</span>
+                                        <a class="s-go-order">预约</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="title">
+                                       <span class="mt">善气.厨房电器教学</span>&nbsp;
+                                       <span class="st">[不让电器闲着，就是对他最大的呵护]</span>
+                                    </div>
+                                    <div class="s-info-img">
+                                        <img src="assets/imgs/ad_i_0.jpg">
+                                    </div>
+                                    <div class="s-info-bottom">
+                                        <span class="s-price">￥100</span>
+                                        <a class="s-go-order">预约</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="space100"></div>
+                        <div class="space40"></div>
+                    </div>
+                </div>
+            </div>
+            <!--End--主要内容-------------------->
+        </div>
+        <!--End--内部主场景容器，包含顶部和底部导航内容-->
+        <!--End--最外层容器，用于整体销毁，包含主场景和全局模块-->
+        <!--底部导航-->
+        <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="navbar_bm" cxid="cx_b1">
+            <ul class="am-navbar-nav am-cf am-avg-sm-4">
+                <li>
+                    <a href="#">
+                        <span class="am-icon-cx-28"></span>
+                        <span class="am-navbar-label">商城</span>
+                    </a>
+                </li>
+                <li data-am-navbar-share>
+                    <a href="#" class="act">
+                        <span class="am-icon-cx-29"></span>
+                        <span class="am-navbar-label">服务</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="am-icon-cx-30"></span>
+                        <span class="am-navbar-label">我的</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--End--底部导航-->
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script>
+    var myScroll;
+    $(function($) {
+        var IScroll = $.AMUI.iScroll;
+        myScroll = new IScroll('#wrapper', {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
+        });
+        $('.am-slider').flexslider({
+            start: function() {
+                myScroll.refresh();
+                console.log($('#service-index-ad').height());
+            }
+        });
+    })
+
+    document.addEventListener('touchmove', function(e) {
+        e.preventDefault();
+    }, false);
+
+</script>
+
+</html>

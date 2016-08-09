@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" class="m am-touch js cssanimations">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="assets/css/amazeui.css">
+    <link rel="stylesheet" href="assets/css/amaze.min.css">
+    <link rel="stylesheet" href="assets/css/ucj.css?r=12223sv3">
+    <title>优厨家</title>
+</head>
+
+<body>
+    <!--最外层容器，用于整体销毁，包含主场景和全局模块-->
+    <div id="main">
+        <div class="am-page " id="uc-address-set">
+            <!--顶部内容-->
+            <!--End--顶部内容-->
+            <!-- 主要内容 -->
+            <div class="am-g ui-border-b" id="uheadtop">
+                <div class="am-u-sm-2">
+                    <a id="backBtn" v-on:click="goBack">
+                        <i class="am-icon-cx-77"></i>
+                    </a>
+                </div>
+                <div class="am-u-sm-8 utopTit">选择优惠券</div>
+                <div class="am-u-sm-2 manage">管理</div>
+            </div>
+            <div class="uviews bodybg1" id="u_address_set">
+                <div class="u_address_cont">
+                    <ul id="u_adressset_list">
+                        <li class="act">
+                            <div class="am-g">
+                                <div class="am-u-sm-11">
+                                    <div class="peopho">
+                                        <span class="addpeo">王倩</span>
+                                        <span>18617049094</span>
+                                    </div>
+                                    <div class="addre">浙江省 杭州市 西湖区 五联经济工业园区8幢 305</div>
+                                </div>
+                                <div class="am-u-sm-1">
+                                    <a class="ckbox ui-border-radius"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="am-g">
+                                <div class="am-u-sm-11">
+                                    <div class="peopho">
+                                        <span class="addpeo">王倩</span>
+                                        <span>18617049094</span>
+                                    </div>
+                                    <div class="addre">浙江省 杭州市 西湖区 五联经济工业园区8幢 305</div>
+                                </div>
+                                <div class="am-u-sm-1">
+                                    <a class="ckbox ui-border-radius"></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="am-g">
+                                <div class="am-u-sm-11">
+                                    <div class="peopho">
+                                        <span class="addpeo">王倩</span>
+                                        <span>18617049094</span>
+                                    </div>
+                                    <div class="addre">浙江省 杭州市 西湖区 五联经济工业园区8幢 305</div>
+                                </div>
+                                <div class="am-u-sm-1">
+                                    <a class="ckbox ui-border-radius"></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--End--主要内容-------------------->
+        </div>
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script>
+    $(function($) {
+
+        var IScroll = $.AMUI.iScroll;
+        myScroll = new IScroll('#u_coupon_c', {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
+        });
+    })
+</script>
+
+</html>

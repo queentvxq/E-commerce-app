@@ -1,0 +1,70 @@
+<div class="views" id="u_bcart" v-if="show" :transition="transitionName">
+    <com-utopbar v-ref:utopbar title="购物车"></com-utopbar>
+    <div id="bcart" class="uviews bodybg1">
+        <ul class="cartlist">
+            <template v-if="list">
+                <template v-for="(index, value) in list">
+                    <li class="ui-border" v-bind:class="{ 'ui-border-red': value.pay }">
+                        <div class="b_sp">
+                            <template v-if="value.kindtype==0">
+                                <a href="#mall/product/{{value.pid}}"><img src="{{value.picurl}}"></a>
+                            </template>
+                            <template v-else>
+                                <a href="#mall/service/{{value.pid}}"><img src="{{value.picurl}}"></a>
+                            </template>
+                            <div class="pddes">
+                                <div class="pddestit">
+                                    <template v-if="value.kindtype==0">
+                                        <a href="#mall/product/{{value.pid}}">{{value.name}}</a>
+                                    </template>
+                                    <template v-else>
+                                        <a href="#mall/service/{{value.pid}}">{{value.name}}</a>
+                                    </template>
+                                </div>
+                                <div class="pddespre" v-show="value.catename.length>0">类型：<span>{{value.catename}}</span></div>
+                                <div class="pddespre">单价：<span>￥{{value.price}}</span></div>
+                                <template v-if="value.kindtype==0">
+                                    <div class="pddnum">
+                                        <div class="numedt ui-border">
+                                            <a v-on:click="subPc(value.id,$event)" class="numedtA ui-border-r"><i class="am-icon-cx-40"></i></a>
+                                            <input v-on:change="changeInput(index,$event)" class="numedtB" type="number" v-bind:value="value.count">
+                                            <a v-on:click="addPc(value.pid,value.kindtype,value.cateid,$event)" class="numedtC ui-border-l"><i class="am-icon-cx-41"></i></a>
+                                        </div>
+                                    </div>
+                                </template>
+                                <template v-else>
+                                    <div class="pddespre">数量：<span>X{{value.count}}</span></div>
+                                </template>
+                            </div>
+                        </div>
+                        <div class="b_sp_ed  ui-border-t">
+                            <a v-on:click="delPc(value.id,$event)" class="delBtn ui-border-r">
+                                <i class="am-icon-cx-32"></i> 删除
+                            </a>
+                            <a v-on:click="setPayPc(value.id,$event,index)" class="setBtn" v-bind:class="{ 'act': value.pay }">
+                                <span class="setbuy ui-border-radius"><i class="am-icon-cx-90"></i></span> 选中
+                            </a>
+                        </div>
+                    </li>
+                </template>
+            </template>
+        </ul>
+        <div class="cartnone" v-show="ctempt">
+            <i class="am-icon-cx-93"></i>
+            <h3>购物车就像人生，不能空空荡荡</h3>
+        </div>
+        <div id="navbar_cart">
+            <div>
+                <a href="#buy/border" @click="goBuy($event)" class="buy">
+                    <div>结算</div>
+                    <div class="buy_jg">{{priceAll}}元</div>
+                </a>
+                <div v-on:click="selectPayAll" class="setAllBtn ui-border-r" v-bind:class="{ 'act':payAll }">
+                    <span class="setbuy ui-border-radius setAllIcon">
+                <i class="am-icon-cx-90"></i>
+                    </span> 全选
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

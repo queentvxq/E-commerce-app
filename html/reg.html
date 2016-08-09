@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="m am-touch js cssanimations">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="assets/css/amazeui.css">
+    <link rel="stylesheet" href="assets/css/amaze.min.css">
+    <link rel="stylesheet" href="assets/css/ucjcss/fonts.css">
+    <link rel="stylesheet" href="assets/css/ucjcss/app.css?r=1255">
+    <link rel="stylesheet" href="assets/css/ucjcss/ucenter.css?r=1255">
+    <title>优厨家</title>
+</head>
+
+<body>
+    <!--最外层容器，用于整体销毁，包含主场景和全局模块-->
+    <div id="main">
+        <!--内部主场景容器，包含顶部和底部导航内容-->
+        <div class="am-page" id="uc-login">
+            <!--顶部内容-->
+            <!--End--顶部内容-->
+            <!--主要内容------------------------->
+            <div class="views">
+                <!--用户中心首页-->
+                <div class="am-container" id="u_login">
+                    <div class="u_login_bg">
+                        <img src="assets/imgs/ubg02.jpg">
+                    </div>
+                    <div class="am-containe" id="u_reg_main">
+                        <div class="am-tabs cx-tabs" data-am-tabs="{noSwipe: 1}">
+                            <div class="am-tabs-bd">
+                                <div class="am-tab-panel am-active">
+                                    <form id="u_reg_form" class="am-form am-form-horizontal cx-form" action="http://apiqa.ukitchenplus.com/account/register" method="post">
+                                        <div class="am-form-group">
+                                            <label for="doc-ipt-3" class="am-u-sm-1 am-form-label"><i class="am-icon-cx-84"></i></label>
+                                            <div class="am-u-sm-6">
+                                                <input type="number" id="phone" name="phone" placeholder="请输入手机号码">
+                                            </div>
+                                            <div class="am-u-sm-3"><a href="" class="takVad" id="takBad">获取验证码</a></div>
+                                        </div>
+                                        <div class="am-form-group">
+                                            <label for="doc-ipt-pwd-2" class="am-u-sm-1 am-form-label"><i class="am-icon-cx-85"></i></label>
+                                            <div class="am-u-sm-11">
+                                                <input type="password" id="code" name="phone" value="" placeholder="六位手机短信验证码">
+                                            </div>
+                                        </div>
+                                        <div class="am-form-group">
+                                            <label for="doc-ipt-pwd-2" class="am-u-sm-1 am-form-label"><i class="am-icon-cx-85"></i></label>
+                                            <div class="am-u-sm-11">
+                                                <input type="password" id="pwd" name="pwd" placeholder="请输入密码">
+                                            </div>
+                                        </div>
+                                        <div class="am-form-group">
+                                            <div class="am-u-sm-12">
+                                                <button type="submit" id="submit" class="am-btn am-btn-default cx-btn-sbmt">注册</button>
+                                                <div class="u_login_ts">点击注册即表示同意并遵守U厨家的<a class="clause" href="">服务条款</a>和<a class="clause" href="">隐私条款</a></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End--主要内容-------------------->
+        </div>
+        <!--End--内部主场景容器，包含顶部和底部导航内容-->
+        <!--End--最外层容器，用于整体销毁，包含主场景和全局模块-->
+        <!--底部导航-->
+        <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " id="navbar_bm" cxid="cx_b1">
+            <ul class="am-navbar-nav am-cf am-avg-sm-4">
+                <li>
+                    <a href="#">
+                        <span class="am-icon-cx-29"></span>
+                        <span class="am-navbar-label">商城</span>
+                    </a>
+                </li>
+                <li data-am-navbar-share>
+                    <a href="#">
+                        <span class="am-icon-cx-30"></span>
+                        <span class="am-navbar-label">服务</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="act">
+                        <span class="am-icon-cx-31"></span>
+                        <span class="am-navbar-label">我的</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--End--底部导航-->
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+
+</html>

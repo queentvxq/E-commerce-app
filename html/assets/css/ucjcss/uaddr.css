@@ -1,0 +1,171 @@
+#u_addr{
+    bottom: 0;
+}
+#u_addr_list {
+    padding: 1.6rem;
+    margin-bottom: 1rem;
+    bottom: 60px;
+    background: #f5f7fb;
+}
+#u_addr_list .addr_box{
+    margin-bottom: 1.6rem;
+    padding: 0 0.6rem;
+    background: #fff;
+    color: #000;
+    font-size: 1.4rem;
+}
+#u_addr_list .addr_box .addr_info{
+    border-bottom: 1px solid #f5f7fb;
+    padding: 1.5rem 1.2rem ;
+    line-height: 1;
+}
+#u_addr_list .addr_box .addr_info .name,
+#u_addr_list .addr_box .addr_info .tel{
+    margin-bottom: 2.4rem;
+}
+#u_addr_list .addr_box .addr_info .address{
+    margin-bottom: 1.2rem;
+    color: #777;
+}
+#u_addr_list .addr_box .addr_info div{
+    padding: 0;
+}
+#u_addr_list .addr_box .addr_info .tel{
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+.addr_box .select{
+    line-height: 3rem;
+    height: 3rem;
+}
+.addr_box .select .set{
+    font-size: 1.2rem;
+    position: relative;
+    padding: 0.7rem 0.5rem 0.7rem 3.5rem;
+}
+.addr_box .select .set span{
+    position: absolute;
+    line-height: 1.6;
+    left: 1rem;
+    height: 1.6rem;
+    width: 1.6rem;
+    border: 1px solid #777; 
+    color: #fff;
+    margin-top: .7rem;
+    text-align: center;
+} 
+#u_addr_list .addr_active{
+    background: #f74c31;
+    border: none; 
+}
+
+#u_addr_list .addr_box .select .del{
+    color: #777;
+    float: right;
+    font-size: 1.6rem;
+    padding: 0 0.7rem;
+}
+
+#add_addr{
+    position: absolute;
+    width: 97%;
+    margin: 6px 1.5%;
+    bottom: 0;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: #fff;
+    z-index: 1000;
+    background: #000;
+    font-size: 1.4rem;
+}
+
+/*address edit*/
+#u_addredit{
+    bottom: 0;
+}
+#u_addr_eidt{
+    padding-top: 0.6rem;
+    bottom: 0;
+    background: #f5f7fb;
+}
+#addr_edit_form{
+    font-size: 1.4rem;
+}
+#addr_edit_form input{
+    height: 4.3rem;
+    /*line-height: 4.3rem;*/
+    border: none;
+    padding: 0 2.4rem;
+    display: block;
+    width: 100%;
+    vertical-align: middle;
+    background-color: #fff;
+    border-radius: 0;
+    -webkit-appearance: none;
+    color: #000;
+}
+#addr_edit_form .place{
+    position: relative;
+}
+#addr_edit_form .place i{
+    position: absolute;
+    right:1.6rem;
+    top: 1.3rem;
+    color: #c0c0c0;
+}
+
+#u_addredit .saveBtn{
+    font-size: 1.6rem;
+    color: #000;
+}
+
+#placeselect{
+    position: absolute;
+    bottom: 0;
+    top: 57px;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
+    display: none;
+    transition: all 1s;
+}
+#placeselect .title{
+    text-align: center;
+    position: relative;
+    height: 4rem;
+    line-height: 4rem;
+    color: #000;
+}
+#placeselect ul .am-active{
+    border-bottom: 3px solid #000;
+}
+#placeselect a,#placeselect a:hover{
+    padding: 5px;
+    border: none;
+}
+#placeselect i{
+    float: right;
+    position: absolute;
+    right: 0;
+    width: 2.5rem;
+    text-align: center;
+}
+
+#placeselect .am-nav-justify>li{
+    width: auto;
+}
+#placeselect .am-tabs-bd{
+    border: none;
+    height: 100%;
+}
+#placeselect .am-tabs-bd .am-tab-panel{
+    overflow-y: auto;
+    height: 100%;
+    padding-bottom: 80px;
+}
+#placeselect .am-tabs-bd div .data-list{
+    height: 3rem;
+    color: #000;
+}

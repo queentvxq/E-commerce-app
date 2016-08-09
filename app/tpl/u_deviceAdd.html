@@ -1,0 +1,43 @@
+<div class="views bodybg1 wrapper2" id="u_device_add" v-if="show" :transition="transitionName">
+    <com-utopbar2 v-ref:utopbar title="添加设备" btname="保存" v-on:btn-evt="device_add_btn"></com-utopbar2>
+    <div class="wrapper" id="u_d_add">
+        <div>
+            <form>
+                <div class="ui-border-b">
+                    <div>设备</div>
+                    <select name="devicecategory" id="devicecategory" v-model="selected" @change="getcategory">
+                        <option v-for="value in device.devicecategory" v-bind:value="value.id">{{ value.name }}</option>
+                    </select>
+                    <i class="am-icon-cx-5"></i>
+                </div>
+                <div class="ui-border-b">
+                    <div>品牌</div>
+                    <select name="brands" id="ingredientid" v-model="brands">
+                        <option v-for="value in device.getbrands" v-bind:value="value.id">{{ value.name }}</option>
+                    </select>
+                    <i class="am-icon-cx-5"></i>
+                </div>
+
+                <div class="ui-border-b xinghao" v-on:click="showmy_model">
+                    <div>型号</div>
+                    <input type="text" id="mymodel">
+                    <i class="am-icon-cx-5"></i>
+                </div>
+                <div class="ui-border-b">
+                    <div>类型</div>
+                    <select id="category" v-model="">
+                        <option v-for="value in device.category" v-bind:value="value.id">{{ value.name }}</option>
+                    </select>
+                    <i class="am-icon-cx-5"></i>
+                </div>
+
+                <div class="ui-border-b">
+                    <div>安装时间</div>
+                    <input type="text" v-model="date" v-on:click="getdate" id="mydatesee" readonly="true" >
+                    <i class="am-icon-cx-5"></i>
+                </div>
+            </form>
+        </div>
+    </div>
+    <input type="date" min="" v-model="date" id="mydate" max='' style="height:0.001px;width:0.01px">
+</div>

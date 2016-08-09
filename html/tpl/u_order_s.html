@@ -1,0 +1,119 @@
+<div class="views" id="u_order" v-if="show" :transition="transitionName">
+    <!--用户中心首页-->
+    <com-utopbar v-ref:utopbar title="订单详细"></com-utopbar>
+    <div class="uviews bodybg1" id="u_order_msg">
+
+        <div class="am-g" id="u_order_detail">
+            <div class="u_od_tb"></div>
+            <div class="u-order_msgcont">
+                <div class="u_order_num">
+                    <div class="am-g udingdan">
+                        <div class="am-u-sm-8 uorblack">订单号:
+                            <span class="odnum">
+                                        {{ordernumber}}
+                                    </span>
+                        </div>
+                        <div class="am-u-sm-4 wtdelivery">{{orderstatusName}}</div>
+                    </div>
+                    <a @click="goPage" class="insel ui-border-t" href="#ucenter/uorderlog/{{ordernumber}}">
+                        <div class="mlistico">
+                            <i class="am-icon-cx-82"></i>
+                        </div>
+                        <div class="odphone">
+                            <div>{{expressinfo}}</div>
+                            <div class="odtime">{{expresstime}}</div>
+                        </div>
+                        <div class="uiconright">
+                            <i class="am-icon-angle-right"></i>
+                        </div>
+                    </a>
+                    <div class="insel ui-border-t">
+                        <div class="odiconadd">
+                            <i class="am-icon-cx-15"></i>
+                        </div>
+                        <div class="odaddress">
+                            <div>{{username}} {{phone}}</div>
+                            <div>{{address}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u_od_td"></div>
+                <div class="u_order_splist">
+                    <div class="u_od_con">
+                        <template v-for="(index, value) in listshop">
+                            <div class="sp_item ui-border-b">
+                                <div class="img">
+                                    <img src="{{value.coverimgurl}}">
+                                </div>
+                                <div class="tit">
+                                    <h3>{{value.productname}}</h3>
+                                    <span class="spec">价格：￥{{value.payprice}}</span>
+                                    <span class="spec">数量：{{value.productcount}}</span>
+                                </div>
+                                <template v-if="value.statesname==null">
+                                    <div class="spstate" @click="retGood(index,value.operatiourl)">{{value.operationmae}}</div>  
+                                </template>
+                                <template v-else>
+                                    <div class="spstate">{{value.statesname}}</div>  
+                                </template>
+                            </div>
+                        </template>
+                        <template v-for="(index, value) in listservice">
+                            <div class="sp_item ui-border-b">
+                                <div class="img">
+                                    <img src="{{value.coverimgurl}}">
+                                </div>
+                                <div class="tit">
+                                    <h3>{{value.servicename}}</h3>
+                                    <span class="spec">价格：￥{{value.payprice}}</span>
+                                    <span class="spec">选项：{{value.name}}</span>
+                                </div>
+                                <div class="spstate">{{value.username}}</div>
+                            </div>
+                        </template>
+                    </div>
+                    <div class="odpay">
+                        <div class="am-g odpayment odpayfirst">
+                            <div class="am-u-sm-6">商品总价</div>
+                            <div class="am-u-sm-6 odmoney">￥{{totalprice}}</div>
+                        </div>
+                        <div class="am-g odpayment">
+                            <div class="am-u-sm-6">优惠</div>
+                            <div class="am-u-sm-6 odmoney">￥{{favorableprice}}</div>
+                        </div>
+                        <div class="am-g odpayment">
+                            <div class="am-u-sm-6">运费</div>
+                            <div class="am-u-sm-6 odmoney">￥{{ExpressPrice}}</div>
+                        </div>
+                        <div class="am-g odpayment odpaylast">
+                            <div class="am-u-sm-6 uorblack">实付款</div>
+                            <div class="am-u-sm-6 wtdelivery">￥{{payamount}}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u_od_td"></div>
+                <div class="u_order_invoice">
+                    <div class="odpaytype uorblack ui-border-b">支付方式<span>{{payment}}</span></div>
+                    <div class="odpaymsg ui-border-b">
+                        <div class="uorblack">发票信息<span>纸质发票</span></div>
+                        <div class="odpaycom">发票抬头：{{invoice}}</div>
+                    </div>
+                    <div class="odmsgfooter">
+                        <div class="odcontact" @click="telphone">
+                            <i class="am-icon-cx-17"></i> 联系望厨
+                        </div>
+                        <div class="odtime">下单时间：{{createtime}}</div>
+                    </div>
+                    <div class="odmsgcode" v-if="iscellphoneorder==1">
+                        <div class="odcodeimg">
+                            <img src="{{cellphoneorderurl}}">
+                        </div>
+                        <div class="odtime">下单时间：{{createtime}}</div>
+                    </div>
+                </div>
+                <div class="space300"></div>
+            </div>
+
+        </div>
+    </div>
+</div>

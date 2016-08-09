@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" class="m am-touch js cssanimations">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <link rel="stylesheet" href="assets/css/amazeui.css">
+    <link rel="stylesheet" href="assets/css/amaze.min.css">
+    <link rel="stylesheet" href="assets/css/ucj.css">
+    <title>优厨家</title>
+</head>
+
+<body>
+    <!--最外层容器，用于整体销毁，包含主场景和全局模块-->
+    <div id="main">
+        <!--内部主场景容器，包含顶部和底部导航内容-->
+        <div class="am-page" id="b-order">
+            <div class="am-g ui-border-b" id="uheadtop">
+                <div class="am-u-sm-2">
+                    <a id="backBtn" v-on:click="goBack">
+                        <i class="am-icon-cx-77"></i>
+                    </a>
+                </div>
+                <div class="am-u-sm-8 utopTit">订单结算</div>
+                <div class="am-u-sm-2">
+                    <a id="msgBtn" href="#/ucenter/umsg">
+                        <i class="am-icon-cx-46"></i>
+                        <span class="cxdot act"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="wrapper" id="b_order">
+                <ul id="b_oder_list">
+                    <li>
+                        <h3>订单确认</h3>
+                        <div class="b_odsps_tit">商品</div>
+                        <div class="b_odsps_con">
+                            <div class="b_odsp am-g ui-border-b">
+                                <div class="am-u-sm-8">
+                                    <div class="img2"><img src="assets/imgs/sp01.jpg"></div>
+                                    <div class="sp_des  am-vertical-align"><span>西门子滚筒洗衣机<span class="sp_des_no"> X1</span></span>
+                                    </div>
+                                </div>
+                                <div class="am-u-sm-4">
+                                    <div class="b_odsp_pre">￥19998.00</div>
+                                </div>
+                            </div>
+                            <div class="b_odsp am-g ui-border-b">
+                                <div class="am-u-sm-8">
+                                    <div class="img2"><img src="assets/imgs/sp01.jpg"></div>
+                                    <div class="sp_des  am-vertical-align"><span>西门子滚筒洗衣机<span class="sp_des_no"> X1</span></span>
+                                    </div>
+                                </div>
+                                <div class="am-u-sm-4">
+                                    <div class="b_odsp_pre">￥19998.00</div>
+                                </div>
+                            </div>
+                            <div class="b_odsp am-g ui-border-b">
+                                <div class="am-u-sm-8">
+                                    <div class="img2"><img src="assets/imgs/sp01.jpg"></div>
+                                    <div class="sp_des  am-vertical-align"><span>西门子滚筒洗衣机<span class="sp_des_no"> X1</span></span>
+                                    </div>
+                                </div>
+                                <div class="am-u-sm-4">
+                                    <div class="b_odsp_pre">￥19998.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b_odsps_tit">服务</div>
+                        <div class="b_odsps_con">
+                            <div class="b_odsp am-g ui-border-b">
+                                <div class="am-u-sm-8">
+                                    <div class="img2"><img src="assets/imgs/sp01.jpg"></div>
+                                    <div class="sp_des  am-vertical-align"><span>西门子滚筒洗衣机<span class="sp_des_no"> X1</span></span>
+                                    </div>
+                                </div>
+                                <div class="am-u-sm-4">
+                                    <div class="b_odsp_pre">￥19998.00</div>
+                                </div>
+                            </div>
+                            <div class="b_odsp am-g ui-border-b">
+                                <div class="am-u-sm-8">
+                                    <div class="img2"><img src="assets/imgs/sp01.jpg"></div>
+                                    <div class="sp_des  am-vertical-align"><span>西门子滚筒洗衣机<span class="sp_des_no"> X1</span></span>
+                                    </div>
+                                </div>
+                                <div class="am-u-sm-4">
+                                    <div class="b_odsp_pre">￥19998.00</div>
+                                </div>
+                            </div>
+                            <div class="b_odsp am-g ui-border-b">
+                                <div class="am-u-sm-8">
+                                    <div class="img2"><img src="assets/imgs/sp01.jpg"></div>
+                                    <div class="sp_des  am-vertical-align"><span>西门子滚筒洗衣机<span class="sp_des_no"> X1</span></span>
+                                    </div>
+                                </div>
+                                <div class="am-u-sm-4">
+                                    <div class="b_odsp_pre">￥19998.00</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b_odsps_tit">
+                            <span class="impred ui-border-radius">促销</span>
+                            <span class="align-middle">悦享生活：满8999 立减2999元</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>收货地址</h3>
+                        <div class="ui-border-radius jt_r " id="stAds">
+                            <div>王琳 13555555555</div>
+                            <div>浙江省杭州市西湖区 西湖科技园</div>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>支付方式</h3>
+                        <div class="am-g b_selectItem ui-border-b act">
+                            <div class="am-u-sm-9"><img src="assets/imgs/ico01.png">支付宝支付</div>
+                            <div class="am-u-sm-3 b_zfxz"><a class="setpay ui-border-radius"></a></div>
+                        </div>
+                        <div class="am-g b_selectItem ui-border-b">
+                            <div class="am-u-sm-9"><img src="assets/imgs/ico02.png">微信支付</div>
+                            <div class="am-u-sm-3 b_zfxz"><a class="setpay ui-border-radius"></a></div>
+                        </div>
+                        <div class="am-g b_selectItem ui-border-b">
+                            <div class="am-u-sm-9"><img src="assets/imgs/ico03.png">支付宝货到付款</div>
+                            <div class="am-u-sm-3 b_zfxz"><a class="setpay ui-border-radius"></a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="jt_r b_yhj">
+                        <h3>优惠券</h3>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>配送方式</h3>
+                        <div class="am-g b_selectItem ui-border-b">
+                            <div class="am-u-sm-9"><img src="assets/imgs/ico04.png">望厨</div>
+                            <div class="am-u-sm-3 b_zfxz"><a class="setpay ui-border-radius"></a></div>
+                        </div>
+                        <div class="am-g b_selectItem ui-border-b">
+                            <div class="am-u-sm-9"><img src="assets/imgs/ico05.png">顺丰快递<span>快递费12元</span></div>
+                            <div class="am-u-sm-3 b_zfxz"><a class="setpay ui-border-radius"></a></div>
+                        </div>
+                    </li>
+                    <li><div class="space100"></div></li>
+                </ul>
+            </div>
+            <div id="navbar_order" cxid="cx_b1">
+               <div>
+                    <h3 class="buy">确认购买</h3>
+                    <div class="tongji ">
+                        总计：<span>199.00</span> 已优惠：<span>0</span>
+                    </div>                   
+               </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>
+<script>
+    var myScroll;
+    $(function($) {
+        var IScroll = $.AMUI.iScroll;
+        myScroll = new IScroll('#b_order', {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: 'scale',
+            fadeScrollbars: true
+        });
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,240 @@
+/*上门服务首页*/
+
+#vs_index {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+
+/*商城首页--顶部搜索条目--*/
+
+#vs-main .m-serch {
+    text-align: center;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 1.8rem;
+    color: #000000;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 1px 0.5px 1px #eee;
+    background-color: #fff;
+}
+
+#vs-main .m-serch .am-icon-cx-27:before {
+    font-weight: bold;
+}
+
+#vs-main .m-serch h2 {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*商城首页--通栏广告--*/
+#service-index-ad{
+    min-height: 16rem;
+}
+#service-index-ad .am-slider-a1 {
+    box-shadow: none;
+}
+
+#service-index-ad .am-slider-a1 .am-control-nav li a {
+    width: 1rem;
+    height: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#service-index-ad .am-slider-a1 .am-control-nav li a.am-active {
+    background-color: #ffffff;
+}
+
+
+/*服务首页--推荐服务列表*/
+
+#service-list-box ul {
+    padding: 0;
+    margin: 0;
+}
+
+#service-list-box ul>li {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    min-height: 18rem;
+    border-top: 1.5rem solid #f5f7fb;
+}
+
+#service-list-box .title {
+    position: relative;
+    padding: 1.3rem 2rem 1.3rem 0;
+    margin-left: 2rem;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#service-list-box .title .mt {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+#service-list-box .title .st {
+    font-size: 1.4rem;
+    color: #747474;
+}
+
+#service-list-box .s-info-img {
+    position: relative;
+}
+
+#service-list-box .s-info-img img {
+    width: 100%;
+    position: relative;
+    height: 50vw;
+}
+
+#service-list-box .s-info-img span {
+    color: #ff7f00;
+    font-size: 1.6rem;
+    height: 3.4rem;
+    line-height: 3.4rem;
+    margin-right: 1rem;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#service-list-box .s-info-bottom {
+    position: relative;
+    font-size: 1.6rem;
+    padding: 1.5rem 1rem 0 2rem;
+    height: 5rem;
+}
+
+#service-list-box .s-info-bottom .s-price {
+    color: #ff7f00;
+    margin: 0;
+}
+#service-list-box .s-info-bottom .s-price-fake {
+    color: #747474;
+    text-decoration: line-through;
+    margin: 0;
+}
+#service-list-box .s-info-bottom .s-go-order {
+    color: #000;
+    font-size: 1.4rem;
+    height: 2.6rem;
+    width: 7rem;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    top: 1.2rem;
+    right: 0.5rem;
+    line-height: 2.6rem;
+    position: absolute;
+}
+
+#service_main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*详页页面*/
+
+#service-detail .wrapper {
+    top: 0;
+}
+
+#service-detail-box .titles {
+    border-bottom: 1.6rem solid #f5f7fb;
+    padding: 1.5rem 0 1.5rem 2.5rem;
+    letter-spacing: 2px;
+}
+
+#service-detail-box .titles .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+#service-detail-box .titles .stitle {
+    font-size: 1.5rem;
+    color: #959595;
+}
+
+#service-detail-box .infos {
+    border-bottom: 1.6rem solid #f5f7fb;
+    padding-left: 2.5rem;
+    color: #727272;
+    font-size: 1.5rem;
+}
+
+#service-detail-box .infos .price {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e5e5;
+    float: left;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+}
+
+#service-detail-box .infos .price .price-txt {
+    float: left;
+    width: 83.5%;
+    padding-left: 0.5rem;
+}
+
+#service-detail-box .infos .price .price-txt div {
+    float: left;
+}
+
+#service-detail-box .infos .content {
+    padding: 1rem 0.5rem 1rem 0;
+    clear: both;
+}
+
+#service-detail-box .infos .content p {
+    margin: 0;
+    line-height: 1.8;
+    font-size: 1.5rem;
+}
+
+#service-detail-box .infos .p-red {
+    color: #ff263f;
+    font-weight: normal;
+}
+
+#sdetail-img-ul img {
+    height: 66vw;
+    width: 120%;
+}
+
+#upyyBtn {
+    position: fixed;
+    height: 5rem;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 1111;
+    line-height: 4.8rem;
+    text-align: center;
+}
+
+#upyyBtn a {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: block;
+}

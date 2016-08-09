@@ -1,0 +1,61 @@
+<div class="views" id="h-pages" v-if="show" :transition="transitionName">
+    <div class="am-g ui-border-b" id="uheadtop">
+        <div class="am-u-sm-2" style="text-align:left"><a id="backBtn" v-on:click="back"><i class="am-icon-cx-77"></i></a></div>
+        <div class="am-u-sm-8 utopTit">品质生活</div>
+        <div class="am-u-sm-2" style="text-align:right"><a id="msgBtn" v-on:click="share"><i class="am-icon-cx-78"></i></a></div>
+    </div>
+    <div id="h_pages">
+        <div id="home_d">
+            <div id="slider" class="item_slider" style="height:{{imgHeight}}px;">
+                <img :src="imgurl" />
+            </div>
+            <div id="item_main" class="item_main">
+                <div class="item_title">
+                    <p>{{title}}</p>
+                    <p>{{subtitle}}</p>
+                </div>
+                <div class="am-g item-group">
+                    <template v-if="goods">
+                        <template v-for="value in goods.list">
+                            <div class="item-box" id="{{value.id}}">
+                                <div class="info">{{value.description}}</div>
+                                <template v-if="value.type==0">
+                                    <a href="#mall/product/{{value.id}}">
+                                        <div class="info-img">
+                                            <div style="height:{{list_imgHeight}}">
+                                                <img :src="value.imgrul">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </template>
+                                <template v-else>
+                                    <a href="#mall/service/{{value.id}}">
+                                        <div class="info-img">
+                                            <div style="height:{{list_imgHeight}}">
+                                                <img :src="value.imgrul">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </template>
+
+                                <div class="item">
+                                    <div class="title">{{value.title}}</div>
+                                    <template v-if="value.memberprice==value.originprice">
+                                        <div class="price"><span>￥{{value.memberprice}}</span></div>
+                                    </template>
+                                    <template v-else>
+                                        <div class="price"><span>￥{{value.memberprice}} <span class="originprice">￥{{value.originprice}}</span></span>
+                                        </div>
+                                    </template>
+                                    <template v-if="value.type===0">
+                                        <div class="like ui-border-radius" v-on:click="likeit(value.id,value.iscollection,$index)"><span class="am-icon-cx-48" v-bind:class="{ 'likeits': value.iscollection }"></span></div>
+                                    </template>
+                                </div>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

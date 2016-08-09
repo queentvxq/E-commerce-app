@@ -1,0 +1,51 @@
+<div class="uviews" id="u_youhui" v-if="show" :transition="transitionName">
+    <!--用户中心首页-->
+    <com-utopbar v-ref:utopbar title="优惠券"></com-utopbar>
+    <div class="wrapper" id="u_youhui_list">
+        <div class="am-container">
+            <div id="u_you_form">
+                <input type="text" v-model="numb" placeholder="请输入兑换码领取优惠券">
+                <a id="upBtn" class="am-btn am-btn-default xc_btn01" @click="takeUp">领取</a>
+            </div>
+            <ul id="u_youhuiset_list" v-if="list">
+                <!--
+          uAct已领取
+          uOver已过期
+          -->
+                <template v-for="(index, value) in list">
+                    <li class="ui-border" :class="{'uAct':value.isused,'uOver':value.isover}" @click="takeUp(index,$event)">
+                        <div class="am-g">
+                            <div class="am-u-sm-12">
+                                <div class="yhp">
+                                    <template v-if="value.type == 2">
+                                        <div class="yhprice">{{value.discount}}<span>折</span></div>
+                                    </template>
+                                    <template v-else>
+                                        <div class="yhprice">{{value.amount}}<span>元</span></div>
+
+                                    </template>
+                                </div>
+                                <div class="yht">
+                                    <div class="yhtitle">{{value.name}}</div>
+                                    <div class="yhtitle">{{value.info}}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="yhtime">{{value.starttime}} 至 {{value.endtime}}</div>
+                        <template v-if="value.isused">
+                            <div class="isusedTxt">已使用</div>
+                        </template>
+                        <template v-else>
+                            <template v-if="value.isover||value.isexpired">
+                                <div class="isusedTxt">已过期</div>
+                            </template>
+                        </template>
+                    </li>
+                </template>
+            </ul>
+            <div v-else>
+                <div style="text-align: center;">你没有任何优惠券</div>
+            </div>
+        </div>
+    </div>
+</div>

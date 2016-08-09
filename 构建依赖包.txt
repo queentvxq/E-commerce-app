@@ -1,0 +1,19 @@
+﻿//首先安装nodejs
+//所有JS的包文件来自于npm
+//cmd命令行运行npm命令,或者使用Git Bash命令行窗口
+
+//GRUNT自动化构建攻击帮助管理维护js代码
+//安装 CLI
+npm install -g grunt-cli
+//安装Grunt
+npm install grunt --save-dev
+//安装jQuery
+npm install jquery --save
+//安装underscore
+npm install underscore --save
+//安装backbone
+npm install backbone --save
+//安装require
+npm install require --save
+//安装require打包工具
+npm install amd-optimize --save

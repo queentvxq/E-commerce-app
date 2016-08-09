@@ -1,0 +1,137 @@
+#m-main .am-u-sm-4 a {
+    color: #999;
+    font-weight: normal;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+}
+
+#m-main .m-serch .am-u-sm-4 a.active{
+    border-bottom: 2px solid #f74c31;
+    color: #f74c31;
+
+}
+
+#m-main .m-serch .am-u-sm-2 a{
+    color: #777;
+    font-size: 2.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+/*发现页--正文*/
+html .discovery{
+    top: 50px
+}
+
+/*发现页--banner*/
+.m-banner img{
+    width: 100%;
+}
+
+/*发现页--顶部类别*/
+.m-category{
+    height: 9rem;
+    color: #000000;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+.m-category > ul {
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    border-bottom: 1px solid #f1f1f1;
+}
+.m-category > ul >li{
+    display: inline-block;
+    height: 100%;
+    font-size: 1.4rem;
+    width: 25%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.m-category > ul >li.active{
+    background-color: #fbfbfb;
+}
+
+.m-category > ul >li .cate{
+    height: 100%;
+    width: 100%;
+    padding: 1rem
+}
+
+.m-category > ul >li i{
+    font-size: 3.5rem;
+}
+.m-category > ul >li p{
+    margin: 0.2rem 0 0 0;
+    font-size: 1.2rem;
+    color: #777;
+    line-height: 1.6rem;
+}
+
+/*商城搜索结果页--商品展示--*/
+
+#m-result-pds,#m-result-pds .u_order_splist{
+    background: #ffffff;
+    position: relative;
+}
+
+#m-result-pds ul>li{
+    width: 43%;
+    display: inline-block;
+    min-height: 18rem;
+    margin: 1rem 4%;
+    background: #ffffff;
+    position: absolute;
+
+}
+
+#m-result-pds .m-product .pdimg{
+    width: 100%;
+    display: inline-block;
+}
+
+#m-result-pds .m-product img{
+    width: 100%;
+    margin-bottom: 1rem;
+    min-height: 10rem;
+}
+
+#m-result-pds .m-product .pdname{
+    width: 100%;
+    display: inline-block;
+    color: #000000;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    overflow: hidden;
+}
+
+#m-result-pds .m-product .wishList{
+    float: right;
+    padding-right: 1rem;
+    color: #c0c0c0;
+    font-size: 1rem;
+    position: relative;
+    top: 0.5rem
+}
+
+#m-result-pds .m-product .wishList.red{
+    color: #ff6248
+}
+
+#m-result-pds .m-product .memberprice{
+    font-size: 1.3rem;
+    color: #000;
+}
+
+#m-result-pds .m-product .marketprice{
+    color:#727272;
+    display: inline-block;
+    font-size: 1rem;
+    text-decoration: line-through;
+    font-style: italic;
+
+}

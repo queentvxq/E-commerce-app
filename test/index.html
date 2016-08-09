@@ -1,0 +1,492 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>调试工具</title>
+    <style type="text/css">
+        #posurl {
+            height: 20px;
+            width: 200px;
+        }
+        
+        .fda {
+            width: 100px;
+            height: 20px;
+        }
+        
+        .fdb {
+            width: 280px;
+            height: 20px;
+        }
+        
+        ul,
+        li {
+            padding: 0;
+            margin: 0
+        }
+        
+        li {
+            padding: 6px;
+            list-style-type: disc;
+        }
+        
+        #outTxt {
+            width: 600px;
+            height: 300px;
+            border: 1px solid #A8A8A8;
+            background-color: #E4E4E4;
+            overflow-y: auto;
+            word-wrap: break-word;
+        }
+        
+        #outTxtPost {
+            width: 600px;
+            height: 100px;
+            border: 1px solid #A8A8A8;
+            background-color: #E4E4E4;
+            overflow-y: auto;
+            word-wrap: break-word;
+        }
+        
+        #nr {
+            position: absolute;
+            top: 100px;
+            left: 800px;
+            width: 300px;
+            height: 300px;
+            background: #eeeeee;
+        }
+        
+        #nr div {
+            width: 200px;
+            height: 100px;
+            background: #eeeeee;
+        }
+        
+        #nr #b1 {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            width: 50px;
+            background-color: #eeeeee;
+        }
+        
+        #nr #b2 {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            width: 100px;
+            background-color: #eeeeee;
+        }
+        
+        #nr #b3 {
+            position: relative;
+            top: 20px;
+            left: 50px;
+            width: 150px;
+            background-color: #eeeeee;
+        }
+
+    </style>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/json2.js"></script>
+    <script type="text/javascript" src="js/jquery.upfiley.js"></script>
+    <script type="text/javascript" src="js/jquery.ajaxfileupload.js"></script>
+    <script>
+         var sArr=['abc','cbf','aaa'];
+         console.log(sArr.indexOf('a'));
+        var apiArr = new Array();
+        var urlArr = new Array();
+        var token = $.cookie("token");
+        /*       apiArr[0] = {
+            phone: "123",
+            pwd: "123",
+            repwd: "123",
+            code: "test"
+        };
+        urlArr[0] = '<option value="0" poUrl="http://apiqa.ukitchenplus.com/account/register">注册用户</option>';
+
+        apiArr[1] = {
+            type: "1",
+            account: "15906670853",
+            pwd: "asdf1234",
+            code: "test"
+        };
+        urlArr[1] = '<option value="1" poUrl="http://apiqa.ukitchenplus.com/account/login">登陆用户</option>';
+
+        apiArr[2] = {
+            type: "3",
+            phone: "13567486258"
+        };
+        urlArr[2] = '<option value="2" poUrl="http://apiqa.ukitchenplus.com/code/phone">接受验证码</option>';
+
+        apiArr[3] = {
+            type: "3",
+            code: "test",
+            verify: "13567486258"
+        };
+        urlArr[3] = '<option value="3" poUrl="http://apiqa.ukitchenplus.com/code/vcode">校验验证码</option>';
+
+        apiArr[4] = {
+            nickname: "wl"
+        };
+        urlArr[4] = '<option value="4" poUrl="http://apiqa.ukitchenplus.com/user/SetNickName?uid=412223&token=' + token + '">设置用户昵称</option>';
+
+        apiArr[5] = {
+            userid: "412223"
+        };
+        urlArr[5] = '<option value="5" poUrl="http://apiqa.ukitchenplus.com/user/userinfo?uid=412223&token=' + token + '">用户信息</option>';
+
+        apiArr[6] = {
+            userid: "412223"
+        };
+        urlArr[6] = '<option value="6" poUrl="http://apiqa.ukitchenplus.com/user/myawards?uid=412223&token=' + token + '">我的奖品</option>';
+
+        apiArr[7] = {};
+        urlArr[7] = '<option value="7" poUrl="http://apiqa.ukitchenplus.com/user/getprovince?uid=412223&token=' + token + '">获取省份列表</option>';
+
+        apiArr[8] = {
+            pid: "1"
+        };
+        urlArr[8] = '<option value="8" poUrl="http://apiqa.ukitchenplus.com/user/getcity?uid=412223&token=' + token + '">获取城市</option>';
+
+        apiArr[9] = {
+            cid: "1"
+        };
+        urlArr[9] = '<option value="9" poUrl="http://apiqa.ukitchenplus.com/user/getregion?uid=412223&token=' + token + '">获取行政区</option>';
+
+        apiArr[10] = {
+            state: -1
+        };
+        urlArr[10] = '<option value="10" poUrl="http://apiqa.ukitchenplus.com/user/myshoporder?token=' + token + '">商品订单</option>';
+
+        apiArr[11] = {};
+        urlArr[11] = '<option value="11" poUrl="http://apiqa.ukitchenplus.com/user/myserviceorder?uid=412223&token=' + token + '">服务订单</option>';
+
+        apiArr[12] = {};
+        urlArr[12] = '<option value="12" poUrl="http://apiqa.ukitchenplus.com/user/myreport?uid=412223&token=' + token + '">我的报告</option>';
+
+        apiArr[13] = {};
+        urlArr[13] = '<option value="13" poUrl="http://apiqa.ukitchenplus.com/user/myawards?uid=412223&token=' + token + '">我的奖品</option>';
+
+        apiArr[14] = {};
+        urlArr[14] = '<option value="14" poUrl="http://apiqa.ukitchenplus.com/user/mycollection?uid=412223&token=' + token + '">我的心愿单</option>';
+
+        apiArr[15] = {};
+        urlArr[15] = '<option value="15" poUrl="http://apiqa.ukitchenplus.com/user/mycoupon?uid=412223&token=' + token + '">我的优惠券</option>';
+
+        apiArr[16] = {};
+        urlArr[16] = '<option value="16" poUrl="http://apiqa.ukitchenplus.com/user/mymessage?uid=412223&token=' + token + '">系统消息</option>';
+
+        apiArr[17] = {};
+        urlArr[17] = '<option value="17" poUrl="http://apiqa.ukitchenplus.com/user/myaddress?uid=412223&token=' + token + '">我的地址列表</option>';
+
+        apiArr[18] = {
+            verify: ""
+        };
+        urlArr[18] = '<option value="18" poUrl="http://apiqa.ukitchenplus.com/account/vphone">验证手机是否被注册</option>';
+
+        apiArr[19] = {};
+        urlArr[19] = '<option value="19" poUrl="http://apiqa.ukitchenplus.com/account/haspwd?uid=412223&token=' + token + '">是否已经设置密码</option>';
+
+        apiArr[20] = {
+            type: 0,
+            phone: ''
+        };
+        urlArr[20] = '<option value="20" poUrl="http://apiqa.ukitchenplus.com/code/phone">接受验证码</option>';
+
+        apiArr[21] = {
+            provinceid: 1,
+            cityid: 1,
+            regionid: 1,
+            name: 'abc',
+            cellphone: '',
+            street: '',
+            room: '',
+            isdefault: 0
+        };
+        urlArr[21] = '<option value="21" poUrl="http://apiqa.ukitchenplus.com/user/UpdateAddress?uid=412223&token=' + token + '">新建和更新地址</option>';
+
+        apiArr[22] = {};
+        urlArr[22] = '<option value="22" poUrl="http://apiqa.ukitchenplus.com/shop/index?uid=412223&token=' + token + '">商城首页</option>';
+
+        apiArr[23] = {};
+        urlArr[23] = '<option value="23" poUrl="http://apiqa.ukitchenplus.com/account/logoff?uid=412223&token=' + token + '">退出</option>';
+
+        apiArr[24] = {};
+        urlArr[24] = '<option value="24" poUrl="http://apiqa.ukitchenplus.com/account/verifytoken?token=' + token + '">验证token</option>';
+
+        apiArr[25] = {};
+        urlArr[25] = '<option value="25" poUrl="http://apiqa.ukitchenplus.com/uses/SetAddrDefault?token=' + token + '">默认地址</option>';
+
+        apiArr[26] = {};
+        urlArr[26] = '<option value="26" poUrl="http://apiqa.ukitchenplus.com/uses/SetAddrDefault?token=' + token + '">默认地址</option>';
+
+        apiArr[27] = {};
+        urlArr[27] = '<option value="27" poUrl="http://apiqa.ukitchenplus.com/shop/getshopcart?token=' + token + '">订单列表</option>';
+        
+        apiArr[28] = {};
+        urlArr[28] = '<option value="28" poUrl="http://apiqa.ukitchenplus.com/shop/searchlist?token=' + token + '">商品列表</option>';
+        
+        apiArr[29] = {id:25};
+        urlArr[29] = '<option value="29" poUrl="http://apiqa.ukitchenplus.com/shop/detail?token=' + token + '">商品详细</option>';
+
+        apiArr[30] = {pid:25,count:1};
+        urlArr[30] = '<option value="30" poUrl="http://apiqa.ukitchenplus.com/shop/addshopcart?token=' + token + '">添加商品到购物车</option>';
+        
+        apiArr[31] = {type:1};
+        urlArr[31] = '<option value="31" poUrl="http://apiqa.ukitchenplus.com/v2/user/UserOrderInfo?token=' + token + '">V2订单列表</option>';
+        
+        apiArr[32] = {ordernumber:1};
+        urlArr[32] = '<option value="32" poUrl="http://apiqa.ukitchenplus.com/v2/user/SelectOrderDetail?token=' + token + '">V2订单详细</option>';
+
+*/
+        var urlSub = 0;
+        var o = {};
+        var out = false;
+        var log = false;
+        var apidb = null;
+        $(function($) {
+            $.ajax({
+                url: "apidb.json",
+                dataType: 'json',
+                success: function(data) {
+                    apidb = data;
+                    for (var k in data.api) {
+                        var _pourl = data.pathA + data.api[k].pourl;
+                        var _name = data.api[k].name;
+                        var _potion = '<option value="' + k + '" poUrl="' + _pourl + '?token=' + token + '">' + _name + '</option>';
+                        $("#apiSelt").append(_potion);
+                    }
+                    buildEvt();
+                    addApi(apidb.api[0].vas);
+                },
+                error: function(XMLHttpRequest, ajaxOptions, thrownError) {
+                    $("#outTxt").html("错误信息：" + ajaxOptions);
+                }
+            });
+
+        });
+
+        function buildEvt() {
+            var ii = 0;
+            /*添加参数*/
+            $("#addFd").click(function(e) {
+                ii++;
+                $("#zdnr").append(addFid(ii, "", ""))
+            });
+            //ajax发送
+            $("#updataBtn").click(function(e) {
+                var o = {}
+                $("#outTxt").html("收集发送数据...");
+                if ($(".zdlist").length > 0) {
+                    $(".zdlist").each(function(index, element) {
+                        var fdAtt = $(element).find(".fda").val();
+                        var fdVal = $(element).find(".fdb").val();
+                        o[fdAtt] = fdVal;
+                    });
+                    upData(o);
+                } else {
+                    upData(o);
+                }
+            });
+            /*切换接口*/
+            log = true;
+            $("#apiSelt").change(function(e) {
+                if ($(this).val() == 23) {
+                    out = true;
+                } else {
+                    out = false;
+                }
+                if ($(this).val() == 0) {
+                    log = true;
+                } else {
+                    log = false;
+                }
+                $("#posurl").val($(this).find("option:selected").attr("poUrl"));
+                urlSub = $(this).val();
+                addApi(apidb.api[$(this).val()].vas);
+            });
+            $("#posurl").val($("#apiSelt").find("option:selected").attr("poUrl"));
+
+        }
+        //添加接口
+        function addApi(_o) {
+            $("#zdnr").empty()
+            var _i = 0;
+            $.each(_o, function(i, n) {
+                $("#zdnr").append(addFid(_i, i, n));
+                _i++;
+            });
+        }
+
+        function addFid(_i, _name, _val) {
+            var _html = '<li id="li' + _i + '" class="zdlist">';
+            _html += '字段名:<input type="text" name="fda" class="fda" value="' + _name + '">';
+            _html += '字段值:<input type="text" name="fdb"  class="fdb" value="' + _val + '">';
+            _html += '<a href="javascript:delfd(' + _i + ')" >删除字段</a></li>';
+
+            return _html;
+        }
+
+        function upData(_data) {
+            var _url = $("#posurl").val();
+            $("#outTxt").html("发送数据中...");
+            var postStr = _url + "<br />" + $.param(_data);
+            $("#outTxtPost").html(postStr);
+
+
+            var typ = "text";
+            if ($("#json").is(":checked")) {
+                typ = "json";
+            }
+            var jsonStr = JSON.stringify(_data);
+            $("#outTxtPost").append("<div>-----------------------------------</div>");
+            $("#outTxtPost").append("<div>" + jsonStr + "</div>");
+            $.ajax({
+                url: _url,
+                data: jsonStr,
+                contentType: 'application/json;charset=utf-8',
+                type: "POST",
+                dataType: 'json',
+                beforeSend: function(xhr) {
+                    //var cookie = $.cookie("UserLogin");
+                    //xhr.setRequestHeader('Cookie', cookie);
+                },
+                success: function(txt) {
+                    if (txt.state == 1) {
+                        $.cookie("UserLogin", token);
+                        if (log) {
+                            $.cookie("token", txt.result.token);
+                            token = txt.result.token;
+                        }
+                        if (out) {
+                            $.cookie("token", null);
+                        }
+                        console.log('token:' + $.cookie("token"));
+                    }
+                    if (typ == "text") {
+                        $("#outTxt").html(txt);
+                    } else {
+                        $("#outTxt").html(JSON.stringify(txt));
+                    }
+                },
+                error: function(XMLHttpRequest, ajaxOptions, thrownError) {
+                    $("#outTxt").html("错误信息：" + ajaxOptions);
+                    console.log($.cookie("UserLogin"));
+                }
+            });
+        }
+
+        function delfd(i) {
+            $("#li" + i).remove();
+        }
+
+        function preImg(sourceId, targetId) {
+            if (typeof FileReader === 'undefined') {
+                alert('Y没有图...');
+                return;
+            }
+
+            var c = document.getElementById('myCanvas');
+            var ctx = c.getContext('2d');
+
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var img = new Image();;
+                img.src = this.result;
+                ctx.drawImage(img, 0, 0, 150, 150);
+                var imgData = c.toDataURL("image/jpeg");
+                upimg(imgData);
+            }
+            reader.readAsDataURL(document.getElementById(sourceId).files[0]);
+        }
+
+        function upimg(_data) {
+            $.ajax({
+                url: "http://apiqa.ukitchenplus.com/user/avatar?ext=jpg&token=" + $.cookie("token"),
+                data: _data,
+                contentType: 'image/jpeg',
+                type: "POST",
+                dataType: 'json',
+                success: function(txt) {
+                    console.log(txt);
+                },
+                error: function(XMLHttpRequest, ajaxOptions, thrownError) {
+                    $("#outTxt").html("错误信息：" + ajaxOptions);
+                    console.log($.cookie("UserLogin"));
+                }
+            });
+        }
+        $(function($) {
+
+            //创建上传方法	
+            files = new upFile({
+                vars: {
+                    ext: "jpg"
+                },
+                aLinkId: "#upimage",
+                filePath: "iimg"
+            });
+            files.success = function(data, s) {
+                $("#tishi").text("文件上传成功");
+            }
+        })
+
+    </script>
+</head>
+
+<body style="padding:30px">
+    <div style="margin-bottom:12px;">
+        <label for="apiii">选择接口:</label>
+        <select id="apiSelt">
+        </select>
+    </div>
+    <label for="textfield3">发送地址:</label>
+    <input name="posurl" type="text" id="posurl" style="width:500px;">
+    <a href="#" id="addFd">添加字段</a>
+    <ul id="zdnr">
+
+    </ul>
+    <p>
+        <input type="button" value="发送数据" id="updataBtn">
+    </p>
+    <p>测试返回结果
+        <input name="json" type="checkbox" id="json" checked>
+        <label for="checkbox">json </label>
+    </p>
+    <p>
+        <label for="checkbox"> </label>
+    </p>
+    <div id="outTxtPost">&nbsp;</div>
+    <br>
+
+    <div id="outTxt">&nbsp;</div>
+    <a href="javascript:void()" id="upimage" class="upFile">上传图片</a>
+    <div id="tishi">ts</div>
+    <input type="file" name="imgOne" id="imgOne" onchange="preImg(this.id,'imgPre');" />
+    <img id="imgPre" src="" style="display: block;" />
+    <canvas id="myCanvas" width="150" height="150" style="border:solid 1px red;"></canvas>
+    <br />
+    <br />
+    <br />
+    <br />
+    <form action="http://apiqa.ukitchenplus.com/user/avatar?token=3a6d93c2-ddae-4226-8a38-193dad85fc6c" method="post" id="form_file" target="iframe_up" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="hidden" name="ext" value="jpg">
+        <button type="submit">上传</button>
+    </form>
+    <br />
+    <br />
+
+    <div id="nr">
+        <div id="b1"></div>
+        <div id="b2"></div>
+        <div id="b3"></div>
+    </div>
+</body>
+
+</html>
